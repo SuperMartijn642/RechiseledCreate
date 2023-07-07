@@ -1,0 +1,37 @@
+{
+  "type": "rechiseled:chiseling",
+  "overwrite": false,
+  "entries": [
+    {
+      "connecting_item": "create:dark_oak_window"
+    },
+    {
+      "item": "rechiseledcreate:dark_oak_window_bars",
+      "connecting_item": "rechiseledcreate:dark_oak_window_bars_connecting"
+    },
+    {
+      "item": "rechiseledcreate:dark_oak_window_covered",
+      "connecting_item": "rechiseledcreate:dark_oak_window_covered_connecting"
+    },
+    {
+      "item": "rechiseledcreate:dark_oak_window_diagonal",
+      "connecting_item": "rechiseledcreate:dark_oak_window_diagonal_connecting"
+    },
+    {
+      "item": "rechiseledcreate:dark_oak_window_slim",
+      "connecting_item": "rechiseledcreate:dark_oak_window_slim_connecting"
+    },
+    {
+      "item": "rechiseledcreate:dark_oak_window_panes",
+      "connecting_item": "rechiseledcreate:dark_oak_window_panes_connecting"
+    },
+    {
+      "item": "rechiseledcreate:dark_oak_window_tiles",
+      "connecting_item": "rechiseledcreate:dark_oak_window_tiles_connecting"
+    },
+    {
+      "item": "rechiseledcreate:dark_oak_window_swirling",
+      "connecting_item": "rechiseledcreate:dark_oak_window_swirling_connecting"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "type": "rechiseled:chiseling",
+  "overwrite": false,
+  "entries": [
+    {
+      "item": "minecraft:calcite"
+    },
+    {
+      "item": "create:cut_calcite"
+    },
+    {
+      "item": "create:cut_calcite_bricks"
+    },
+    {
+      "item": "create:layered_calcite"
+    },
+    {
+      "item": "create:calcite_pillar"
+    },
+    {
+      "item": "create:polished_cut_calcite",
+      "connecting_item": "rechiseledcreate:calcite_cut_polished_connecting"
+    },
+    {
+      "item": "create:small_calcite_bricks",
+      "connecting_item": "rechiseledcreate:calcite_cut_small_brick_connecting"
+    }
+  ]
+}

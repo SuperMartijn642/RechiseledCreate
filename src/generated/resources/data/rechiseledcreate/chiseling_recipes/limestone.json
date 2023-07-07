@@ -1,0 +1,29 @@
+{
+  "type": "rechiseled:chiseling",
+  "overwrite": false,
+  "entries": [
+    {
+      "item": "create:limestone"
+    },
+    {
+      "item": "create:cut_limestone"
+    },
+    {
+      "item": "create:cut_limestone_bricks"
+    },
+    {
+      "item": "create:layered_limestone"
+    },
+    {
+      "item": "create:limestone_pillar"
+    },
+    {
+      "item": "create:polished_cut_limestone",
+      "connecting_item": "rechiseledcreate:limestone_cut_polished_connecting"
+    },
+    {
+      "item": "create:small_limestone_bricks",
+      "connecting_item": "rechiseledcreate:limestone_cut_small_brick_connecting"
+    }
+  ]
+}

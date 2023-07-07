@@ -1,0 +1,29 @@
+{
+  "type": "rechiseled:chiseling",
+  "overwrite": false,
+  "entries": [
+    {
+      "item": "create:scorchia"
+    },
+    {
+      "item": "create:cut_scorchia"
+    },
+    {
+      "item": "create:cut_scorchia_bricks"
+    },
+    {
+      "item": "create:layered_scorchia"
+    },
+    {
+      "item": "create:scorchia_pillar"
+    },
+    {
+      "item": "create:polished_cut_scorchia",
+      "connecting_item": "rechiseledcreate:scorchia_cut_polished_connecting"
+    },
+    {
+      "item": "create:small_scorchia_bricks",
+      "connecting_item": "rechiseledcreate:scorchia_cut_small_brick_connecting"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "replace": false,
+  "values": [
+    "rechiseledcreate:diorite_cut_polished_connecting",
+    "rechiseledcreate:tuff_cut_polished_connecting",
+    "rechiseledcreate:tuff_cut_small_brick_connecting",
+    "rechiseledcreate:dripstone_cut_small_brick_connecting",
+    "rechiseledcreate:mechanical_chisel",
+    "rechiseledcreate:dripstone_cut_polished_connecting",
+    "rechiseledcreate:deepslate_cut_polished_connecting",
+    "rechiseledcreate:deepslate_cut_small_brick_connecting",
+    "rechiseledcreate:calcite_cut_small_brick_connecting",
+    "rechiseledcreate:andesite_cut_polished_connecting",
+    "rechiseledcreate:granite_cut_small_brick_connecting",
+    "rechiseledcreate:diorite_cut_small_brick_connecting",
+    "rechiseledcreate:andesite_cut_small_brick_connecting",
+    "rechiseledcreate:granite_cut_polished_connecting",
+    "rechiseledcreate:calcite_cut_polished_connecting"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "up": "rechiseledcreate:block/warped_window_slim_end",
+    "down": "rechiseledcreate:block/warped_window_slim_end",
+    "north": "rechiseledcreate:block/warped_window_slim_side",
+    "east": "rechiseledcreate:block/warped_window_slim_side",
+    "south": "rechiseledcreate:block/warped_window_slim_side",
+    "west": "rechiseledcreate:block/warped_window_slim_side",
+    "particle": "rechiseledcreate:block/warped_window_slim_side"
+  }
+}

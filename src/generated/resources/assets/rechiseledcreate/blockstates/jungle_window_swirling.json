@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "rechiseledcreate:block/jungle_window_swirling",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "rechiseledcreate:block/jungle_window_swirling"
+    },
+    "axis=z": {
+      "model": "rechiseledcreate:block/jungle_window_swirling",
+      "x": 90
+    }
+  }
+}

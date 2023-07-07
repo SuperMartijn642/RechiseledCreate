@@ -1,0 +1,54 @@
+{
+  "parent": "minecraft:recipes/root",
+  "display": {
+    "icon": {
+      "item": "rechiseledcreate:mechanical_chisel"
+    },
+    "title": {
+      "translate": "rechiseledcreate.advancement.recipes/rechiseledcreate/mechanical_chisel.title"
+    },
+    "description": {
+      "translate": "rechiseledcreate.advancement.recipes/rechiseledcreate/mechanical_chisel.description"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "rechiseledcreate:mechanical_chisel"
+      }
+    },
+    "recipe_condition": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "create:andesite_casing"
+            ]
+          },
+          {
+            "items": [
+              "rechiseled:chisel"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "recipe_condition"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "rechiseledcreate:mechanical_chisel"
+    ]
+  }
+}

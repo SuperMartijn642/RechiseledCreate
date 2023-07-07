@@ -1,0 +1,29 @@
+{
+  "type": "rechiseled:chiseling",
+  "overwrite": false,
+  "entries": [
+    {
+      "item": "minecraft:dripstone_block"
+    },
+    {
+      "item": "create:cut_dripstone"
+    },
+    {
+      "item": "create:cut_dripstone_bricks"
+    },
+    {
+      "item": "create:layered_dripstone"
+    },
+    {
+      "item": "create:dripstone_pillar"
+    },
+    {
+      "item": "create:polished_cut_dripstone",
+      "connecting_item": "rechiseledcreate:dripstone_cut_polished_connecting"
+    },
+    {
+      "item": "create:small_dripstone_bricks",
+      "connecting_item": "rechiseledcreate:dripstone_cut_small_brick_connecting"
+    }
+  ]
+}

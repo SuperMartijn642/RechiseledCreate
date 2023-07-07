@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "up": "rechiseledcreate:block/dark_oak_window_diagonal_end",
+    "down": "rechiseledcreate:block/dark_oak_window_diagonal_end",
+    "north": "rechiseledcreate:block/dark_oak_window_diagonal_side",
+    "east": "rechiseledcreate:block/dark_oak_window_diagonal_side",
+    "south": "rechiseledcreate:block/dark_oak_window_diagonal_side",
+    "west": "rechiseledcreate:block/dark_oak_window_diagonal_side",
+    "particle": "rechiseledcreate:block/dark_oak_window_diagonal_side"
+  }
+}

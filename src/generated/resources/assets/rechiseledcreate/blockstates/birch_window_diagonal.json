@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "rechiseledcreate:block/birch_window_diagonal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "rechiseledcreate:block/birch_window_diagonal"
+    },
+    "axis=z": {
+      "model": "rechiseledcreate:block/birch_window_diagonal",
+      "x": 90
+    }
+  }
+}

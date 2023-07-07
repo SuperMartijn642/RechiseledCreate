@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "up": "rechiseledcreate:block/acacia_window_panes_end",
+    "down": "rechiseledcreate:block/acacia_window_panes_end",
+    "north": "rechiseledcreate:block/acacia_window_panes_side",
+    "east": "rechiseledcreate:block/acacia_window_panes_side",
+    "south": "rechiseledcreate:block/acacia_window_panes_side",
+    "west": "rechiseledcreate:block/acacia_window_panes_side",
+    "particle": "rechiseledcreate:block/acacia_window_panes_side"
+  }
+}

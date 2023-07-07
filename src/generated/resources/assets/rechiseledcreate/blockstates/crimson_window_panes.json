@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "rechiseledcreate:block/crimson_window_panes",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "rechiseledcreate:block/crimson_window_panes"
+    },
+    "axis=z": {
+      "model": "rechiseledcreate:block/crimson_window_panes",
+      "x": 90
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "rechiseledcreate:block/oak_window_bars",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "rechiseledcreate:block/oak_window_bars"
+    },
+    "axis=z": {
+      "model": "rechiseledcreate:block/oak_window_bars",
+      "x": 90
+    }
+  }
+}

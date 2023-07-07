@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "up": "rechiseledcreate:block/crimson_window_swirling_end",
+    "down": "rechiseledcreate:block/crimson_window_swirling_end",
+    "north": "rechiseledcreate:block/crimson_window_swirling_side",
+    "east": "rechiseledcreate:block/crimson_window_swirling_side",
+    "south": "rechiseledcreate:block/crimson_window_swirling_side",
+    "west": "rechiseledcreate:block/crimson_window_swirling_side",
+    "particle": "rechiseledcreate:block/crimson_window_swirling_side"
+  }
+}

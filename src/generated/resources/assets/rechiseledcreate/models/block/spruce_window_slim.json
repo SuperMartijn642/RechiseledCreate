@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "up": "rechiseledcreate:block/spruce_window_slim_end",
+    "down": "rechiseledcreate:block/spruce_window_slim_end",
+    "north": "rechiseledcreate:block/spruce_window_slim_side",
+    "east": "rechiseledcreate:block/spruce_window_slim_side",
+    "south": "rechiseledcreate:block/spruce_window_slim_side",
+    "west": "rechiseledcreate:block/spruce_window_slim_side",
+    "particle": "rechiseledcreate:block/spruce_window_slim_side"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "type": "rechiseled:chiseling",
+  "overwrite": false,
+  "entries": [
+    {
+      "item": "create:scoria"
+    },
+    {
+      "item": "create:cut_scoria"
+    },
+    {
+      "item": "create:cut_scoria_bricks"
+    },
+    {
+      "item": "create:layered_scoria"
+    },
+    {
+      "item": "create:scoria_pillar"
+    },
+    {
+      "item": "create:polished_cut_scoria",
+      "connecting_item": "rechiseledcreate:scoria_cut_polished_connecting"
+    },
+    {
+      "item": "create:small_scoria_bricks",
+      "connecting_item": "rechiseledcreate:scoria_cut_small_brick_connecting"
+    }
+  ]
+}

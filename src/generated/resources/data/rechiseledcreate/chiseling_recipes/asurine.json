@@ -1,0 +1,29 @@
+{
+  "type": "rechiseled:chiseling",
+  "overwrite": false,
+  "entries": [
+    {
+      "item": "create:asurine"
+    },
+    {
+      "item": "create:cut_asurine"
+    },
+    {
+      "item": "create:cut_asurine_bricks"
+    },
+    {
+      "item": "create:layered_asurine"
+    },
+    {
+      "item": "create:asurine_pillar"
+    },
+    {
+      "item": "create:polished_cut_asurine",
+      "connecting_item": "rechiseledcreate:asurine_cut_polished_connecting"
+    },
+    {
+      "item": "create:small_asurine_bricks",
+      "connecting_item": "rechiseledcreate:asurine_cut_small_brick_connecting"
+    }
+  ]
+}

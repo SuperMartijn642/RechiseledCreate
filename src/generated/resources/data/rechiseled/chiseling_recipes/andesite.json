@@ -1,0 +1,26 @@
+{
+  "type": "rechiseled:chiseling",
+  "overwrite": false,
+  "entries": [
+    {
+      "item": "create:cut_andesite"
+    },
+    {
+      "item": "create:cut_andesite_bricks"
+    },
+    {
+      "item": "create:layered_andesite"
+    },
+    {
+      "item": "create:andesite_pillar"
+    },
+    {
+      "item": "create:polished_cut_andesite",
+      "connecting_item": "rechiseledcreate:andesite_cut_polished_connecting"
+    },
+    {
+      "item": "create:small_andesite_bricks",
+      "connecting_item": "rechiseledcreate:andesite_cut_small_brick_connecting"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "up": "rechiseledcreate:block/birch_window_diagonal_end",
+    "down": "rechiseledcreate:block/birch_window_diagonal_end",
+    "north": "rechiseledcreate:block/birch_window_diagonal_side",
+    "east": "rechiseledcreate:block/birch_window_diagonal_side",
+    "south": "rechiseledcreate:block/birch_window_diagonal_side",
+    "west": "rechiseledcreate:block/birch_window_diagonal_side",
+    "particle": "rechiseledcreate:block/birch_window_diagonal_side"
+  }
+}

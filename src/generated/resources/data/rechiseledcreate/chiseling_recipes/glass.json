@@ -1,0 +1,21 @@
+{
+  "type": "rechiseled:chiseling",
+  "overwrite": false,
+  "entries": [
+    {
+      "item": "minecraft:glass"
+    },
+    {
+      "item": "create:tiled_glass"
+    },
+    {
+      "connecting_item": "create:framed_glass"
+    },
+    {
+      "connecting_item": "create:horizontal_framed_glass"
+    },
+    {
+      "connecting_item": "create:vertical_framed_glass"
+    }
+  ]
+}

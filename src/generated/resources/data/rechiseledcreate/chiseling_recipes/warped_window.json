@@ -1,0 +1,37 @@
+{
+  "type": "rechiseled:chiseling",
+  "overwrite": false,
+  "entries": [
+    {
+      "connecting_item": "create:warped_window"
+    },
+    {
+      "item": "rechiseledcreate:warped_window_bars",
+      "connecting_item": "rechiseledcreate:warped_window_bars_connecting"
+    },
+    {
+      "item": "rechiseledcreate:warped_window_covered",
+      "connecting_item": "rechiseledcreate:warped_window_covered_connecting"
+    },
+    {
+      "item": "rechiseledcreate:warped_window_diagonal",
+      "connecting_item": "rechiseledcreate:warped_window_diagonal_connecting"
+    },
+    {
+      "item": "rechiseledcreate:warped_window_large",
+      "connecting_item": "rechiseledcreate:warped_window_large_connecting"
+    },
+    {
+      "item": "rechiseledcreate:warped_window_slim",
+      "connecting_item": "rechiseledcreate:warped_window_slim_connecting"
+    },
+    {
+      "item": "rechiseledcreate:warped_window_panes",
+      "connecting_item": "rechiseledcreate:warped_window_panes_connecting"
+    },
+    {
+      "item": "rechiseledcreate:warped_window_tiles",
+      "connecting_item": "rechiseledcreate:warped_window_tiles_connecting"
+    }
+  ]
+}
