@@ -1,0 +1,19 @@
+{
+  "type": "fusion:connecting",
+  "parent": "minecraft:block/cube",
+  "connections": [
+    {
+      "type": "fusion:is_same_state"
+    }
+  ],
+  "loader": "fusion:model",
+  "textures": {
+    "down": "rechiseledcreate:block/birch_window_rounded_end",
+    "east": "rechiseledcreate:block/birch_window_rounded_side",
+    "north": "rechiseledcreate:block/birch_window_rounded_side",
+    "particle": "rechiseledcreate:block/birch_window_rounded_side",
+    "south": "rechiseledcreate:block/birch_window_rounded_side",
+    "up": "rechiseledcreate:block/birch_window_rounded_end",
+    "west": "rechiseledcreate:block/birch_window_rounded_side"
+  }
+}

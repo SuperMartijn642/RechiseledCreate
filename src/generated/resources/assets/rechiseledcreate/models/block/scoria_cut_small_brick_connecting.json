@@ -1,13 +1,13 @@
 {
+  "type": "fusion:connecting",
   "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "rechiseledcreate:block/scoria_cut_small_brick"
-  },
   "connections": [
     {
       "type": "fusion:is_same_block"
     }
   ],
   "loader": "fusion:model",
-  "type": "fusion:connecting"
+  "textures": {
+    "all": "rechiseledcreate:block/scoria_cut_small_brick"
+  }
 }

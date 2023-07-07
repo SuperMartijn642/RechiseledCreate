@@ -1,37 +1,41 @@
 {
   "type": "rechiseled:chiseling",
-  "overwrite": false,
   "entries": [
     {
       "connecting_item": "create:acacia_window"
     },
     {
-      "item": "rechiseledcreate:acacia_window_covered",
-      "connecting_item": "rechiseledcreate:acacia_window_covered_connecting"
+      "connecting_item": "rechiseledcreate:acacia_window_covered_connecting",
+      "item": "rechiseledcreate:acacia_window_covered"
     },
     {
-      "item": "rechiseledcreate:acacia_window_diagonal",
-      "connecting_item": "rechiseledcreate:acacia_window_diagonal_connecting"
+      "connecting_item": "rechiseledcreate:acacia_window_diagonal_connecting",
+      "item": "rechiseledcreate:acacia_window_diagonal"
     },
     {
-      "item": "rechiseledcreate:acacia_window_large",
-      "connecting_item": "rechiseledcreate:acacia_window_large_connecting"
+      "connecting_item": "rechiseledcreate:acacia_window_large_connecting",
+      "item": "rechiseledcreate:acacia_window_large"
     },
     {
-      "item": "rechiseledcreate:acacia_window_slim",
-      "connecting_item": "rechiseledcreate:acacia_window_slim_connecting"
+      "connecting_item": "rechiseledcreate:acacia_window_panes_connecting",
+      "item": "rechiseledcreate:acacia_window_panes"
     },
     {
-      "item": "rechiseledcreate:acacia_window_panes",
-      "connecting_item": "rechiseledcreate:acacia_window_panes_connecting"
+      "connecting_item": "rechiseledcreate:acacia_window_rounded_connecting",
+      "item": "rechiseledcreate:acacia_window_rounded"
     },
     {
-      "item": "rechiseledcreate:acacia_window_tiles",
-      "connecting_item": "rechiseledcreate:acacia_window_tiles_connecting"
+      "connecting_item": "rechiseledcreate:acacia_window_slim_connecting",
+      "item": "rechiseledcreate:acacia_window_slim"
     },
     {
-      "item": "rechiseledcreate:acacia_window_swirling",
-      "connecting_item": "rechiseledcreate:acacia_window_swirling_connecting"
+      "connecting_item": "rechiseledcreate:acacia_window_swirling_connecting",
+      "item": "rechiseledcreate:acacia_window_swirling"
+    },
+    {
+      "connecting_item": "rechiseledcreate:acacia_window_tiles_connecting",
+      "item": "rechiseledcreate:acacia_window_tiles"
     }
-  ]
+  ],
+  "overwrite": false
 }

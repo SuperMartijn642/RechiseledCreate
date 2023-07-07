@@ -17,10 +17,11 @@ public class WoodTextureProvider extends ChiseledTextureProvider {
     private static final ResourceLocation CRIMSON = new ResourceLocation("block/crimson_planks");
     private static final ResourceLocation DARK_OAK = new ResourceLocation("block/dark_oak_planks");
     private static final ResourceLocation JUNGLE = new ResourceLocation("block/jungle_planks");
+    private static final ResourceLocation MANGROVE = new ResourceLocation("block/mangrove_planks");
     private static final ResourceLocation OAK = new ResourceLocation("block/oak_planks");
     private static final ResourceLocation SPRUCE = new ResourceLocation("block/spruce_planks");
     private static final ResourceLocation WARPED = new ResourceLocation("block/warped_planks");
-    private static final List<ResourceLocation> PLANKS = Arrays.asList(ACACIA, BIRCH, CRIMSON, DARK_OAK, JUNGLE, OAK, SPRUCE, WARPED);
+    private static final List<ResourceLocation> PLANKS = Arrays.asList(ACACIA, BIRCH, CRIMSON, DARK_OAK, JUNGLE, MANGROVE, OAK, SPRUCE, WARPED);
 
     public WoodTextureProvider(DataGenerator generator){
         super(RechiseledCreate.MODID, generator);
@@ -38,6 +39,8 @@ public class WoodTextureProvider extends ChiseledTextureProvider {
         this.mapPlankTexture(OAK, OAK, "_window_large_end", false);
         this.mapPlankTexture(new ResourceLocation("rechiseledcreate", "block/jungle_window_slim_side"), JUNGLE, "_window_slim_side", true);
         this.mapPlankTexture(OAK, OAK, "_window_slim_end", false);
+        this.mapPlankTexture(new ResourceLocation("rechiseledcreate", "block/mangrove_window_rounded_side"), MANGROVE, "_window_rounded_side", true);
+        this.mapPlankTexture(OAK, OAK, "_window_rounded_end", false);
         this.mapPlankTexture(new ResourceLocation("rechiseledcreate", "block/oak_window_panes_side"), OAK, "_window_panes_side", true);
         this.mapPlankTexture(OAK, OAK, "_window_panes_end", false);
         this.mapPlankTexture(new ResourceLocation("rechiseledcreate", "block/oak_window_tiles_side"), OAK, "_window_tiles_side", true);

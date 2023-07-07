@@ -1,19 +1,19 @@
 {
+  "type": "fusion:connecting",
   "parent": "minecraft:block/cube",
-  "textures": {
-    "east": "rechiseledcreate:block/jungle_window_swirling_side",
-    "south": "rechiseledcreate:block/jungle_window_swirling_side",
-    "north": "rechiseledcreate:block/jungle_window_swirling_side",
-    "west": "rechiseledcreate:block/jungle_window_swirling_side",
-    "particle": "rechiseledcreate:block/jungle_window_swirling_side",
-    "up": "rechiseledcreate:block/jungle_window_swirling_end",
-    "down": "rechiseledcreate:block/jungle_window_swirling_end"
-  },
   "connections": [
     {
       "type": "fusion:is_same_state"
     }
   ],
   "loader": "fusion:model",
-  "type": "fusion:connecting"
+  "textures": {
+    "down": "rechiseledcreate:block/jungle_window_swirling_end",
+    "east": "rechiseledcreate:block/jungle_window_swirling_side",
+    "north": "rechiseledcreate:block/jungle_window_swirling_side",
+    "particle": "rechiseledcreate:block/jungle_window_swirling_side",
+    "south": "rechiseledcreate:block/jungle_window_swirling_side",
+    "up": "rechiseledcreate:block/jungle_window_swirling_end",
+    "west": "rechiseledcreate:block/jungle_window_swirling_side"
+  }
 }

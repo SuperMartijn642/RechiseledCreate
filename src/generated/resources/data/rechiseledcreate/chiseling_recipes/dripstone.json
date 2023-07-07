@@ -1,6 +1,5 @@
 {
   "type": "rechiseled:chiseling",
-  "overwrite": false,
   "entries": [
     {
       "item": "minecraft:dripstone_block"
@@ -18,12 +17,13 @@
       "item": "create:dripstone_pillar"
     },
     {
-      "item": "create:polished_cut_dripstone",
-      "connecting_item": "rechiseledcreate:dripstone_cut_polished_connecting"
+      "connecting_item": "rechiseledcreate:dripstone_cut_polished_connecting",
+      "item": "create:polished_cut_dripstone"
     },
     {
-      "item": "create:small_dripstone_bricks",
-      "connecting_item": "rechiseledcreate:dripstone_cut_small_brick_connecting"
+      "connecting_item": "rechiseledcreate:dripstone_cut_small_brick_connecting",
+      "item": "create:small_dripstone_bricks"
     }
-  ]
+  ],
+  "overwrite": false
 }

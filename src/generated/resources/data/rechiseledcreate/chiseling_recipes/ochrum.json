@@ -1,6 +1,5 @@
 {
   "type": "rechiseled:chiseling",
-  "overwrite": false,
   "entries": [
     {
       "item": "create:ochrum"
@@ -18,12 +17,13 @@
       "item": "create:ochrum_pillar"
     },
     {
-      "item": "create:polished_cut_ochrum",
-      "connecting_item": "rechiseledcreate:ochrum_cut_polished_connecting"
+      "connecting_item": "rechiseledcreate:ochrum_cut_polished_connecting",
+      "item": "create:polished_cut_ochrum"
     },
     {
-      "item": "create:small_ochrum_bricks",
-      "connecting_item": "rechiseledcreate:ochrum_cut_small_brick_connecting"
+      "connecting_item": "rechiseledcreate:ochrum_cut_small_brick_connecting",
+      "item": "create:small_ochrum_bricks"
     }
-  ]
+  ],
+  "overwrite": false
 }

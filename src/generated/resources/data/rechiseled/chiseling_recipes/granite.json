@@ -1,6 +1,5 @@
 {
   "type": "rechiseled:chiseling",
-  "overwrite": false,
   "entries": [
     {
       "item": "create:cut_granite"
@@ -15,12 +14,13 @@
       "item": "create:granite_pillar"
     },
     {
-      "item": "create:polished_cut_granite",
-      "connecting_item": "rechiseledcreate:granite_cut_polished_connecting"
+      "connecting_item": "rechiseledcreate:granite_cut_polished_connecting",
+      "item": "create:polished_cut_granite"
     },
     {
-      "item": "create:small_granite_bricks",
-      "connecting_item": "rechiseledcreate:granite_cut_small_brick_connecting"
+      "connecting_item": "rechiseledcreate:granite_cut_small_brick_connecting",
+      "item": "create:small_granite_bricks"
     }
-  ]
+  ],
+  "overwrite": false
 }

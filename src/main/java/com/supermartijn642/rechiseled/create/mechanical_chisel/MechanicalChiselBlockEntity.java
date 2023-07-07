@@ -24,6 +24,7 @@ import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.transfer.v1.item.ItemVariant;
 import net.fabricmc.fabric.api.transfer.v1.storage.Storage;
+import net.fabricmc.fabric.api.transfer.v1.storage.base.SidedStorageBlockEntity;
 import net.fabricmc.fabric.api.transfer.v1.transaction.Transaction;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -33,6 +34,7 @@ import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.util.Mth;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -46,14 +48,13 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.Collections;
 import java.util.List;
-import java.util.Random;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 /**
  * Created 15/05/2023 by SuperMartijn642
  */
-public class MechanicalChiselBlockEntity extends KineticBlockEntity implements ItemTransferable {
+public class MechanicalChiselBlockEntity extends KineticBlockEntity implements SidedStorageBlockEntity {
 
     public ProcessingInventory inventory;
     private int recipeIndex;
@@ -242,7 +243,7 @@ public class MechanicalChiselBlockEntity extends KineticBlockEntity implements I
         else
             particleData = new ItemParticleOption(ParticleTypes.ITEM, stack);
 
-        Random r = this.level.random;
+        RandomSource r = this.level.random;
         Vec3 v = VecHelper.getCenterOf(this.worldPosition)
             .add(0, 5 / 16f, 0);
         for(int i = 0; i < 10; i++){

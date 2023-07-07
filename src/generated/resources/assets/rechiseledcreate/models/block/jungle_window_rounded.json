@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "up": "rechiseledcreate:block/jungle_window_rounded_end",
+    "down": "rechiseledcreate:block/jungle_window_rounded_end",
+    "north": "rechiseledcreate:block/jungle_window_rounded_side",
+    "east": "rechiseledcreate:block/jungle_window_rounded_side",
+    "south": "rechiseledcreate:block/jungle_window_rounded_side",
+    "west": "rechiseledcreate:block/jungle_window_rounded_side",
+    "particle": "rechiseledcreate:block/jungle_window_rounded_side"
+  }
+}

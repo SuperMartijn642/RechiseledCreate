@@ -25,10 +25,11 @@ public class Blocks {
     public static final RechiseledBlockType ACACIA_WINDOW_COVERED = createWindow("acacia_window_covered", "Covered Acacia Window", AllPaletteBlocks.ACACIA_WINDOW).recipe(Recipes.ACACIA_WINDOW).build();
     public static final RechiseledBlockType ACACIA_WINDOW_DIAGONAL = createWindow("acacia_window_diagonal", "Diagonal Acacia Window", AllPaletteBlocks.ACACIA_WINDOW).recipe(Recipes.ACACIA_WINDOW).build();
     public static final RechiseledBlockType ACACIA_WINDOW_LARGE = createWindow("acacia_window_large", "Large Acacia Window", AllPaletteBlocks.ACACIA_WINDOW).recipe(Recipes.ACACIA_WINDOW).build();
-    public static final RechiseledBlockType ACACIA_WINDOW_SLIM = createWindow("acacia_window_slim", "Slim Acacia Window", AllPaletteBlocks.ACACIA_WINDOW).recipe(Recipes.ACACIA_WINDOW).build();
     public static final RechiseledBlockType ACACIA_WINDOW_PANES = createWindow("acacia_window_panes", "Acacia Window Panes", AllPaletteBlocks.ACACIA_WINDOW).recipe(Recipes.ACACIA_WINDOW).build();
-    public static final RechiseledBlockType ACACIA_WINDOW_TILES = createWindow("acacia_window_tiles", "Acacia Window Tiles", AllPaletteBlocks.ACACIA_WINDOW).recipe(Recipes.ACACIA_WINDOW).build();
+    public static final RechiseledBlockType ACACIA_WINDOW_ROUNDED = createWindow("acacia_window_rounded", "Rounded Acacia Window", AllPaletteBlocks.ACACIA_WINDOW).recipe(Recipes.ACACIA_WINDOW).build();
+    public static final RechiseledBlockType ACACIA_WINDOW_SLIM = createWindow("acacia_window_slim", "Slim Acacia Window", AllPaletteBlocks.ACACIA_WINDOW).recipe(Recipes.ACACIA_WINDOW).build();
     public static final RechiseledBlockType ACACIA_WINDOW_SWIRLING = createWindow("acacia_window_swirling", "Swirling Acacia Window", AllPaletteBlocks.ACACIA_WINDOW).recipe(Recipes.ACACIA_WINDOW).build();
+    public static final RechiseledBlockType ACACIA_WINDOW_TILES = createWindow("acacia_window_tiles", "Acacia Window Tiles", AllPaletteBlocks.ACACIA_WINDOW).recipe(Recipes.ACACIA_WINDOW).build();
     // Andesite
     public static final RechiseledBlockType ANDESITE_CUT_POLISHED = create("andesite_cut_polished", "Polished Cut Andesite", () -> AllPaletteStoneTypes.ANDESITE.getBaseBlock().get()).regularVariant(getBlock("create:polished_cut_andesite")).recipe(Recipes.ANDESITE).build();
     public static final RechiseledBlockType ANDESITE_CUT_SMALL_BRICK = create("andesite_cut_small_brick", "Small Andesite Bricks", () -> AllPaletteStoneTypes.ANDESITE.getBaseBlock().get()).regularVariant(getBlock("create:small_andesite_bricks")).recipe(Recipes.ANDESITE).build();
@@ -39,10 +40,11 @@ public class Blocks {
     public static final RechiseledBlockType BIRCH_WINDOW_BARS = createWindow("birch_window_bars", "Birch Window Bars", AllPaletteBlocks.BIRCH_WINDOW).recipe(Recipes.BIRCH_WINDOW).build();
     public static final RechiseledBlockType BIRCH_WINDOW_DIAGONAL = createWindow("birch_window_diagonal", "Diagonal Birch Window", AllPaletteBlocks.BIRCH_WINDOW).recipe(Recipes.BIRCH_WINDOW).build();
     public static final RechiseledBlockType BIRCH_WINDOW_LARGE = createWindow("birch_window_large", "Large Birch Window", AllPaletteBlocks.BIRCH_WINDOW).recipe(Recipes.BIRCH_WINDOW).build();
-    public static final RechiseledBlockType BIRCH_WINDOW_SLIM = createWindow("birch_window_slim", "Slim Birch Window", AllPaletteBlocks.BIRCH_WINDOW).recipe(Recipes.BIRCH_WINDOW).build();
     public static final RechiseledBlockType BIRCH_WINDOW_PANES = createWindow("birch_window_panes", "Birch Window Panes", AllPaletteBlocks.BIRCH_WINDOW).recipe(Recipes.BIRCH_WINDOW).build();
-    public static final RechiseledBlockType BIRCH_WINDOW_TILES = createWindow("birch_window_tiles", "Birch Window Tiles", AllPaletteBlocks.BIRCH_WINDOW).recipe(Recipes.BIRCH_WINDOW).build();
+    public static final RechiseledBlockType BIRCH_WINDOW_ROUNDED = createWindow("birch_window_rounded", "Rounded Birch Window", AllPaletteBlocks.BIRCH_WINDOW).recipe(Recipes.BIRCH_WINDOW).build();
+    public static final RechiseledBlockType BIRCH_WINDOW_SLIM = createWindow("birch_window_slim", "Slim Birch Window", AllPaletteBlocks.BIRCH_WINDOW).recipe(Recipes.BIRCH_WINDOW).build();
     public static final RechiseledBlockType BIRCH_WINDOW_SWIRLING = createWindow("birch_window_swirling", "Swirling Birch Window", AllPaletteBlocks.BIRCH_WINDOW).recipe(Recipes.BIRCH_WINDOW).build();
+    public static final RechiseledBlockType BIRCH_WINDOW_TILES = createWindow("birch_window_tiles", "Birch Window Tiles", AllPaletteBlocks.BIRCH_WINDOW).recipe(Recipes.BIRCH_WINDOW).build();
     // Calcite
     public static final RechiseledBlockType CALCITE_CUT_POLISHED = create("calcite_cut_polished", "Polished Cut Calcite", () -> AllPaletteStoneTypes.CALCITE.getBaseBlock().get()).regularVariant(getBlock("create:polished_cut_calcite")).recipe(Recipes.CALCITE).build();
     public static final RechiseledBlockType CALCITE_CUT_SMALL_BRICK = create("calcite_cut_small_brick", "Small Calcite Bricks", () -> AllPaletteStoneTypes.CALCITE.getBaseBlock().get()).regularVariant(getBlock("create:small_calcite_bricks")).recipe(Recipes.CALCITE).build();
@@ -53,18 +55,20 @@ public class Blocks {
     public static final RechiseledBlockType CRIMSON_WINDOW_BARS = createWindow("crimson_window_bars", "Crimson Window Bars", AllPaletteBlocks.CRIMSON_WINDOW).recipe(Recipes.CRIMSON_WINDOW).build();
     public static final RechiseledBlockType CRIMSON_WINDOW_COVERED = createWindow("crimson_window_covered", "Covered Crimson Window", AllPaletteBlocks.CRIMSON_WINDOW).recipe(Recipes.CRIMSON_WINDOW).build();
     public static final RechiseledBlockType CRIMSON_WINDOW_LARGE = createWindow("crimson_window_large", "Large Crimson Window", AllPaletteBlocks.CRIMSON_WINDOW).recipe(Recipes.CRIMSON_WINDOW).build();
-    public static final RechiseledBlockType CRIMSON_WINDOW_SLIM = createWindow("crimson_window_slim", "Slim Crimson Window", AllPaletteBlocks.CRIMSON_WINDOW).recipe(Recipes.CRIMSON_WINDOW).build();
     public static final RechiseledBlockType CRIMSON_WINDOW_PANES = createWindow("crimson_window_panes", "Crimson Window Panes", AllPaletteBlocks.CRIMSON_WINDOW).recipe(Recipes.CRIMSON_WINDOW).build();
-    public static final RechiseledBlockType CRIMSON_WINDOW_TILES = createWindow("crimson_window_tiles", "Crimson Window Tiles", AllPaletteBlocks.CRIMSON_WINDOW).recipe(Recipes.CRIMSON_WINDOW).build();
+    public static final RechiseledBlockType CRIMSON_WINDOW_ROUNDED = createWindow("crimson_window_rounded", "Rounded Crimson Window", AllPaletteBlocks.CRIMSON_WINDOW).recipe(Recipes.CRIMSON_WINDOW).build();
+    public static final RechiseledBlockType CRIMSON_WINDOW_SLIM = createWindow("crimson_window_slim", "Slim Crimson Window", AllPaletteBlocks.CRIMSON_WINDOW).recipe(Recipes.CRIMSON_WINDOW).build();
     public static final RechiseledBlockType CRIMSON_WINDOW_SWIRLING = createWindow("crimson_window_swirling", "Swirling Crimson Window", AllPaletteBlocks.CRIMSON_WINDOW).recipe(Recipes.CRIMSON_WINDOW).build();
+    public static final RechiseledBlockType CRIMSON_WINDOW_TILES = createWindow("crimson_window_tiles", "Crimson Window Tiles", AllPaletteBlocks.CRIMSON_WINDOW).recipe(Recipes.CRIMSON_WINDOW).build();
     // Dark oak window
     public static final RechiseledBlockType DARK_OAK_WINDOW_BARS = createWindow("dark_oak_window_bars", "Dark Oak Window Bars", AllPaletteBlocks.DARK_OAK_WINDOW).recipe(Recipes.DARK_OAK_WINDOW).build();
     public static final RechiseledBlockType DARK_OAK_WINDOW_COVERED = createWindow("dark_oak_window_covered", "Covered Dark Oak Window", AllPaletteBlocks.DARK_OAK_WINDOW).recipe(Recipes.DARK_OAK_WINDOW).build();
     public static final RechiseledBlockType DARK_OAK_WINDOW_DIAGONAL = createWindow("dark_oak_window_diagonal", "Diagonal Dark Oak Window", AllPaletteBlocks.DARK_OAK_WINDOW).recipe(Recipes.DARK_OAK_WINDOW).build();
-    public static final RechiseledBlockType DARK_OAK_WINDOW_SLIM = createWindow("dark_oak_window_slim", "Slim Dark Oak Window", AllPaletteBlocks.DARK_OAK_WINDOW).recipe(Recipes.DARK_OAK_WINDOW).build();
     public static final RechiseledBlockType DARK_OAK_WINDOW_PANES = createWindow("dark_oak_window_panes", "Dark Oak Window Panes", AllPaletteBlocks.DARK_OAK_WINDOW).recipe(Recipes.DARK_OAK_WINDOW).build();
-    public static final RechiseledBlockType DARK_OAK_WINDOW_TILES = createWindow("dark_oak_window_tiles", "Dark Oak Window Tiles", AllPaletteBlocks.DARK_OAK_WINDOW).recipe(Recipes.DARK_OAK_WINDOW).build();
+    public static final RechiseledBlockType DARK_OAK_WINDOW_ROUNDED = createWindow("dark_oak_window_rounded", "Rounded Dark Oak Window", AllPaletteBlocks.DARK_OAK_WINDOW).recipe(Recipes.DARK_OAK_WINDOW).build();
+    public static final RechiseledBlockType DARK_OAK_WINDOW_SLIM = createWindow("dark_oak_window_slim", "Slim Dark Oak Window", AllPaletteBlocks.DARK_OAK_WINDOW).recipe(Recipes.DARK_OAK_WINDOW).build();
     public static final RechiseledBlockType DARK_OAK_WINDOW_SWIRLING = createWindow("dark_oak_window_swirling", "Swirling Dark Oak Window", AllPaletteBlocks.DARK_OAK_WINDOW).recipe(Recipes.DARK_OAK_WINDOW).build();
+    public static final RechiseledBlockType DARK_OAK_WINDOW_TILES = createWindow("dark_oak_window_tiles", "Dark Oak Window Tiles", AllPaletteBlocks.DARK_OAK_WINDOW).recipe(Recipes.DARK_OAK_WINDOW).build();
     // Deepslate
     public static final RechiseledBlockType DEEPSLATE_CUT_POLISHED = create("deepslate_cut_polished", "Polished Cut Deepslate", () -> AllPaletteStoneTypes.DEEPSLATE.getBaseBlock().get()).regularVariant(getBlock("create:polished_cut_deepslate")).recipe(Recipes.DEEPSLATE).build();
     public static final RechiseledBlockType DEEPSLATE_CUT_SMALL_BRICK = create("deepslate_cut_small_brick", "Small Deepslate Bricks", () -> AllPaletteStoneTypes.DEEPSLATE.getBaseBlock().get()).regularVariant(getBlock("create:small_deepslate_bricks")).recipe(Recipes.DEEPSLATE).build();
@@ -83,19 +87,30 @@ public class Blocks {
     public static final RechiseledBlockType JUNGLE_WINDOW_DIAGONAL = createWindow("jungle_window_diagonal", "Diagonal Jungle Window", AllPaletteBlocks.JUNGLE_WINDOW).recipe(Recipes.JUNGLE_WINDOW).build();
     public static final RechiseledBlockType JUNGLE_WINDOW_LARGE = createWindow("jungle_window_large", "Large Jungle Window", AllPaletteBlocks.JUNGLE_WINDOW).recipe(Recipes.JUNGLE_WINDOW).build();
     public static final RechiseledBlockType JUNGLE_WINDOW_PANES = createWindow("jungle_window_panes", "Jungle Window Panes", AllPaletteBlocks.JUNGLE_WINDOW).recipe(Recipes.JUNGLE_WINDOW).build();
-    public static final RechiseledBlockType JUNGLE_WINDOW_TILES = createWindow("jungle_window_tiles", "Jungle Window Tiles", AllPaletteBlocks.JUNGLE_WINDOW).recipe(Recipes.JUNGLE_WINDOW).build();
+    public static final RechiseledBlockType JUNGLE_WINDOW_ROUNDED = createWindow("jungle_window_rounded", "Rounded Jungle Window", AllPaletteBlocks.JUNGLE_WINDOW).recipe(Recipes.JUNGLE_WINDOW).build();
     public static final RechiseledBlockType JUNGLE_WINDOW_SWIRLING = createWindow("jungle_window_swirling", "Swirling Jungle Window", AllPaletteBlocks.JUNGLE_WINDOW).recipe(Recipes.JUNGLE_WINDOW).build();
+    public static final RechiseledBlockType JUNGLE_WINDOW_TILES = createWindow("jungle_window_tiles", "Jungle Window Tiles", AllPaletteBlocks.JUNGLE_WINDOW).recipe(Recipes.JUNGLE_WINDOW).build();
     // Limestone
     public static final RechiseledBlockType LIMESTONE_CUT_POLISHED = create("limestone_cut_polished", "Polished Cut Limestone", () -> AllPaletteStoneTypes.LIMESTONE.getBaseBlock().get()).regularVariant(getBlock("create:polished_cut_limestone")).recipe(Recipes.LIMESTONE).build();
     public static final RechiseledBlockType LIMESTONE_CUT_SMALL_BRICK = create("limestone_cut_small_brick", "Small Limestone Bricks", () -> AllPaletteStoneTypes.LIMESTONE.getBaseBlock().get()).regularVariant(getBlock("create:small_limestone_bricks")).recipe(Recipes.LIMESTONE).build();
+    // Mangrove window
+    public static final RechiseledBlockType MANGROVE_WINDOW_BARS = createWindow("mangrove_window_bars", "Mangrove Window Bars", AllPaletteBlocks.MANGROVE_WINDOW).recipe(Recipes.MANGROVE_WINDOW).build();
+    public static final RechiseledBlockType MANGROVE_WINDOW_COVERED = createWindow("mangrove_window_covered", "Covered Mangrove Window", AllPaletteBlocks.MANGROVE_WINDOW).recipe(Recipes.MANGROVE_WINDOW).build();
+    public static final RechiseledBlockType MANGROVE_WINDOW_DIAGONAL = createWindow("mangrove_window_diagonal", "Diagonal Mangrove Window", AllPaletteBlocks.MANGROVE_WINDOW).recipe(Recipes.MANGROVE_WINDOW).build();
+    public static final RechiseledBlockType MANGROVE_WINDOW_LARGE = createWindow("mangrove_window_large", "Large Mangrove Window", AllPaletteBlocks.MANGROVE_WINDOW).recipe(Recipes.MANGROVE_WINDOW).build();
+    public static final RechiseledBlockType MANGROVE_WINDOW_SLIM = createWindow("mangrove_window_slim", "Slim Mangrove Window", AllPaletteBlocks.MANGROVE_WINDOW).recipe(Recipes.MANGROVE_WINDOW).build();
+    public static final RechiseledBlockType MANGROVE_WINDOW_PANES = createWindow("mangrove_window_panes", "Mangrove Window Panes", AllPaletteBlocks.MANGROVE_WINDOW).recipe(Recipes.MANGROVE_WINDOW).build();
+    public static final RechiseledBlockType MANGROVE_WINDOW_SWIRLING = createWindow("mangrove_window_swirling", "Swirling Mangrove Window", AllPaletteBlocks.MANGROVE_WINDOW).recipe(Recipes.MANGROVE_WINDOW).build();
+    public static final RechiseledBlockType MANGROVE_WINDOW_TILES = createWindow("mangrove_window_tiles", "Mangrove Window Tiles", AllPaletteBlocks.MANGROVE_WINDOW).recipe(Recipes.MANGROVE_WINDOW).build();
     // Oak window
     public static final RechiseledBlockType OAK_WINDOW_BARS = createWindow("oak_window_bars", "Oak Window Bars", AllPaletteBlocks.OAK_WINDOW).recipe(Recipes.OAK_WINDOW).build();
     public static final RechiseledBlockType OAK_WINDOW_COVERED = createWindow("oak_window_covered", "Covered Oak Window", AllPaletteBlocks.OAK_WINDOW).recipe(Recipes.OAK_WINDOW).build();
     public static final RechiseledBlockType OAK_WINDOW_DIAGONAL = createWindow("oak_window_diagonal", "Diagonal Oak Window", AllPaletteBlocks.OAK_WINDOW).recipe(Recipes.OAK_WINDOW).build();
     public static final RechiseledBlockType OAK_WINDOW_LARGE = createWindow("oak_window_large", "Large Oak Window", AllPaletteBlocks.OAK_WINDOW).recipe(Recipes.OAK_WINDOW).build();
+    public static final RechiseledBlockType OAK_WINDOW_ROUNDED = createWindow("oak_window_rounded", "Rounded Oak Window", AllPaletteBlocks.OAK_WINDOW).recipe(Recipes.OAK_WINDOW).build();
     public static final RechiseledBlockType OAK_WINDOW_SLIM = createWindow("oak_window_slim", "Slim Oak Window", AllPaletteBlocks.OAK_WINDOW).recipe(Recipes.OAK_WINDOW).build();
-    public static final RechiseledBlockType OAK_WINDOW_TILES = createWindow("oak_window_tiles", "Oak Window Tiles", AllPaletteBlocks.OAK_WINDOW).recipe(Recipes.OAK_WINDOW).build();
     public static final RechiseledBlockType OAK_WINDOW_SWIRLING = createWindow("oak_window_swirling", "Swirling Oak Window", AllPaletteBlocks.OAK_WINDOW).recipe(Recipes.OAK_WINDOW).build();
+    public static final RechiseledBlockType OAK_WINDOW_TILES = createWindow("oak_window_tiles", "Oak Window Tiles", AllPaletteBlocks.OAK_WINDOW).recipe(Recipes.OAK_WINDOW).build();
     // Ochrum
     public static final RechiseledBlockType OCHRUM_CUT_POLISHED = create("ochrum_cut_polished", "Polished Cut Ochrum", () -> AllPaletteStoneTypes.OCHRUM.getBaseBlock().get()).regularVariant(getBlock("create:polished_cut_ochrum")).recipe(Recipes.OCHRUM).build();
     public static final RechiseledBlockType OCHRUM_CUT_SMALL_BRICK = create("ochrum_cut_small_brick", "Small Ochrum Bricks", () -> AllPaletteStoneTypes.OCHRUM.getBaseBlock().get()).regularVariant(getBlock("create:small_ochrum_bricks")).recipe(Recipes.OCHRUM).build();
@@ -117,10 +132,11 @@ public class Blocks {
     public static final RechiseledBlockType SPRUCE_WINDOW_COVERED = createWindow("spruce_window_covered", "Covered Spruce Window", AllPaletteBlocks.SPRUCE_WINDOW).recipe(Recipes.SPRUCE_WINDOW).build();
     public static final RechiseledBlockType SPRUCE_WINDOW_DIAGONAL = createWindow("spruce_window_diagonal", "Diagonal Spruce Window", AllPaletteBlocks.SPRUCE_WINDOW).recipe(Recipes.SPRUCE_WINDOW).build();
     public static final RechiseledBlockType SPRUCE_WINDOW_LARGE = createWindow("spruce_window_large", "Large Spruce Window", AllPaletteBlocks.SPRUCE_WINDOW).recipe(Recipes.SPRUCE_WINDOW).build();
-    public static final RechiseledBlockType SPRUCE_WINDOW_SLIM = createWindow("spruce_window_slim", "Slim Spruce Window", AllPaletteBlocks.SPRUCE_WINDOW).recipe(Recipes.SPRUCE_WINDOW).build();
     public static final RechiseledBlockType SPRUCE_WINDOW_PANES = createWindow("spruce_window_panes", "Spruce Window Panes", AllPaletteBlocks.SPRUCE_WINDOW).recipe(Recipes.SPRUCE_WINDOW).build();
-    public static final RechiseledBlockType SPRUCE_WINDOW_TILES = createWindow("spruce_window_tiles", "Spruce Window Tiles", AllPaletteBlocks.SPRUCE_WINDOW).recipe(Recipes.SPRUCE_WINDOW).build();
+    public static final RechiseledBlockType SPRUCE_WINDOW_ROUNDED = createWindow("spruce_window_rounded", "Rounded Spruce Window", AllPaletteBlocks.SPRUCE_WINDOW).recipe(Recipes.SPRUCE_WINDOW).build();
+    public static final RechiseledBlockType SPRUCE_WINDOW_SLIM = createWindow("spruce_window_slim", "Slim Spruce Window", AllPaletteBlocks.SPRUCE_WINDOW).recipe(Recipes.SPRUCE_WINDOW).build();
     public static final RechiseledBlockType SPRUCE_WINDOW_SWIRLING = createWindow("spruce_window_swirling", "Swirling Spruce Window", AllPaletteBlocks.SPRUCE_WINDOW).recipe(Recipes.SPRUCE_WINDOW).build();
+    public static final RechiseledBlockType SPRUCE_WINDOW_TILES = createWindow("spruce_window_tiles", "Spruce Window Tiles", AllPaletteBlocks.SPRUCE_WINDOW).recipe(Recipes.SPRUCE_WINDOW).build();
     // Tuff
     public static final RechiseledBlockType TUFF_CUT_POLISHED = create("tuff_cut_polished", "Polished Cut Tuff", () -> AllPaletteStoneTypes.TUFF.getBaseBlock().get()).regularVariant(getBlock("create:polished_cut_tuff")).recipe(Recipes.TUFF).build();
     public static final RechiseledBlockType TUFF_CUT_SMALL_BRICK = create("tuff_cut_small_brick", "Small Tuff Bricks", () -> AllPaletteStoneTypes.TUFF.getBaseBlock().get()).regularVariant(getBlock("create:small_tuff_bricks")).recipe(Recipes.TUFF).build();
@@ -132,8 +148,9 @@ public class Blocks {
     public static final RechiseledBlockType WARPED_WINDOW_COVERED = createWindow("warped_window_covered", "Covered Warped Window", AllPaletteBlocks.WARPED_WINDOW).recipe(Recipes.WARPED_WINDOW).build();
     public static final RechiseledBlockType WARPED_WINDOW_DIAGONAL = createWindow("warped_window_diagonal", "Diagonal Warped Window", AllPaletteBlocks.WARPED_WINDOW).recipe(Recipes.WARPED_WINDOW).build();
     public static final RechiseledBlockType WARPED_WINDOW_LARGE = createWindow("warped_window_large", "Large Warped Window", AllPaletteBlocks.WARPED_WINDOW).recipe(Recipes.WARPED_WINDOW).build();
-    public static final RechiseledBlockType WARPED_WINDOW_SLIM = createWindow("warped_window_slim", "Slim Warped Window", AllPaletteBlocks.WARPED_WINDOW).recipe(Recipes.WARPED_WINDOW).build();
     public static final RechiseledBlockType WARPED_WINDOW_PANES = createWindow("warped_window_panes", "Warped Window Panes", AllPaletteBlocks.WARPED_WINDOW).recipe(Recipes.WARPED_WINDOW).build();
+    public static final RechiseledBlockType WARPED_WINDOW_ROUNDED = createWindow("warped_window_rounded", "Rounded Warped Window", AllPaletteBlocks.WARPED_WINDOW).recipe(Recipes.WARPED_WINDOW).build();
+    public static final RechiseledBlockType WARPED_WINDOW_SLIM = createWindow("warped_window_slim", "Slim Warped Window", AllPaletteBlocks.WARPED_WINDOW).recipe(Recipes.WARPED_WINDOW).build();
     public static final RechiseledBlockType WARPED_WINDOW_TILES = createWindow("warped_window_tiles", "Warped Window Tiles", AllPaletteBlocks.WARPED_WINDOW).recipe(Recipes.WARPED_WINDOW).build();
 
     private static RechiseledBlockBuilder createWindow(String identifier, String translation, Supplier<? extends Block> parent){
