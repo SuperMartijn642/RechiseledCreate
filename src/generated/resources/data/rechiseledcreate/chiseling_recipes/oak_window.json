@@ -26,12 +26,12 @@
       "connecting_item": "rechiseledcreate:oak_window_slim_connecting"
     },
     {
-      "item": "rechiseledcreate:oak_window_tiles",
-      "connecting_item": "rechiseledcreate:oak_window_tiles_connecting"
-    },
-    {
       "item": "rechiseledcreate:oak_window_swirling",
       "connecting_item": "rechiseledcreate:oak_window_swirling_connecting"
+    },
+    {
+      "item": "rechiseledcreate:oak_window_tiles",
+      "connecting_item": "rechiseledcreate:oak_window_tiles_connecting"
     }
   ]
 }

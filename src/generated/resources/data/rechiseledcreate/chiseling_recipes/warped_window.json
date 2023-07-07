@@ -22,12 +22,12 @@
       "connecting_item": "rechiseledcreate:warped_window_large_connecting"
     },
     {
-      "item": "rechiseledcreate:warped_window_slim",
-      "connecting_item": "rechiseledcreate:warped_window_slim_connecting"
-    },
-    {
       "item": "rechiseledcreate:warped_window_panes",
       "connecting_item": "rechiseledcreate:warped_window_panes_connecting"
+    },
+    {
+      "item": "rechiseledcreate:warped_window_slim",
+      "connecting_item": "rechiseledcreate:warped_window_slim_connecting"
     },
     {
       "item": "rechiseledcreate:warped_window_tiles",

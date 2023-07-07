@@ -18,20 +18,20 @@
       "connecting_item": "rechiseledcreate:birch_window_large_connecting"
     },
     {
-      "item": "rechiseledcreate:birch_window_slim",
-      "connecting_item": "rechiseledcreate:birch_window_slim_connecting"
-    },
-    {
       "item": "rechiseledcreate:birch_window_panes",
       "connecting_item": "rechiseledcreate:birch_window_panes_connecting"
     },
     {
-      "item": "rechiseledcreate:birch_window_tiles",
-      "connecting_item": "rechiseledcreate:birch_window_tiles_connecting"
+      "item": "rechiseledcreate:birch_window_slim",
+      "connecting_item": "rechiseledcreate:birch_window_slim_connecting"
     },
     {
       "item": "rechiseledcreate:birch_window_swirling",
       "connecting_item": "rechiseledcreate:birch_window_swirling_connecting"
+    },
+    {
+      "item": "rechiseledcreate:birch_window_tiles",
+      "connecting_item": "rechiseledcreate:birch_window_tiles_connecting"
     }
   ]
 }
