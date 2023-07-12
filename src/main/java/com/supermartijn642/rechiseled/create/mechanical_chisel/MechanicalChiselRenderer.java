@@ -2,7 +2,6 @@ package com.supermartijn642.rechiseled.create.mechanical_chisel;
 
 import com.jozufozu.flywheel.backend.Backend;
 import com.mojang.blaze3d.vertex.PoseStack;
-import com.mojang.math.Quaternion;
 import com.mojang.math.Vector3f;
 import com.simibubi.create.AllPartialModels;
 import com.simibubi.create.content.kinetics.base.KineticBlockEntity;

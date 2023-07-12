@@ -3,6 +3,7 @@ package com.supermartijn642.rechiseled.create;
 import com.supermartijn642.rechiseled.api.ChiseledTextureProvider;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraftforge.common.data.ExistingFileHelper;
 
 import java.util.Arrays;
 import java.util.List;
@@ -22,8 +23,8 @@ public class WoodTextureProvider extends ChiseledTextureProvider {
     private static final ResourceLocation WARPED = new ResourceLocation("block/warped_planks");
     private static final List<ResourceLocation> PLANKS = Arrays.asList(ACACIA, BIRCH, CRIMSON, DARK_OAK, JUNGLE, OAK, SPRUCE, WARPED);
 
-    public WoodTextureProvider(DataGenerator generator){
-        super(RechiseledCreate.MODID, generator);
+    public WoodTextureProvider(DataGenerator generator, ExistingFileHelper existingFileHelper){
+        super(RechiseledCreate.MODID, generator, existingFileHelper);
     }
 
     @Override

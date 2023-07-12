@@ -15,16 +15,6 @@ import com.supermartijn642.rechiseled.chiseling.ChiselingEntry;
 import com.supermartijn642.rechiseled.chiseling.ChiselingRecipe;
 import com.supermartijn642.rechiseled.chiseling.ChiselingRecipes;
 import com.supermartijn642.rechiseled.create.RechiseledCreate;
-import io.github.fabricators_of_create.porting_lib.transfer.TransferUtil;
-import io.github.fabricators_of_create.porting_lib.transfer.item.ItemHandlerHelper;
-import io.github.fabricators_of_create.porting_lib.transfer.item.ItemTransferable;
-import io.github.fabricators_of_create.porting_lib.util.ItemStackUtil;
-import io.github.fabricators_of_create.porting_lib.util.NBTSerializer;
-import net.fabricmc.api.EnvType;
-import net.fabricmc.api.Environment;
-import net.fabricmc.fabric.api.transfer.v1.item.ItemVariant;
-import net.fabricmc.fabric.api.transfer.v1.storage.Storage;
-import net.fabricmc.fabric.api.transfer.v1.transaction.Transaction;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.particles.BlockParticleOption;
@@ -42,7 +32,12 @@ import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
-import org.jetbrains.annotations.Nullable;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.common.capabilities.Capability;
+import net.minecraftforge.common.util.LazyOptional;
+import net.minecraftforge.items.CapabilityItemHandler;
+import net.minecraftforge.items.IItemHandler;
 
 import java.util.Collections;
 import java.util.List;
@@ -53,10 +48,11 @@ import java.util.stream.Stream;
 /**
  * Created 15/05/2023 by SuperMartijn642
  */
-public class MechanicalChiselBlockEntity extends KineticBlockEntity implements ItemTransferable {
+public class MechanicalChiselBlockEntity extends KineticBlockEntity {
 
     public ProcessingInventory inventory;
     private int recipeIndex;
+    private final LazyOptional<IItemHandler> invProvider;
     private FilteringBehaviour filtering;
 
     private ItemStack playEvent;
@@ -66,6 +62,7 @@ public class MechanicalChiselBlockEntity extends KineticBlockEntity implements I
         this.inventory = new ProcessingInventory(this::start).withSlotLimit(!AllConfigs.server().recipes.bulkCutting.get());
         this.inventory.remainingTime = -1;
         this.recipeIndex = 0;
+        this.invProvider = LazyOptional.of(() -> this.inventory);
         this.playEvent = ItemStack.EMPTY;
     }
 
@@ -85,7 +82,7 @@ public class MechanicalChiselBlockEntity extends KineticBlockEntity implements I
 
         if(!clientPacket || this.playEvent.isEmpty())
             return;
-        compound.put("PlayEvent", NBTSerializer.serializeNBT(this.playEvent));
+        compound.put("PlayEvent", this.playEvent.serializeNBT());
         this.playEvent = ItemStack.EMPTY;
     }
 
@@ -104,7 +101,7 @@ public class MechanicalChiselBlockEntity extends KineticBlockEntity implements I
     }
 
     @Override
-    @Environment(EnvType.CLIENT)
+    @OnlyIn(Dist.CLIENT)
     public void tickAudio(){
         super.tickAudio();
         if(this.getSpeed() == 0)
@@ -190,7 +187,7 @@ public class MechanicalChiselBlockEntity extends KineticBlockEntity implements I
                 if(stack.isEmpty())
                     continue;
                 ItemStack remainder = behaviour.handleInsertion(stack, itemMovementFacing, false);
-                if(ItemStackUtil.equals(remainder, stack, false))
+                if(remainder.equals(stack, false))
                     continue;
                 this.inventory.setStackInSlot(slot, remainder);
                 changed = true;
@@ -219,16 +216,19 @@ public class MechanicalChiselBlockEntity extends KineticBlockEntity implements I
         this.sendData();
     }
 
+    public void invalidate(){
+        super.invalidate();
+        this.invProvider.invalidate();
+    }
+
     @Override
     public void destroy(){
         super.destroy();
         ItemHelper.dropContents(this.level, this.worldPosition, this.inventory);
     }
 
-    @Nullable
-    @Override
-    public Storage<ItemVariant> getItemStorage(@Nullable Direction face){
-        return face == Direction.DOWN ? null : this.inventory;
+    public <T> LazyOptional<T> getCapability(Capability<T> capability, Direction side){
+        return capability == CapabilityItemHandler.ITEM_HANDLER_CAPABILITY && side != Direction.DOWN ? this.invProvider.cast() : super.getCapability(capability, side);
     }
 
     protected void spawnEventParticles(ItemStack stack){
@@ -243,8 +243,7 @@ public class MechanicalChiselBlockEntity extends KineticBlockEntity implements I
             particleData = new ItemParticleOption(ParticleTypes.ITEM, stack);
 
         Random r = this.level.random;
-        Vec3 v = VecHelper.getCenterOf(this.worldPosition)
-            .add(0, 5 / 16f, 0);
+        Vec3 v = VecHelper.getCenterOf(this.worldPosition).add(0, 5 / 16f, 0);
         for(int i = 0; i < 10; i++){
             Vec3 m = VecHelper.offsetRandomly(new Vec3(0, 0.25f, 0), r, .125f);
             this.level.addParticle(particleData, v.x, v.y, v.z, m.x, m.y, m.y);
@@ -320,15 +319,11 @@ public class MechanicalChiselBlockEntity extends KineticBlockEntity implements I
             return;
 
         this.inventory.clear();
-        try(Transaction transaction = TransferUtil.getTransaction()){
-            ItemStack stack = entity.getItem();
-            long inserted = this.inventory.insert(ItemVariant.of(stack), stack.getCount(), transaction);
-            if(stack.getCount() == inserted)
-                entity.discard();
-            else
-                entity.setItem(ItemHandlerHelper.copyStackWithSize(stack, (int)(stack.getCount() - inserted)));
-            transaction.commit();
-        }
+        ItemStack remainder = this.inventory.insertItem(0, entity.getItem().copy(), false);
+        if(remainder.isEmpty())
+            entity.discard();
+        else
+            entity.setItem(remainder);
     }
 
     public void start(ItemStack inserted){
