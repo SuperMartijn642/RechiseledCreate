@@ -21,7 +21,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.material.MaterialColor;
+import net.minecraft.world.level.material.MapColor;
 import net.minecraftforge.fml.common.Mod;
 
 /**
@@ -47,7 +47,7 @@ public class RechiseledCreate {
 
         // Register mechanical chisel
         RegistrationHandler handler = RegistrationHandler.get(MODID);
-        handler.registerBlock("mechanical_chisel", () -> new MechanicalChiselBlock(BlockBehaviour.Properties.copy(SharedProperties.stone()).color(MaterialColor.PODZOL)));
+        handler.registerBlock("mechanical_chisel", () -> new MechanicalChiselBlock(BlockBehaviour.Properties.copy(SharedProperties.stone()).mapColor(MapColor.PODZOL)));
         handler.registerBlockEntityTypeCallback(RechiseledCreate::registerBlockEntity);
         handler.registerItemCallback(RechiseledCreate::registerItem);
         BlockStressDefaults.setDefaultImpact(new ResourceLocation(MODID, "mechanical_chisel"), 3);

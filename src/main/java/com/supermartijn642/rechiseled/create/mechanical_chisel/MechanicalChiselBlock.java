@@ -123,11 +123,11 @@ public class MechanicalChiselBlock extends DirectionalAxisKineticBlock implement
         super.updateEntityAfterFallOn(level, entity);
         if(!(entity instanceof ItemEntity))
             return;
-        if(entity.level.isClientSide)
+        if(entity.level().isClientSide)
             return;
 
         BlockPos pos = entity.blockPosition();
-        this.withBlockEntityDo(entity.level, pos, be -> {
+        this.withBlockEntityDo(entity.level(), pos, be -> {
             if(be.getSpeed() == 0)
                 return;
             be.insertItem((ItemEntity)entity);

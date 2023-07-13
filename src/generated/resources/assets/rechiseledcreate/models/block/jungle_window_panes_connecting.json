@@ -1,6 +1,7 @@
 {
   "type": "fusion:connecting",
   "parent": "minecraft:block/cube",
+  "ambientocclusion": false,
   "connections": [
     {
       "type": "fusion:is_same_state"

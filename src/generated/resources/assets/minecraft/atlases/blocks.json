@@ -1,0 +1,608 @@
+{
+  "sources": [
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/jungle_window_diagonal_end"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/spruce_window_panes_side"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/acacia_window_swirling_side"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/mangrove_window_slim_side"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/acacia_window_covered_end"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/dark_oak_window_slim_end"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/crimson_window_tiles_side"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/acacia_window_rounded_side"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/mangrove_window_tiles_side"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/spruce_window_slim_end"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/warped_window_covered_end"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/oak_window_tiles_side"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/oak_window_rounded_side"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/warped_window_diagonal_side"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/warped_window_covered_side"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/jungle_window_panes_side"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/oak_window_bars_end"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/acacia_window_rounded_end"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/dark_oak_window_diagonal_end"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/acacia_window_tiles_end"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/dark_oak_window_diagonal_side"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/warped_window_slim_end"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/warped_window_rounded_side"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/dark_oak_window_swirling_end"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/birch_window_swirling_side"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/jungle_window_swirling_end"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/spruce_window_swirling_side"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/birch_window_large_side"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/acacia_window_large_end"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/oak_window_bars_side"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/oak_window_slim_end"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/oak_window_swirling_side"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/mangrove_window_diagonal_side"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/crimson_window_slim_side"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/spruce_window_covered_end"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/oak_window_covered_end"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/oak_window_rounded_end"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/spruce_window_diagonal_end"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/crimson_window_panes_end"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/acacia_window_tiles_side"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/warped_window_large_end"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/oak_window_large_end"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/spruce_window_rounded_side"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/mangrove_window_bars_side"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/birch_window_slim_side"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/rose_quartz_crushed"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/acacia_window_diagonal_side"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/birch_window_bars_end"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/acacia_window_slim_side"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/warped_window_bars_end"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/crimson_window_large_end"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/acacia_window_panes_end"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/dark_oak_window_bars_side"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/mangrove_window_panes_side"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/dark_oak_window_covered_end"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/birch_window_tiles_side"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/jungle_window_diagonal_side"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/rose_quartz_squares"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/crimson_window_covered_end"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/jungle_window_rounded_end"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/acacia_window_covered_side"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/warped_window_bars_side"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/dark_oak_window_swirling_side"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/dark_oak_window_bars_end"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/mangrove_window_large_end"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/mangrove_window_covered_side"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/crimson_window_swirling_end"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/mangrove_window_covered_end"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/warped_window_large_side"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/birch_window_rounded_end"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/mangrove_window_swirling_end"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/birch_window_swirling_end"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/jungle_window_bars_end"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/jungle_window_covered_end"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/crimson_window_rounded_end"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/acacia_window_swirling_end"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/birch_window_bars_side"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/jungle_window_rounded_side"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/mangrove_window_bars_end"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/dark_oak_window_rounded_end"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/jungle_window_tiles_end"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/crimson_window_rounded_side"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/birch_window_tiles_end"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/birch_window_diagonal_end"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/dark_oak_window_rounded_side"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/jungle_window_bars_side"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/spruce_window_slim_side"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/spruce_window_large_side"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/crimson_window_swirling_side"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/jungle_window_swirling_side"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/warped_window_tiles_end"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/spruce_window_large_end"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/crimson_window_covered_side"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/warped_window_panes_side"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/dark_oak_window_slim_side"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/birch_window_panes_end"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/jungle_window_large_end"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/oak_window_slim_side"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/warped_window_diagonal_end"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/dark_oak_window_tiles_side"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/warped_window_tiles_side"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/jungle_window_covered_side"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/dark_oak_window_covered_side"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/birch_window_panes_side"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/jungle_window_panes_end"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/mangrove_window_slim_end"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/spruce_window_rounded_end"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/spruce_window_diagonal_side"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/crimson_window_bars_side"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/spruce_window_panes_end"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/spruce_window_bars_side"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/mangrove_window_large_side"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/oak_window_diagonal_end"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/acacia_window_diagonal_end"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/rose_quartz_chiseled"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/mangrove_window_diagonal_end"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/crimson_window_slim_end"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/birch_window_slim_end"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/acacia_window_large_side"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/spruce_window_tiles_end"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/acacia_window_slim_end"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/spruce_window_tiles_side"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/acacia_window_panes_side"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/spruce_window_covered_side"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/warped_window_panes_end"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/rose_quartz_polished_block"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/mangrove_window_swirling_side"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/jungle_window_tiles_side"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/dark_oak_window_tiles_end"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/spruce_window_bars_end"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/crimson_window_bars_end"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/birch_window_diagonal_side"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/warped_window_rounded_end"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/oak_window_large_side"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/mangrove_window_tiles_end"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/crimson_window_panes_side"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/dark_oak_window_panes_end"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/rose_quartz_bricks"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/mangrove_window_panes_end"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/oak_window_covered_side"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/crimson_window_tiles_end"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/birch_window_large_end"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/oak_window_diagonal_side"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/dark_oak_window_panes_side"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/spruce_window_swirling_end"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/warped_window_slim_side"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/jungle_window_large_side"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/oak_window_swirling_end"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/crimson_window_large_side"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/oak_window_tiles_end"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "rechiseledcreate:block/birch_window_rounded_side"
+    }
+  ]
+}

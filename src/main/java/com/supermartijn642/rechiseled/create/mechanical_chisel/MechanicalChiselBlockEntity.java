@@ -174,7 +174,7 @@ public class MechanicalChiselBlockEntity extends KineticBlockEntity {
             }
         }
 
-        BlockPos nextPos = this.worldPosition.offset(itemMovement.x, itemMovement.y, itemMovement.z);
+        BlockPos nextPos = this.worldPosition.offset((int)itemMovement.x, (int)itemMovement.y, (int)itemMovement.z);
         DirectBeltInputBehaviour behaviour = BlockEntityBehaviour.get(this.level, nextPos, DirectBeltInputBehaviour.TYPE);
         if(behaviour != null){
             boolean changed = false;
