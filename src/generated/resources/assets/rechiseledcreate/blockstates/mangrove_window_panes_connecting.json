@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "rechiseledcreate:block/mangrove_window_panes_connecting",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "rechiseledcreate:block/mangrove_window_panes_connecting"
+    },
+    "axis=z": {
+      "model": "rechiseledcreate:block/mangrove_window_panes_connecting",
+      "x": 90
+    }
+  }
+}

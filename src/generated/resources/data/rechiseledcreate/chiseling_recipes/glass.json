@@ -1,6 +1,5 @@
 {
   "type": "rechiseled:chiseling",
-  "overwrite": false,
   "entries": [
     {
       "item": "minecraft:glass"
@@ -17,5 +16,6 @@
     {
       "connecting_item": "create:vertical_framed_glass"
     }
-  ]
+  ],
+  "overwrite": false
 }

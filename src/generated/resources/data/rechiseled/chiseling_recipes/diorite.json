@@ -1,6 +1,5 @@
 {
   "type": "rechiseled:chiseling",
-  "overwrite": false,
   "entries": [
     {
       "item": "create:cut_diorite"
@@ -15,12 +14,13 @@
       "item": "create:diorite_pillar"
     },
     {
-      "item": "create:polished_cut_diorite",
-      "connecting_item": "rechiseledcreate:diorite_cut_polished_connecting"
+      "connecting_item": "rechiseledcreate:diorite_cut_polished_connecting",
+      "item": "create:polished_cut_diorite"
     },
     {
-      "item": "create:small_diorite_bricks",
-      "connecting_item": "rechiseledcreate:diorite_cut_small_brick_connecting"
+      "connecting_item": "rechiseledcreate:diorite_cut_small_brick_connecting",
+      "item": "create:small_diorite_bricks"
     }
-  ]
+  ],
+  "overwrite": false
 }

@@ -1,41 +1,45 @@
 {
   "type": "rechiseled:chiseling",
-  "overwrite": false,
   "entries": [
     {
       "connecting_item": "create:spruce_window"
     },
     {
-      "item": "rechiseledcreate:spruce_window_bars",
-      "connecting_item": "rechiseledcreate:spruce_window_bars_connecting"
+      "connecting_item": "rechiseledcreate:spruce_window_bars_connecting",
+      "item": "rechiseledcreate:spruce_window_bars"
     },
     {
-      "item": "rechiseledcreate:spruce_window_covered",
-      "connecting_item": "rechiseledcreate:spruce_window_covered_connecting"
+      "connecting_item": "rechiseledcreate:spruce_window_covered_connecting",
+      "item": "rechiseledcreate:spruce_window_covered"
     },
     {
-      "item": "rechiseledcreate:spruce_window_diagonal",
-      "connecting_item": "rechiseledcreate:spruce_window_diagonal_connecting"
+      "connecting_item": "rechiseledcreate:spruce_window_diagonal_connecting",
+      "item": "rechiseledcreate:spruce_window_diagonal"
     },
     {
-      "item": "rechiseledcreate:spruce_window_large",
-      "connecting_item": "rechiseledcreate:spruce_window_large_connecting"
+      "connecting_item": "rechiseledcreate:spruce_window_large_connecting",
+      "item": "rechiseledcreate:spruce_window_large"
     },
     {
-      "item": "rechiseledcreate:spruce_window_panes",
-      "connecting_item": "rechiseledcreate:spruce_window_panes_connecting"
+      "connecting_item": "rechiseledcreate:spruce_window_panes_connecting",
+      "item": "rechiseledcreate:spruce_window_panes"
     },
     {
-      "item": "rechiseledcreate:spruce_window_slim",
-      "connecting_item": "rechiseledcreate:spruce_window_slim_connecting"
+      "connecting_item": "rechiseledcreate:spruce_window_rounded_connecting",
+      "item": "rechiseledcreate:spruce_window_rounded"
     },
     {
-      "item": "rechiseledcreate:spruce_window_swirling",
-      "connecting_item": "rechiseledcreate:spruce_window_swirling_connecting"
+      "connecting_item": "rechiseledcreate:spruce_window_slim_connecting",
+      "item": "rechiseledcreate:spruce_window_slim"
     },
     {
-      "item": "rechiseledcreate:spruce_window_tiles",
-      "connecting_item": "rechiseledcreate:spruce_window_tiles_connecting"
+      "connecting_item": "rechiseledcreate:spruce_window_swirling_connecting",
+      "item": "rechiseledcreate:spruce_window_swirling"
+    },
+    {
+      "connecting_item": "rechiseledcreate:spruce_window_tiles_connecting",
+      "item": "rechiseledcreate:spruce_window_tiles"
     }
-  ]
+  ],
+  "overwrite": false
 }

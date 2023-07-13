@@ -1,0 +1,19 @@
+{
+  "type": "fusion:connecting",
+  "parent": "minecraft:block/cube",
+  "connections": [
+    {
+      "type": "fusion:is_same_state"
+    }
+  ],
+  "loader": "fusion:model",
+  "textures": {
+    "down": "rechiseledcreate:block/mangrove_window_swirling_end",
+    "east": "rechiseledcreate:block/mangrove_window_swirling_side",
+    "north": "rechiseledcreate:block/mangrove_window_swirling_side",
+    "particle": "rechiseledcreate:block/mangrove_window_swirling_side",
+    "south": "rechiseledcreate:block/mangrove_window_swirling_side",
+    "up": "rechiseledcreate:block/mangrove_window_swirling_end",
+    "west": "rechiseledcreate:block/mangrove_window_swirling_side"
+  }
+}

@@ -1,6 +1,5 @@
 {
   "type": "rechiseled:chiseling",
-  "overwrite": false,
   "entries": [
     {
       "item": "minecraft:deepslate"
@@ -18,12 +17,13 @@
       "item": "create:deepslate_pillar"
     },
     {
-      "item": "create:polished_cut_deepslate",
-      "connecting_item": "rechiseledcreate:deepslate_cut_polished_connecting"
+      "connecting_item": "rechiseledcreate:deepslate_cut_polished_connecting",
+      "item": "create:polished_cut_deepslate"
     },
     {
-      "item": "create:small_deepslate_bricks",
-      "connecting_item": "rechiseledcreate:deepslate_cut_small_brick_connecting"
+      "connecting_item": "rechiseledcreate:deepslate_cut_small_brick_connecting",
+      "item": "create:small_deepslate_bricks"
     }
-  ]
+  ],
+  "overwrite": false
 }

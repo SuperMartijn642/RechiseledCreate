@@ -1,6 +1,5 @@
 {
   "type": "rechiseled:chiseling",
-  "overwrite": false,
   "entries": [
     {
       "item": "minecraft:calcite"
@@ -18,12 +17,13 @@
       "item": "create:calcite_pillar"
     },
     {
-      "item": "create:polished_cut_calcite",
-      "connecting_item": "rechiseledcreate:calcite_cut_polished_connecting"
+      "connecting_item": "rechiseledcreate:calcite_cut_polished_connecting",
+      "item": "create:polished_cut_calcite"
     },
     {
-      "item": "create:small_calcite_bricks",
-      "connecting_item": "rechiseledcreate:calcite_cut_small_brick_connecting"
+      "connecting_item": "rechiseledcreate:calcite_cut_small_brick_connecting",
+      "item": "create:small_calcite_bricks"
     }
-  ]
+  ],
+  "overwrite": false
 }

@@ -1,6 +1,5 @@
 {
   "type": "rechiseled:chiseling",
-  "overwrite": false,
   "entries": [
     {
       "item": "create:veridium"
@@ -18,12 +17,13 @@
       "item": "create:veridium_pillar"
     },
     {
-      "item": "create:polished_cut_veridium",
-      "connecting_item": "rechiseledcreate:veridium_cut_polished_connecting"
+      "connecting_item": "rechiseledcreate:veridium_cut_polished_connecting",
+      "item": "create:polished_cut_veridium"
     },
     {
-      "item": "create:small_veridium_bricks",
-      "connecting_item": "rechiseledcreate:veridium_cut_small_brick_connecting"
+      "connecting_item": "rechiseledcreate:veridium_cut_small_brick_connecting",
+      "item": "create:small_veridium_bricks"
     }
-  ]
+  ],
+  "overwrite": false
 }

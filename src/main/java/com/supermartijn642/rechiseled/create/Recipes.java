@@ -6,8 +6,6 @@ import com.supermartijn642.rechiseled.api.BaseChiselingRecipes;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.ItemLike;
-import net.minecraft.world.level.block.Blocks;
-import org.lwjgl.opengl.GL;
 
 import java.util.function.Supplier;
 
@@ -33,6 +31,7 @@ public class Recipes {
     public static final ResourceLocation GRANITE = BaseChiselingRecipes.GRANITE;
     public static final ResourceLocation JUNGLE_WINDOW = location("jungle_window");
     public static final ResourceLocation LIMESTONE = location("limestone");
+    public static final ResourceLocation MANGROVE_WINDOW = location("mangrove_window");
     public static final ResourceLocation OCHRUM = location("ochrum");
     public static final ResourceLocation OAK_WINDOW = location("oak_window");
     public static final ResourceLocation POLISHED_ROSE_QUARTZ = location("polished_rose_quartz");
@@ -124,6 +123,8 @@ public class Recipes {
         REGISTRATION.chiselingEntry(LIMESTONE, getBlock("create:cut_limestone_bricks"), null);
         REGISTRATION.chiselingEntry(LIMESTONE, getBlock("create:layered_limestone"), null);
         REGISTRATION.chiselingEntry(LIMESTONE, getBlock("create:limestone_pillar"), null);
+        // Mangrove window
+        REGISTRATION.chiselingEntry(MANGROVE_WINDOW, null, getBlock("create:mangrove_window"));
         // Oak window
         REGISTRATION.chiselingEntry(OAK_WINDOW, null, getBlock("create:oak_window"));
         // Ochrum

@@ -1,33 +1,33 @@
 {
   "type": "rechiseled:chiseling",
-  "overwrite": false,
   "entries": [
     {
       "item": "create:small_rose_quartz_tiles"
     },
     {
-      "item": "rechiseledcreate:rose_quartz_bricks",
-      "connecting_item": "rechiseledcreate:rose_quartz_bricks_connecting"
+      "connecting_item": "rechiseledcreate:rose_quartz_bricks_connecting",
+      "item": "rechiseledcreate:rose_quartz_bricks"
     },
     {
-      "item": "rechiseledcreate:rose_quartz_chiseled",
-      "connecting_item": "rechiseledcreate:rose_quartz_chiseled_connecting"
+      "connecting_item": "rechiseledcreate:rose_quartz_chiseled_connecting",
+      "item": "rechiseledcreate:rose_quartz_chiseled"
     },
     {
-      "item": "rechiseledcreate:rose_quartz_crushed",
-      "connecting_item": "rechiseledcreate:rose_quartz_crushed_connecting"
+      "connecting_item": "rechiseledcreate:rose_quartz_crushed_connecting",
+      "item": "rechiseledcreate:rose_quartz_crushed"
     },
     {
-      "item": "rechiseledcreate:rose_quartz_polished_block",
-      "connecting_item": "rechiseledcreate:rose_quartz_polished_block_connecting"
+      "connecting_item": "rechiseledcreate:rose_quartz_polished_block_connecting",
+      "item": "rechiseledcreate:rose_quartz_polished_block"
     },
     {
-      "item": "rechiseledcreate:rose_quartz_squares",
-      "connecting_item": "rechiseledcreate:rose_quartz_squares_connecting"
+      "connecting_item": "rechiseledcreate:rose_quartz_squares_connecting",
+      "item": "rechiseledcreate:rose_quartz_squares"
     },
     {
-      "item": "create:rose_quartz_tiles",
-      "connecting_item": "rechiseledcreate:rose_quartz_tiles_connecting"
+      "connecting_item": "rechiseledcreate:rose_quartz_tiles_connecting",
+      "item": "create:rose_quartz_tiles"
     }
-  ]
+  ],
+  "overwrite": false
 }

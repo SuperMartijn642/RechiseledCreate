@@ -1,19 +1,19 @@
 {
+  "type": "fusion:connecting",
   "parent": "minecraft:block/cube",
-  "textures": {
-    "east": "rechiseledcreate:block/crimson_window_large_side",
-    "south": "rechiseledcreate:block/crimson_window_large_side",
-    "north": "rechiseledcreate:block/crimson_window_large_side",
-    "west": "rechiseledcreate:block/crimson_window_large_side",
-    "particle": "rechiseledcreate:block/crimson_window_large_side",
-    "up": "rechiseledcreate:block/crimson_window_large_end",
-    "down": "rechiseledcreate:block/crimson_window_large_end"
-  },
   "connections": [
     {
       "type": "fusion:is_same_state"
     }
   ],
   "loader": "fusion:model",
-  "type": "fusion:connecting"
+  "textures": {
+    "down": "rechiseledcreate:block/crimson_window_large_end",
+    "east": "rechiseledcreate:block/crimson_window_large_side",
+    "north": "rechiseledcreate:block/crimson_window_large_side",
+    "particle": "rechiseledcreate:block/crimson_window_large_side",
+    "south": "rechiseledcreate:block/crimson_window_large_side",
+    "up": "rechiseledcreate:block/crimson_window_large_end",
+    "west": "rechiseledcreate:block/crimson_window_large_side"
+  }
 }

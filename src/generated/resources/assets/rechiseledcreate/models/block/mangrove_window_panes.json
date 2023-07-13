@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "up": "rechiseledcreate:block/mangrove_window_panes_end",
+    "down": "rechiseledcreate:block/mangrove_window_panes_end",
+    "north": "rechiseledcreate:block/mangrove_window_panes_side",
+    "east": "rechiseledcreate:block/mangrove_window_panes_side",
+    "south": "rechiseledcreate:block/mangrove_window_panes_side",
+    "west": "rechiseledcreate:block/mangrove_window_panes_side",
+    "particle": "rechiseledcreate:block/mangrove_window_panes_side"
+  }
+}

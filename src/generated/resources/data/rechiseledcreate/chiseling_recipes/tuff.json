@@ -1,6 +1,5 @@
 {
   "type": "rechiseled:chiseling",
-  "overwrite": false,
   "entries": [
     {
       "item": "minecraft:tuff"
@@ -18,12 +17,13 @@
       "item": "create:tuff_pillar"
     },
     {
-      "item": "create:polished_cut_tuff",
-      "connecting_item": "rechiseledcreate:tuff_cut_polished_connecting"
+      "connecting_item": "rechiseledcreate:tuff_cut_polished_connecting",
+      "item": "create:polished_cut_tuff"
     },
     {
-      "item": "create:small_tuff_bricks",
-      "connecting_item": "rechiseledcreate:tuff_cut_small_brick_connecting"
+      "connecting_item": "rechiseledcreate:tuff_cut_small_brick_connecting",
+      "item": "create:small_tuff_bricks"
     }
-  ]
+  ],
+  "overwrite": false
 }

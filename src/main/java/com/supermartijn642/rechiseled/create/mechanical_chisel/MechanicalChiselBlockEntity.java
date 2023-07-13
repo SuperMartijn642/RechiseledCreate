@@ -23,6 +23,7 @@ import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.util.Mth;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -35,13 +36,12 @@ import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.common.capabilities.Capability;
+import net.minecraftforge.common.capabilities.ForgeCapabilities;
 import net.minecraftforge.common.util.LazyOptional;
-import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.IItemHandler;
 
 import java.util.Collections;
 import java.util.List;
-import java.util.Random;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -228,7 +228,7 @@ public class MechanicalChiselBlockEntity extends KineticBlockEntity {
     }
 
     public <T> LazyOptional<T> getCapability(Capability<T> capability, Direction side){
-        return capability == CapabilityItemHandler.ITEM_HANDLER_CAPABILITY && side != Direction.DOWN ? this.invProvider.cast() : super.getCapability(capability, side);
+        return capability == ForgeCapabilities.ITEM_HANDLER && side != Direction.DOWN ? this.invProvider.cast() : super.getCapability(capability, side);
     }
 
     protected void spawnEventParticles(ItemStack stack){
@@ -242,7 +242,7 @@ public class MechanicalChiselBlockEntity extends KineticBlockEntity {
         else
             particleData = new ItemParticleOption(ParticleTypes.ITEM, stack);
 
-        Random r = this.level.random;
+        RandomSource r = this.level.random;
         Vec3 v = VecHelper.getCenterOf(this.worldPosition).add(0, 5 / 16f, 0);
         for(int i = 0; i < 10; i++){
             Vec3 m = VecHelper.offsetRandomly(new Vec3(0, 0.25f, 0), r, .125f);
