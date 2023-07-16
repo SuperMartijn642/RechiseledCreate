@@ -344,9 +344,12 @@ public class MechanicalChiselBlockEntity extends KineticBlockEntity {
             return;
         }
 
-        this.recipeIndex++;
-        if(this.recipeIndex >= recipes.size())
-            this.recipeIndex = 0;
+        this.recipeIndex = this.level.getRandom().nextInt(recipes.size());
+        if(inserted.getItem() == recipes.get(this.recipeIndex).getItem()){
+            this.recipeIndex++;
+            if(this.recipeIndex >= recipes.size())
+                this.recipeIndex = 0;
+        }
 
         this.inventory.remainingTime = time * Math.max(1, (inserted.getCount() / 5));
         this.inventory.recipeDuration = this.inventory.remainingTime;
