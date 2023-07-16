@@ -243,8 +243,7 @@ public class MechanicalChiselBlockEntity extends KineticBlockEntity implements I
             particleData = new ItemParticleOption(ParticleTypes.ITEM, stack);
 
         Random r = this.level.random;
-        Vec3 v = VecHelper.getCenterOf(this.worldPosition)
-            .add(0, 5 / 16f, 0);
+        Vec3 v = VecHelper.getCenterOf(this.worldPosition).add(0, 5 / 16f, 0);
         for(int i = 0; i < 10; i++){
             Vec3 m = VecHelper.offsetRandomly(new Vec3(0, 0.25f, 0), r, .125f);
             this.level.addParticle(particleData, v.x, v.y, v.z, m.x, m.y, m.y);
@@ -349,9 +348,12 @@ public class MechanicalChiselBlockEntity extends KineticBlockEntity implements I
             return;
         }
 
-        this.recipeIndex++;
-        if(this.recipeIndex >= recipes.size())
-            this.recipeIndex = 0;
+        this.recipeIndex = this.level.getRandom().nextInt(recipes.size());
+        if(inserted.getItem() == recipes.get(this.recipeIndex).getItem()){
+            this.recipeIndex++;
+            if(this.recipeIndex >= recipes.size())
+                this.recipeIndex = 0;
+        }
 
         this.inventory.remainingTime = time * Math.max(1, (inserted.getCount() / 5));
         this.inventory.recipeDuration = this.inventory.remainingTime;
