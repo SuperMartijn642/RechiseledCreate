@@ -29,11 +29,11 @@ bin/
 forge*changelog.txt
 
 # other
-eclipse/
-run/
-libs/
-lib/
-logs/
-images/
-reference/
+/eclipse/
+/run/
+/libs/
+/lib/
+/logs/
+/images/
+/reference/
 desktop.ini
