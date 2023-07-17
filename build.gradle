@@ -162,6 +162,7 @@ curseforge {
         id = project.curseforge_project_id
         releaseType = project.curseforge_release_type
         project.curseforge_game_versions.split(" ").each it::addGameVersion
+        addGameVersion("Forge")
         // Point to 'changelog' setting to a the changelog file
         changelog = file("changelog.md")
         changelogType = "markdown"
@@ -177,12 +178,6 @@ curseforge {
         }
 
         mainArtifact(jar) {
-            it.displayName = "${project.mod_name} ${project.mod_version} for Forge ${project.minecraft_suffix.substring(2)}"
-        }
-        addArtifact(javadocJar) {
-            it.displayName = "${project.mod_name} ${project.mod_version} for Forge ${project.minecraft_suffix.substring(2)}"
-        }
-        addArtifact(sourcesJar) {
             it.displayName = "${project.mod_name} ${project.mod_version} for Forge ${project.minecraft_suffix.substring(2)}"
         }
     }
