@@ -2,8 +2,6 @@ package com.supermartijn642.rechiseled.create.mechanical_chisel;
 
 import com.jozufozu.flywheel.backend.Backend;
 import com.mojang.blaze3d.vertex.PoseStack;
-import com.mojang.math.Quaternion;
-import com.mojang.math.Vector3f;
 import com.simibubi.create.AllPartialModels;
 import com.simibubi.create.content.kinetics.base.KineticBlockEntity;
 import com.simibubi.create.content.kinetics.base.KineticBlockEntityRenderer;
@@ -17,14 +15,15 @@ import com.supermartijn642.rechiseled.Rechiseled;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.RenderType;
-import net.minecraft.client.renderer.block.model.ItemTransforms;
 import net.minecraft.client.renderer.entity.ItemRenderer;
 import net.minecraft.client.resources.model.BakedModel;
 import net.minecraft.core.Direction;
 import net.minecraft.util.Mth;
+import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Rotation;
 import net.minecraft.world.level.block.state.BlockState;
+import org.joml.Quaternionf;
 
 import static net.minecraft.world.level.block.state.properties.BlockStateProperties.FACING;
 
@@ -77,7 +76,7 @@ public class MechanicalChiselRenderer extends SafeBlockEntityRenderer<Mechanical
             if(be.getSpeed() > 0 ^ alongZ)
                 offset = 1 - offset;
 
-            for(int i = 0; i < be.inventory.getSlots(); i++){
+            for(int i = 0; i < be.inventory.getSlotCount(); i++){
                 ItemStack stack = be.inventory.getStackInSlot(i);
                 if(stack.isEmpty())
                     continue;
@@ -91,9 +90,9 @@ public class MechanicalChiselRenderer extends SafeBlockEntityRenderer<Mechanical
 
                 ms.scale(.5f, .5f, .5f);
                 if(alongZ)
-                    ms.mulPose(Vector3f.YP.rotationDegrees(90));
-                ms.mulPose(Vector3f.XP.rotationDegrees(90));
-                itemRenderer.renderStatic(stack, ItemTransforms.TransformType.FIXED, light, overlay, ms, buffer, 0);
+                    ms.mulPose(new Quaternionf().rotateY((float)Math.PI / 2));
+                ms.mulPose(new Quaternionf().rotateX((float)Math.PI / 2));
+                itemRenderer.renderStatic(stack, ItemDisplayContext.FIXED, light, overlay, ms, buffer, be.getLevel(), 0);
                 break;
             }
 
@@ -109,19 +108,19 @@ public class MechanicalChiselRenderer extends SafeBlockEntityRenderer<Mechanical
         poseStack.pushPose();
         poseStack.translate(0.5, 0.5, 0.5);
         if(be.getBlockState().getValue(SawBlock.FLIPPED))
-            poseStack.mulPose(Vector3f.YP.rotationDegrees(180));
+            poseStack.mulPose(new Quaternionf().rotateY((float)Math.PI));
         if(be.getBlockState().getValue(SawBlock.AXIS_ALONG_FIRST_COORDINATE))
-            poseStack.mulPose(Vector3f.YP.rotationDegrees(180));
+            poseStack.mulPose(new Quaternionf().rotateY((float)Math.PI));
         else
-            poseStack.mulPose(Vector3f.YP.rotationDegrees(90));
+            poseStack.mulPose(new Quaternionf().rotateY((float)Math.PI / 2));
         if(facing == Direction.DOWN)
-            poseStack.mulPose(Vector3f.ZP.rotationDegrees(180));
+            poseStack.mulPose(new Quaternionf().rotateZ((float)Math.PI));
         poseStack.translate(0.25, 0.6, 0);
         poseStack.scale(0.5f, 0.5f, 0.5f);
         poseStack.translate(0.2, -0.2, 0);
-        poseStack.mulPose(Vector3f.ZP.rotationDegrees(progress * 90));
+        poseStack.mulPose(new Quaternionf().rotateZ(progress * (float)Math.PI / 2));
         poseStack.translate(-0.2, 0.2, 0);
-        ClientUtils.getItemRenderer().renderStatic(Rechiseled.chisel.getDefaultInstance(), ItemTransforms.TransformType.FIXED, light, overlay, poseStack, buffer, 0);
+        ClientUtils.getItemRenderer().renderStatic(Rechiseled.chisel.getDefaultInstance(), ItemDisplayContext.FIXED, light, overlay, poseStack, buffer, be.getLevel(), 0);
         poseStack.popPose();
     }
 

@@ -23,7 +23,6 @@ import net.minecraft.world.level.block.Rotation;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
-import net.minecraft.world.level.material.PushReaction;
 import net.minecraft.world.level.pathfinder.PathComputationType;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
@@ -107,7 +106,7 @@ public class MechanicalChiselBlock extends DirectionalAxisKineticBlock implement
             return InteractionResult.PASS;
 
         return this.onBlockEntityUse(level, pos, be -> {
-            for(int i = 0; i < be.inventory.getSlots(); i++){
+            for(int i = 0; i < be.inventory.getSlotCount(); i++){
                 ItemStack heldItemStack = be.inventory.getStackInSlot(i);
                 if(!level.isClientSide && !heldItemStack.isEmpty())
                     player.getInventory().placeItemBackInInventory(heldItemStack);
@@ -123,20 +122,15 @@ public class MechanicalChiselBlock extends DirectionalAxisKineticBlock implement
         super.updateEntityAfterFallOn(level, entity);
         if(!(entity instanceof ItemEntity))
             return;
-        if(entity.level.isClientSide)
+        if(entity.level().isClientSide)
             return;
 
         BlockPos pos = entity.blockPosition();
-        this.withBlockEntityDo(entity.level, pos, be -> {
+        this.withBlockEntityDo(entity.level(), pos, be -> {
             if(be.getSpeed() == 0)
                 return;
             be.insertItem((ItemEntity)entity);
         });
-    }
-
-    @Override
-    public PushReaction getPistonPushReaction(BlockState state){
-        return PushReaction.NORMAL;
     }
 
     public static boolean isHorizontal(BlockState state){

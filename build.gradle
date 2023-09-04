@@ -48,8 +48,7 @@ dependencies {
     // Config library
     modImplementation "curse.maven:supermartijn642s-config-lib-438332:${project.config_library_file}"
     // Rechiseled
-//    modImplementation "curse.maven:rechiseled-558998:${project.rechiseled_file}"
-    modImplementation "com.supermartijn642:rechiseled:1.1.2-fabric-mc1.19.2"
+    modImplementation "curse.maven:rechiseled-558998:${project.rechiseled_file}"
     // Fusion
     modImplementation "maven.modrinth:fusion-connected-textures:${fusion_version}"
     // Create Fabric

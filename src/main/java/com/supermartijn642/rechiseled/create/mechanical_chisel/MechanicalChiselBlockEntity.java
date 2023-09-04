@@ -17,7 +17,6 @@ import com.supermartijn642.rechiseled.chiseling.ChiselingRecipes;
 import com.supermartijn642.rechiseled.create.RechiseledCreate;
 import io.github.fabricators_of_create.porting_lib.transfer.TransferUtil;
 import io.github.fabricators_of_create.porting_lib.transfer.item.ItemHandlerHelper;
-import io.github.fabricators_of_create.porting_lib.util.ItemStackUtil;
 import io.github.fabricators_of_create.porting_lib.util.NBTSerializer;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
@@ -161,7 +160,7 @@ public class MechanicalChiselBlockEntity extends KineticBlockEntity implements S
             return;
         this.inventory.remainingTime = 0;
 
-        for(int slot = 0; slot < this.inventory.getSlots(); slot++){
+        for(int slot = 0; slot < this.inventory.getSlotCount(); slot++){
             ItemStack stack = this.inventory.getStackInSlot(slot);
             if(stack.isEmpty())
                 continue;
@@ -177,7 +176,7 @@ public class MechanicalChiselBlockEntity extends KineticBlockEntity implements S
             }
         }
 
-        BlockPos nextPos = this.worldPosition.offset(itemMovement.x, itemMovement.y, itemMovement.z);
+        BlockPos nextPos = this.worldPosition.offset((int)itemMovement.x, (int)itemMovement.y, (int)itemMovement.z);
         DirectBeltInputBehaviour behaviour = BlockEntityBehaviour.get(this.level, nextPos, DirectBeltInputBehaviour.TYPE);
         if(behaviour != null){
             boolean changed = false;
@@ -185,12 +184,12 @@ public class MechanicalChiselBlockEntity extends KineticBlockEntity implements S
                 return;
             if(this.level.isClientSide && !this.isVirtual())
                 return;
-            for(int slot = 0; slot < this.inventory.getSlots(); slot++){
+            for(int slot = 0; slot < this.inventory.getSlotCount(); slot++){
                 ItemStack stack = this.inventory.getStackInSlot(slot);
                 if(stack.isEmpty())
                     continue;
                 ItemStack remainder = behaviour.handleInsertion(stack, itemMovementFacing, false);
-                if(ItemStackUtil.equals(remainder, stack, false))
+                if(ItemStack.matches(remainder, stack))
                     continue;
                 this.inventory.setStackInSlot(slot, remainder);
                 changed = true;
@@ -205,7 +204,7 @@ public class MechanicalChiselBlockEntity extends KineticBlockEntity implements S
         // Eject Items
         Vec3 outPos = VecHelper.getCenterOf(this.worldPosition).add(itemMovement.scale(.5f).add(0, .5, 0));
         Vec3 outMotion = itemMovement.scale(.0625).add(0, .125, 0);
-        for(int slot = 0; slot < this.inventory.getSlots(); slot++){
+        for(int slot = 0; slot < this.inventory.getSlotCount(); slot++){
             ItemStack stack = this.inventory.getStackInSlot(slot);
             if(stack.isEmpty())
                 continue;

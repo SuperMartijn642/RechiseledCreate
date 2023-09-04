@@ -5,10 +5,10 @@
       "item": "rechiseledcreate:mechanical_chisel"
     },
     "title": {
-      "translate": "rechiseledcreate.advancement.recipes/rechiseledcreate/mechanical_chisel.title"
+      "translate": "rechiseledcreate.advancement.recipes/misc/mechanical_chisel.title"
     },
     "description": {
-      "translate": "rechiseledcreate.advancement.recipes/rechiseledcreate/mechanical_chisel.description"
+      "translate": "rechiseledcreate.advancement.recipes/misc/mechanical_chisel.description"
     },
     "frame": "task",
     "show_toast": false,

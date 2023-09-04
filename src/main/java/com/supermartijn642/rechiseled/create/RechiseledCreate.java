@@ -16,7 +16,7 @@ import net.fabricmc.api.ModInitializer;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.material.MaterialColor;
+import net.minecraft.world.level.material.MapColor;
 
 /**
  * Created 25/04/2023 by SuperMartijn642
@@ -41,7 +41,7 @@ public class RechiseledCreate implements ModInitializer {
 
         // Register mechanical chisel
         RegistrationHandler handler = RegistrationHandler.get(MODID);
-        handler.registerBlock("mechanical_chisel", () -> new MechanicalChiselBlock(BlockBehaviour.Properties.copy(SharedProperties.stone()).color(MaterialColor.PODZOL)));
+        handler.registerBlock("mechanical_chisel", () -> new MechanicalChiselBlock(BlockBehaviour.Properties.copy(SharedProperties.stone()).mapColor(MapColor.PODZOL)));
         handler.registerBlockEntityType("mechanical_chisel", () -> BlockEntityType.Builder.of(MechanicalChiselBlockEntity::new, mechanical_chisel).build(null));
         handler.registerItem("mechanical_chisel", () -> new BaseBlockItem(mechanical_chisel, ItemProperties.create().group(GROUP)));
         BlockStressDefaults.setDefaultImpact(new ResourceLocation(MODID, "mechanical_chisel"), 3);
