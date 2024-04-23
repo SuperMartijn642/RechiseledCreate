@@ -3,11 +3,14 @@
   "textures": {
     "all": "rechiseledcreate:block/diorite_cut_small_brick"
   },
-  "connections": [
-    {
-      "type": "fusion:is_same_block"
-    }
-  ],
+  "connections": {
+    "predicates": [
+      {
+        "type": "fusion:is_same_block"
+      }
+    ],
+    "type": "fusion:or"
+  },
   "loader": "fusion:model",
   "type": "fusion:connecting"
 }

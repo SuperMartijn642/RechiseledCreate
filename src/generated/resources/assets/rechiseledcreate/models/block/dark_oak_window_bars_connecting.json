@@ -9,11 +9,14 @@
     "up": "rechiseledcreate:block/dark_oak_window_bars_end",
     "down": "rechiseledcreate:block/dark_oak_window_bars_end"
   },
-  "connections": [
-    {
-      "type": "fusion:is_same_state"
-    }
-  ],
+  "connections": {
+    "predicates": [
+      {
+        "type": "fusion:is_same_state"
+      }
+    ],
+    "type": "fusion:or"
+  },
   "loader": "fusion:model",
   "type": "fusion:connecting"
 }
