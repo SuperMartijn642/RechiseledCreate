@@ -1,3 +1,6 @@
+### Rechiseled: Create 1.0.2a
+- Fixed missing mining tools for some blocks
+
 ### Rechiseled: Create 1.0.2
 - Added Ukrainian translations (thanks to unroman!)
 
