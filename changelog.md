@@ -1,3 +1,6 @@
+### Rechiseled: Create 1.0.2a
+- Account for changes in Create 6.0
+
 ### Rechiseled: Create 1.0.2
 - Added Ukrainian translations (thanks to unroman!)
 
