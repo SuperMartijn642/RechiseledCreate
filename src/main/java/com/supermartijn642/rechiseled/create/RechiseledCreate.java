@@ -21,7 +21,8 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
-import net.minecraftforge.fml.common.Mod;
+import net.neoforged.bus.api.IEventBus;
+import net.neoforged.fml.common.Mod;
 
 /**
  * Created 25/04/2023 by SuperMartijn642
@@ -39,7 +40,7 @@ public class RechiseledCreate {
     @RegistryEntryAcceptor(namespace = MODID, identifier = "mechanical_chisel", registry = RegistryEntryAcceptor.Registry.BLOCK_ENTITY_TYPES)
     public static BlockEntityType<MechanicalChiselBlockEntity> mechanical_chisel_entity;
 
-    public RechiseledCreate(){
+    public RechiseledCreate(IEventBus eventBus) {
         // Make sure the blocks get loaded
         Blocks.init();
         Recipes.init();
@@ -47,12 +48,13 @@ public class RechiseledCreate {
         // Register mechanical chisel
         RegistrationHandler handler = RegistrationHandler.get(MODID);
         handler.registerBlock("mechanical_chisel", () -> {
-            MechanicalChiselBlock block = new MechanicalChiselBlock(BlockBehaviour.Properties.copy(SharedProperties.stone()).mapColor(MapColor.PODZOL));
+            MechanicalChiselBlock block = new MechanicalChiselBlock(BlockBehaviour.Properties.ofFullCopy(SharedProperties.stone()).mapColor(MapColor.PODZOL));
             BlockStressValues.IMPACTS.register(block, () -> 3);
             return block;
         });
         handler.registerBlockEntityTypeCallback(RechiseledCreate::registerBlockEntity);
         handler.registerItemCallback(RechiseledCreate::registerItem);
+        eventBus.addListener(MechanicalChiselBlockEntity::registerCapabilities);
         MechanicalChiselDataGenerators.register();
 
         // Register data providers for generating all the json files

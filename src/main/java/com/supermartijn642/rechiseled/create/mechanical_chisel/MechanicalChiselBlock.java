@@ -2,16 +2,21 @@ package com.supermartijn642.rechiseled.create.mechanical_chisel;
 
 import com.simibubi.create.AllShapes;
 import com.simibubi.create.content.kinetics.base.DirectionalAxisKineticBlock;
+import com.simibubi.create.content.kinetics.base.DirectionalKineticBlock;
 import com.simibubi.create.content.kinetics.saw.SawBlock;
 import com.simibubi.create.foundation.block.IBE;
 import com.supermartijn642.rechiseled.create.RechiseledCreate;
+import net.createmod.catnip.placement.IPlacementHelper;
+import net.createmod.catnip.placement.PlacementHelpers;
+import net.createmod.catnip.placement.PlacementOffset;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.InteractionHand;
-import net.minecraft.world.InteractionResult;
+import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
@@ -29,10 +34,14 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
+import java.util.List;
+import java.util.function.Predicate;
+
 /**
  * Created 15/05/2023 by SuperMartijn642
  */
 public class MechanicalChiselBlock extends DirectionalAxisKineticBlock implements IBE<MechanicalChiselBlockEntity> {
+    private static final int placementHelperId = PlacementHelpers.register(new PlacementHelper());
 
     public MechanicalChiselBlock(Properties properties){
         super(properties);
@@ -100,22 +109,25 @@ public class MechanicalChiselBlock extends DirectionalAxisKineticBlock implement
     }
 
     @Override
-    public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit){
-        if(player.isSpectator() || !player.getItemInHand(hand).isEmpty())
-            return InteractionResult.PASS;
-        if(state.getOptionalValue(FACING).orElse(Direction.WEST) != Direction.UP)
-            return InteractionResult.PASS;
+    protected ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit){
+        IPlacementHelper placementHelper = PlacementHelpers.get(placementHelperId);
+        if(!player.isShiftKeyDown() && player.mayBuild() && placementHelper.matchesItem(stack) && placementHelper.getOffset(player, level, state, pos, hit).placeInWorld(level, (BlockItem)stack.getItem(), player, hand, hit).consumesAction())
+            return ItemInteractionResult.SUCCESS;
+        else if(!player.isSpectator() && stack.isEmpty()){
+            return state.getOptionalValue(FACING).orElse(Direction.WEST) != Direction.UP ? ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION : this.onBlockEntityUseItemOn(level, pos, (be) -> {
+                for(int i = 0; i < be.inventory.getSlots(); ++i){
+                    ItemStack heldItemStack = be.inventory.getStackInSlot(i);
+                    if(!level.isClientSide && !heldItemStack.isEmpty()){
+                        player.getInventory().placeItemBackInInventory(heldItemStack);
+                    }
+                }
 
-        return this.onBlockEntityUse(level, pos, be -> {
-            for(int i = 0; i < be.inventory.getSlots(); i++){
-                ItemStack heldItemStack = be.inventory.getStackInSlot(i);
-                if(!level.isClientSide && !heldItemStack.isEmpty())
-                    player.getInventory().placeItemBackInInventory(heldItemStack);
-            }
-            be.inventory.clear();
-            be.notifyUpdate();
-            return InteractionResult.SUCCESS;
-        });
+                be.inventory.clear();
+                be.notifyUpdate();
+                return ItemInteractionResult.SUCCESS;
+            });
+        }
+        return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
     }
 
     @Override
@@ -165,7 +177,25 @@ public class MechanicalChiselBlock extends DirectionalAxisKineticBlock implement
     }
 
     @Override
-    public boolean isPathfindable(BlockState state, BlockGetter reader, BlockPos pos, PathComputationType type){
+    protected boolean isPathfindable(BlockState state, PathComputationType type){
         return false;
+    }
+
+    private static class PlacementHelper implements IPlacementHelper {
+        private PlacementHelper(){
+        }
+
+        public Predicate<ItemStack> getItemPredicate(){
+            return stack -> stack.getItem() instanceof BlockItem && ((BlockItem)stack.getItem()).getBlock() == RechiseledCreate.mechanical_chisel;
+        }
+
+        public Predicate<BlockState> getStatePredicate(){
+            return state -> state.getBlock() == RechiseledCreate.mechanical_chisel;
+        }
+
+        public PlacementOffset getOffset(Player player, Level world, BlockState state, BlockPos pos, BlockHitResult ray){
+            List<Direction> directions = IPlacementHelper.orderedByDistanceExceptAxis(pos, ray.getLocation(), state.getValue(DirectionalKineticBlock.FACING).getAxis(), dir -> world.getBlockState(pos.relative(dir)).canBeReplaced());
+            return directions.isEmpty() ? PlacementOffset.fail() : PlacementOffset.success(pos.relative(directions.get(0)), s -> s.setValue(DirectionalKineticBlock.FACING, state.getValue(DirectionalKineticBlock.FACING)).setValue(DirectionalAxisKineticBlock.AXIS_ALONG_FIRST_COORDINATE, state.getValue(DirectionalAxisKineticBlock.AXIS_ALONG_FIRST_COORDINATE)).setValue(SawBlock.FLIPPED, state.getValue(SawBlock.FLIPPED)));
+        }
     }
 }

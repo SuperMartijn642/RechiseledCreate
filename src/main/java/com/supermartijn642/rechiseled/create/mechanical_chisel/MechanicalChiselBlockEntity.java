@@ -17,6 +17,7 @@ import com.supermartijn642.rechiseled.create.RechiseledCreate;
 import net.createmod.catnip.math.VecHelper;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.core.HolderLookup;
 import net.minecraft.core.particles.BlockParticleOption;
 import net.minecraft.core.particles.ItemParticleOption;
 import net.minecraft.core.particles.ParticleOptions;
@@ -33,12 +34,10 @@ import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.common.capabilities.Capability;
-import net.minecraftforge.common.capabilities.ForgeCapabilities;
-import net.minecraftforge.common.util.LazyOptional;
-import net.minecraftforge.items.IItemHandler;
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.api.distmarker.OnlyIn;
+import net.neoforged.neoforge.capabilities.Capabilities;
+import net.neoforged.neoforge.capabilities.RegisterCapabilitiesEvent;
 
 import java.util.Collections;
 import java.util.List;
@@ -52,7 +51,6 @@ public class MechanicalChiselBlockEntity extends KineticBlockEntity {
 
     public ProcessingInventory inventory;
     private int recipeIndex;
-    private final LazyOptional<IItemHandler> invProvider;
     private FilteringBehaviour filtering;
 
     private ItemStack playEvent;
@@ -62,8 +60,19 @@ public class MechanicalChiselBlockEntity extends KineticBlockEntity {
         this.inventory = new ProcessingInventory(this::start).withSlotLimit(!AllConfigs.server().recipes.bulkCutting.get());
         this.inventory.remainingTime = -1;
         this.recipeIndex = 0;
-        this.invProvider = LazyOptional.of(() -> this.inventory);
         this.playEvent = ItemStack.EMPTY;
+    }
+
+    public static void registerCapabilities(RegisterCapabilitiesEvent event){
+        event.registerBlockEntity(
+            Capabilities.ItemHandler.BLOCK,
+            RechiseledCreate.mechanical_chisel_entity,
+            (be, context) -> {
+                if(context != Direction.DOWN)
+                    return be.inventory;
+                return null;
+            }
+        );
     }
 
     @Override
@@ -75,24 +84,24 @@ public class MechanicalChiselBlockEntity extends KineticBlockEntity {
     }
 
     @Override
-    public void write(CompoundTag compound, boolean clientPacket){
-        compound.put("Inventory", this.inventory.serializeNBT());
+    public void write(CompoundTag compound, HolderLookup.Provider registries, boolean clientPacket){
+        compound.put("Inventory", this.inventory.serializeNBT(registries));
         compound.putInt("RecipeIndex", this.recipeIndex);
-        super.write(compound, clientPacket);
+        super.write(compound, registries, clientPacket);
 
         if(!clientPacket || this.playEvent.isEmpty())
             return;
-        compound.put("PlayEvent", this.playEvent.serializeNBT());
+        compound.put("PlayEvent", this.playEvent.saveOptional(registries));
         this.playEvent = ItemStack.EMPTY;
     }
 
     @Override
-    protected void read(CompoundTag compound, boolean clientPacket){
-        super.read(compound, clientPacket);
-        this.inventory.deserializeNBT(compound.getCompound("Inventory"));
+    protected void read(CompoundTag compound, HolderLookup.Provider registries, boolean clientPacket){
+        super.read(compound, registries, clientPacket);
+        this.inventory.deserializeNBT(registries, compound.getCompound("Inventory"));
         this.recipeIndex = compound.getInt("RecipeIndex");
         if(compound.contains("PlayEvent"))
-            this.playEvent = ItemStack.of(compound.getCompound("PlayEvent"));
+            this.playEvent = ItemStack.parseOptional(registries, compound.getCompound("PlayEvent"));
     }
 
     @Override
@@ -112,7 +121,8 @@ public class MechanicalChiselBlockEntity extends KineticBlockEntity {
             Item item = this.playEvent.getItem();
             if(item instanceof BlockItem){
                 Block block = ((BlockItem)item).getBlock();
-                isWood = block.getSoundType(block.defaultBlockState()) == SoundType.WOOD;
+                //noinspection DataFlowIssue
+                isWood = block.getSoundType(block.defaultBlockState(), this.level, this.worldPosition, null) == SoundType.WOOD;
             }
             this.spawnEventParticles(this.playEvent);
             this.playEvent = ItemStack.EMPTY;
@@ -187,7 +197,7 @@ public class MechanicalChiselBlockEntity extends KineticBlockEntity {
                 if(stack.isEmpty())
                     continue;
                 ItemStack remainder = behaviour.handleInsertion(stack, itemMovementFacing, false);
-                if(remainder.equals(stack, false))
+                if(ItemStack.matches(remainder, stack))
                     continue;
                 this.inventory.setStackInSlot(slot, remainder);
                 changed = true;
@@ -218,17 +228,13 @@ public class MechanicalChiselBlockEntity extends KineticBlockEntity {
 
     public void invalidate(){
         super.invalidate();
-        this.invProvider.invalidate();
+        this.invalidateCapabilities();
     }
 
     @Override
     public void destroy(){
         super.destroy();
         ItemHelper.dropContents(this.level, this.worldPosition, this.inventory);
-    }
-
-    public <T> LazyOptional<T> getCapability(Capability<T> capability, Direction side){
-        return capability == ForgeCapabilities.ITEM_HANDLER && side != Direction.DOWN ? this.invProvider.cast() : super.getCapability(capability, side);
     }
 
     protected void spawnEventParticles(ItemStack stack){
