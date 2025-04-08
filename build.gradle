@@ -23,7 +23,8 @@ repositories {
     maven { url "https://www.cursemaven.com" }
     maven { url = "https://api.modrinth.com/maven" }
     maven { url = "https://repo.spongepowered.org/maven" }
-    maven { url = "https://modmaven.dev/" } // Create
+    maven { url = "https://maven.createmod.net" } // Create, Flywheel, Ponder
+    maven { url = "https://modmaven.dev/" } // Registrate
 }
 
 dependencies {
@@ -39,11 +40,15 @@ dependencies {
     // Fusion
     implementation fg.deobf("maven.modrinth:fusion-connected-textures:${fusion_version}")
     // Create
-    implementation fg.deobf("maven.modrinth:create:${create_version}")
+    implementation fg.deobf("com.simibubi.create:create-${minecraft_version}:${create_version}:slim") { transitive = false }
     // Flywheel
-    implementation fg.deobf("com.jozufozu.flywheel:flywheel-forge-${minecraft_version}:${project.flywheel_version}")
+    implementation fg.deobf("dev.engine-room.flywheel:flywheel-forge-${minecraft_version}:${flywheel_version}")
+    // Ponder
+    implementation fg.deobf("net.createmod.ponder:Ponder-Forge-${minecraft_version}:${ponder_version}")
     // Registrate
-    compileOnly fg.deobf("com.tterrag.registrate:Registrate:${registrate_version}")
+    implementation fg.deobf("com.tterrag.registrate:Registrate:${registrate_version}")
+    // Mixin Extras
+    implementation "io.github.llamalad7:mixinextras-forge:${mixin_extras_version}"
 
     // Just Enough Items
     runtimeOnly fg.deobf("curse.maven:jei-238222:${just_enough_items_file}")

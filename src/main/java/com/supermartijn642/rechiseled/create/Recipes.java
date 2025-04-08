@@ -43,15 +43,15 @@ public class Recipes {
     public static final ResourceLocation WARPED_WINDOW = location("warped_window");
 
     private static ResourceLocation location(String name){
-        return new ResourceLocation(RechiseledCreate.MODID, name);
+        return ResourceLocation.fromNamespaceAndPath(RechiseledCreate.MODID, name);
     }
 
     private static ResourceLocation rechiseledLocation(String name){
-        return new ResourceLocation(RechiseledCreate.MODID, name);
+        return ResourceLocation.fromNamespaceAndPath(RechiseledCreate.MODID, name);
     }
 
     private static Supplier<ItemLike> getBlock(String identifier){
-        ResourceLocation location = new ResourceLocation(identifier);
+        ResourceLocation location = ResourceLocation.parse(identifier);
         return () -> Registries.BLOCKS.getValue(location);
     }
 

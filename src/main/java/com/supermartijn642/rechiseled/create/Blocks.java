@@ -163,7 +163,7 @@ public class Blocks {
     }
 
     private static Supplier<Block> getBlock(String identifier){
-        ResourceLocation location = new ResourceLocation(identifier);
+        ResourceLocation location = ResourceLocation.parse(identifier);
         return () -> Registries.BLOCKS.getValue(location);
     }
 

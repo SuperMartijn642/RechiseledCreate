@@ -1,4 +1,4 @@
-// 1.20.1	2023-07-29T14:44:06.5933511	Core Lib Generators
+// 1.20.1	2025-04-09T01:05:02.3532983	Core Lib Generators
 d6a153153eb322a7931f6b2707c4b6fbe36b9373 assets/minecraft/atlases/blocks.json
 45440d054f0f87b31e2af784ef24d21e70163fc2 assets/rechiseledcreate/blockstates/acacia_window_covered.json
 3239af41aff137367eb129aca412e58b6e0c211b assets/rechiseledcreate/blockstates/acacia_window_covered_connecting.json
@@ -451,7 +451,7 @@ b7afb28150cacd790937793adf62df345457ce77 assets/rechiseledcreate/models/item/war
 b288a2aa70db24c9b46f7b5e1816013fb6e6aac4 assets/rechiseledcreate/models/item/warped_window_tiles.json
 ada83baa9ffe7c108a378b5d3c58ad7f42aab3cf assets/rechiseledcreate/models/item/warped_window_tiles_connecting.json
 fca222b17a1d9f347d3a4630a5a61dde464d1d0e data/minecraft/tags/blocks/mineable/axe.json
-2f563b70dfb6d18ff0be51d1cae23edc3763430f data/minecraft/tags/blocks/mineable/pickaxe.json
+efe15e511252a0172ce351ed20af6815bda0db8d data/minecraft/tags/blocks/mineable/pickaxe.json
 12e3d022e60664e85559228a79b12a3624891293 data/rechiseledcreate/advancements/recipes/misc/mechanical_chisel.json
 33ec1d959505c0719f54563fbb75fb5c633703b2 data/rechiseledcreate/loot_tables/blocks/acacia_window_covered.json
 e9aea2110adc6cc4e6081e8c11d9abe1c47a52f2 data/rechiseledcreate/loot_tables/blocks/acacia_window_covered_connecting.json
