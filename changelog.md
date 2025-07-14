@@ -1,3 +1,7 @@
+### Rechiseled: Create 1.0.2b
+- Fixed crashes when using NeoForge
+- Raised minimum Create version to 6.0
+
 ### Rechiseled: Create 1.0.2a
 - Account for changes in Create 6.0
 
