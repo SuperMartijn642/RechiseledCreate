@@ -22,7 +22,12 @@ repositories {
     flatDir { dirs "libs" }
     maven { url "https://www.cursemaven.com" }
     maven { url = "https://api.modrinth.com/maven" }
-    maven { url = "https://repo.spongepowered.org/maven" }
+    exclusiveContent {
+        forRepository {
+            maven { url = "https://repo.spongepowered.org/maven" }
+        }
+        filter { includeGroup "org.spongepowered" }
+    }
     maven { url = "https://maven.createmod.net" } // Create, Flywheel, Ponder
     maven { url = "https://modmaven.dev/" } // Registrate
 }
