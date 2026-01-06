@@ -6,8 +6,6 @@ import com.supermartijn642.rechiseled.api.BaseChiselingRecipes;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.ItemLike;
-import net.minecraft.world.level.block.Blocks;
-import org.lwjgl.opengl.GL;
 
 import java.util.function.Supplier;
 

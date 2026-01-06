@@ -1,6 +1,5 @@
 package com.supermartijn642.rechiseled.create.mechanical_chisel;
 
-import com.jozufozu.flywheel.backend.Backend;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.simibubi.create.AllPartialModels;
 import com.simibubi.create.content.kinetics.base.KineticBlockEntity;
@@ -8,10 +7,11 @@ import com.simibubi.create.content.kinetics.base.KineticBlockEntityRenderer;
 import com.simibubi.create.content.kinetics.saw.SawBlock;
 import com.simibubi.create.foundation.blockEntity.behaviour.filtering.FilteringRenderer;
 import com.simibubi.create.foundation.blockEntity.renderer.SafeBlockEntityRenderer;
-import com.simibubi.create.foundation.render.CachedBufferer;
-import com.simibubi.create.foundation.render.SuperByteBuffer;
 import com.supermartijn642.core.ClientUtils;
 import com.supermartijn642.rechiseled.Rechiseled;
+import dev.engine_room.flywheel.api.visualization.VisualizationManager;
+import net.createmod.catnip.render.CachedBuffers;
+import net.createmod.catnip.render.SuperByteBuffer;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.RenderType;
@@ -23,9 +23,8 @@ import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Rotation;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import org.joml.Quaternionf;
-
-import static net.minecraft.world.level.block.state.properties.BlockStateProperties.FACING;
 
 /**
  * Created 16/05/2023 by SuperMartijn642
@@ -37,10 +36,8 @@ public class MechanicalChiselRenderer extends SafeBlockEntityRenderer<Mechanical
         this.renderItems(be, partialTicks, ms, buffer, light, overlay);
         FilteringRenderer.renderOnBlockEntity(be, partialTicks, ms, buffer, light, overlay);
 
-        if(Backend.canUseInstancing(be.getLevel()))
-            return;
-
-        this.renderShaft(be, ms, buffer, light, overlay);
+        if(VisualizationManager.supportsVisualization(be.getLevel()))
+            this.renderShaft(be, ms, buffer, light, overlay);
     }
 
     protected void renderShaft(MechanicalChiselBlockEntity be, PoseStack ms, MultiBufferSource buffer, int light, int overlay){
@@ -126,9 +123,7 @@ public class MechanicalChiselRenderer extends SafeBlockEntityRenderer<Mechanical
 
     protected SuperByteBuffer getRotatedModel(KineticBlockEntity be){
         BlockState state = be.getBlockState();
-        if(state.getValue(FACING).getAxis().isHorizontal())
-            return CachedBufferer.partialFacing(AllPartialModels.SHAFT_HALF, state.rotate(Rotation.CLOCKWISE_180));
-        return CachedBufferer.block(KineticBlockEntityRenderer.KINETIC_BLOCK, this.getRenderedBlockState(be));
+        return state.getValue(BlockStateProperties.FACING).getAxis().isHorizontal() ? CachedBuffers.partialFacing(AllPartialModels.SHAFT_HALF, state.rotate(Rotation.CLOCKWISE_180)) : CachedBuffers.block(KineticBlockEntityRenderer.KINETIC_BLOCK, this.getRenderedBlockState(be));
     }
 
     protected BlockState getRenderedBlockState(KineticBlockEntity be){

@@ -9,7 +9,6 @@ import com.simibubi.create.foundation.advancement.AllAdvancements;
 import com.simibubi.create.foundation.blockEntity.behaviour.BlockEntityBehaviour;
 import com.simibubi.create.foundation.blockEntity.behaviour.filtering.FilteringBehaviour;
 import com.simibubi.create.foundation.item.ItemHelper;
-import com.simibubi.create.foundation.utility.VecHelper;
 import com.simibubi.create.infrastructure.config.AllConfigs;
 import com.supermartijn642.rechiseled.chiseling.ChiselingEntry;
 import com.supermartijn642.rechiseled.chiseling.ChiselingRecipe;
@@ -17,7 +16,7 @@ import com.supermartijn642.rechiseled.chiseling.ChiselingRecipes;
 import com.supermartijn642.rechiseled.create.RechiseledCreate;
 import io.github.fabricators_of_create.porting_lib.transfer.TransferUtil;
 import io.github.fabricators_of_create.porting_lib.transfer.item.ItemHandlerHelper;
-import io.github.fabricators_of_create.porting_lib.util.NBTSerializer;
+import net.createmod.catnip.math.VecHelper;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.transfer.v1.item.ItemVariant;
@@ -84,7 +83,7 @@ public class MechanicalChiselBlockEntity extends KineticBlockEntity implements S
 
         if(!clientPacket || this.playEvent.isEmpty())
             return;
-        compound.put("PlayEvent", NBTSerializer.serializeNBT(this.playEvent));
+        compound.put("PlayEvent", this.playEvent.serializeNBT());
         this.playEvent = ItemStack.EMPTY;
     }
 

@@ -1,5 +1,5 @@
 plugins {
-    id "fabric-loom" version "1.7-SNAPSHOT"
+    id "fabric-loom" version "1.14-SNAPSHOT"
     id "me.modmuss50.mod-publish-plugin" version "0.5.2"
 }
 
@@ -7,8 +7,8 @@ version = mod_version + "-fabric-" + minecraft_suffix
 group = maven_group
 base.archivesName = mod_id
 
-sourceCompatibility = JavaLanguageVersion.of(java_target)
-targetCompatibility = JavaLanguageVersion.of(java_target)
+java.sourceCompatibility = JavaLanguageVersion.of(java_target)
+java.targetCompatibility = JavaLanguageVersion.of(java_target)
 
 println("Java: " + System.getProperty("java.version") + " JVM: " + System.getProperty("java.vm.version") + "(" + System.getProperty("java.vendor") + ") Arch: " + System.getProperty("os.arch"))
 
@@ -24,15 +24,24 @@ repositories {
         }
         filter { includeGroup "maven.modrinth" }
     }
-    maven { url = "https://repo.spongepowered.org/maven" }
-    maven { url = "https://maven.shedaniel.me/" } // Cloth Config, REI
-    maven { url = "https://dvs1.progwml6.com/files/maven/" } // JEI
-    maven { url = "https://maven.terraformersmc.com/releases/" } // Mod Menu
-    maven { url = "https://mvn.devos.one/snapshots/" } // Create, Porting Lib, Forge Tags, Milk Lib, Registrate
-    maven { url = "https://maven.jamieswhiteshirt.com/libs-release" } // Reach Entity Attributes
-    maven { url = "https://jitpack.io/" } // Mixin Extras, Fabric ASM
-    maven { url = "https://maven.tterrag.com/" } // Flywheel
-    maven { url = "https://raw.githubusercontent.com/Fuzss/modresources/main/maven/" } // Forge Config API Port
+
+    def exclusiveMaven = (address, groups) -> {
+        exclusiveContent {
+            forRepository {
+                maven { url = address }
+            }
+            filter {
+                for (def group in groups)
+                    includeGroup group
+            }
+        }
+    }
+    // Repositories for Create Fabric
+    exclusiveMaven("https://mvn.devos.one/snapshots/", ["com.simibubi.create", "com.tterrag.registrate_fabric", "io.github.tropheusj"])
+    exclusiveMaven("https://mvn.devos.one/releases/", ["io.github.fabricators_of_create.Porting-Lib"])
+    exclusiveMaven("https://maven.createmod.net/", ["dev.engine-room.flywheel", "net.createmod.ponder"])
+    exclusiveMaven("https://raw.githubusercontent.com/Fuzss/modresources/main/maven/", ["fuzs.forgeconfigapiport"])
+    exclusiveMaven("https://maven.jamieswhiteshirt.com/libs-release/", ["com.jamieswhiteshirt"])
 }
 
 dependencies {

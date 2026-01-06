@@ -1,7 +1,10 @@
 package com.supermartijn642.rechiseled.create;
 
-import com.simibubi.create.content.kinetics.BlockStressDefaults;
+import com.simibubi.create.api.stress.BlockStressValues;
 import com.simibubi.create.foundation.data.SharedProperties;
+import com.simibubi.create.foundation.item.KineticStats;
+import com.simibubi.create.foundation.item.TooltipModifier;
+import com.supermartijn642.core.CommonUtils;
 import com.supermartijn642.core.item.BaseBlockItem;
 import com.supermartijn642.core.item.CreativeItemGroup;
 import com.supermartijn642.core.item.ItemProperties;
@@ -12,8 +15,10 @@ import com.supermartijn642.rechiseled.api.registration.RechiseledRegistration;
 import com.supermartijn642.rechiseled.create.mechanical_chisel.MechanicalChiselBlock;
 import com.supermartijn642.rechiseled.create.mechanical_chisel.MechanicalChiselBlockEntity;
 import com.supermartijn642.rechiseled.create.mechanical_chisel.MechanicalChiselDataGenerators;
+import com.supermartijn642.rechiseled.create.mechanical_chisel.MechanicalChiselVisual;
+import dev.engine_room.flywheel.lib.visualization.SimpleBlockEntityVisualizer;
 import net.fabricmc.api.ModInitializer;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
@@ -41,14 +46,35 @@ public class RechiseledCreate implements ModInitializer {
 
         // Register mechanical chisel
         RegistrationHandler handler = RegistrationHandler.get(MODID);
-        handler.registerBlock("mechanical_chisel", () -> new MechanicalChiselBlock(BlockBehaviour.Properties.copy(SharedProperties.stone()).mapColor(MapColor.PODZOL)));
-        handler.registerBlockEntityType("mechanical_chisel", () -> BlockEntityType.Builder.of(MechanicalChiselBlockEntity::new, mechanical_chisel).build(null));
-        handler.registerItem("mechanical_chisel", () -> new BaseBlockItem(mechanical_chisel, ItemProperties.create().group(GROUP)));
-        BlockStressDefaults.setDefaultImpact(new ResourceLocation(MODID, "mechanical_chisel"), 3);
+        handler.registerBlock("mechanical_chisel", () -> {
+            MechanicalChiselBlock block = new MechanicalChiselBlock(BlockBehaviour.Properties.copy(SharedProperties.stone()).mapColor(MapColor.PODZOL));
+            BlockStressValues.IMPACTS.register(block, () -> 3);
+            return block;
+        });
+        handler.registerBlockEntityTypeCallback(RechiseledCreate::registerBlockEntity);
+        handler.registerItemCallback(RechiseledCreate::registerItem);
         MechanicalChiselDataGenerators.register();
 
         // Register data providers for generating all the json files
         GeneratorRegistrationHandler.get("rechiseledcreate").addProvider(WoodTextureProvider::new);
         REGISTRATION.registerDataProviders();
+    }
+
+    private static void registerBlockEntity(RegistrationHandler.Helper<BlockEntityType<?>> helper){
+        BlockEntityType<MechanicalChiselBlockEntity> blockEntityType = BlockEntityType.Builder.of(MechanicalChiselBlockEntity::new, mechanical_chisel).build(null);
+        helper.register("mechanical_chisel", blockEntityType);
+        if(CommonUtils.getEnvironmentSide().isClient()){
+            SimpleBlockEntityVisualizer.builder(blockEntityType)
+                .factory(MechanicalChiselVisual::new)
+                .neverSkipVanillaRender()
+                .apply();
+        }
+    }
+
+    private static void registerItem(RegistrationHandler.Helper<Item> helper){
+        Item item = new BaseBlockItem(mechanical_chisel, ItemProperties.create().group(GROUP));
+        helper.register("mechanical_chisel", item);
+        if(CommonUtils.getEnvironmentSide().isClient())
+            TooltipModifier.REGISTRY.register(item, KineticStats.create(item));
     }
 }
