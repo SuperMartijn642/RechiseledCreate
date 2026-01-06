@@ -1,3 +1,6 @@
+### Rechiseled: Create 1.0.2b
+- Account for changes in Create Fabric 6.0
+
 ### Rechiseled: Create 1.0.2a
 - Fixed missing mining tools for some blocks
 
