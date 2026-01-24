@@ -1,7 +1,7 @@
 {
   "variants": {
     "axis=x": {
-      "model": "rechiseledcreate:block/dark_oak_window_rounded_connecting",
+      "model": "rechiseledcreate:block/dark_oak_window_rounded_connecting_horizontal",
       "x": 90,
       "y": 90
     },
@@ -9,7 +9,7 @@
       "model": "rechiseledcreate:block/dark_oak_window_rounded_connecting"
     },
     "axis=z": {
-      "model": "rechiseledcreate:block/dark_oak_window_rounded_connecting",
+      "model": "rechiseledcreate:block/dark_oak_window_rounded_connecting_horizontal",
       "x": 90
     }
   }

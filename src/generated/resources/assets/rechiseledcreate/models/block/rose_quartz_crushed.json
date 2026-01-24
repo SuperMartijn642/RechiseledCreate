@@ -1,6 +1,12 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/cube",
   "textures": {
-    "all": "rechiseledcreate:block/rose_quartz_crushed"
+    "up": "rechiseledcreate:block/rose_quartz_crushed",
+    "down": "rechiseledcreate:block/rose_quartz_crushed",
+    "north": "rechiseledcreate:block/rose_quartz_crushed",
+    "east": "rechiseledcreate:block/rose_quartz_crushed",
+    "south": "rechiseledcreate:block/rose_quartz_crushed",
+    "west": "rechiseledcreate:block/rose_quartz_crushed",
+    "particle": "rechiseledcreate:block/rose_quartz_crushed"
   }
 }

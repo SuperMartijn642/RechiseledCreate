@@ -1,7 +1,7 @@
 {
   "variants": {
     "axis=x": {
-      "model": "rechiseledcreate:block/crimson_window_swirling_connecting",
+      "model": "rechiseledcreate:block/crimson_window_swirling_connecting_horizontal",
       "x": 90,
       "y": 90
     },
@@ -9,7 +9,7 @@
       "model": "rechiseledcreate:block/crimson_window_swirling_connecting"
     },
     "axis=z": {
-      "model": "rechiseledcreate:block/crimson_window_swirling_connecting",
+      "model": "rechiseledcreate:block/crimson_window_swirling_connecting_horizontal",
       "x": 90
     }
   }

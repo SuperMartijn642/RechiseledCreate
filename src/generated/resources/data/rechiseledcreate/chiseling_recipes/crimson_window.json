@@ -2,39 +2,39 @@
   "type": "rechiseled:chiseling",
   "entries": [
     {
-      "connecting_item": "create:crimson_window"
+      "connecting_block": "create:crimson_window"
     },
     {
-      "connecting_item": "rechiseledcreate:crimson_window_bars_connecting",
-      "item": "rechiseledcreate:crimson_window_bars"
+      "block": "rechiseledcreate:crimson_window_bars",
+      "connecting_block": "rechiseledcreate:crimson_window_bars_connecting"
     },
     {
-      "connecting_item": "rechiseledcreate:crimson_window_covered_connecting",
-      "item": "rechiseledcreate:crimson_window_covered"
+      "block": "rechiseledcreate:crimson_window_covered",
+      "connecting_block": "rechiseledcreate:crimson_window_covered_connecting"
     },
     {
-      "connecting_item": "rechiseledcreate:crimson_window_large_connecting",
-      "item": "rechiseledcreate:crimson_window_large"
+      "block": "rechiseledcreate:crimson_window_large",
+      "connecting_block": "rechiseledcreate:crimson_window_large_connecting"
     },
     {
-      "connecting_item": "rechiseledcreate:crimson_window_panes_connecting",
-      "item": "rechiseledcreate:crimson_window_panes"
+      "block": "rechiseledcreate:crimson_window_panes",
+      "connecting_block": "rechiseledcreate:crimson_window_panes_connecting"
     },
     {
-      "connecting_item": "rechiseledcreate:crimson_window_rounded_connecting",
-      "item": "rechiseledcreate:crimson_window_rounded"
+      "block": "rechiseledcreate:crimson_window_rounded",
+      "connecting_block": "rechiseledcreate:crimson_window_rounded_connecting"
     },
     {
-      "connecting_item": "rechiseledcreate:crimson_window_slim_connecting",
-      "item": "rechiseledcreate:crimson_window_slim"
+      "block": "rechiseledcreate:crimson_window_slim",
+      "connecting_block": "rechiseledcreate:crimson_window_slim_connecting"
     },
     {
-      "connecting_item": "rechiseledcreate:crimson_window_swirling_connecting",
-      "item": "rechiseledcreate:crimson_window_swirling"
+      "block": "rechiseledcreate:crimson_window_swirling",
+      "connecting_block": "rechiseledcreate:crimson_window_swirling_connecting"
     },
     {
-      "connecting_item": "rechiseledcreate:crimson_window_tiles_connecting",
-      "item": "rechiseledcreate:crimson_window_tiles"
+      "block": "rechiseledcreate:crimson_window_tiles",
+      "connecting_block": "rechiseledcreate:crimson_window_tiles_connecting"
     }
   ],
   "overwrite": false
