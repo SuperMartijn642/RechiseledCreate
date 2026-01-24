@@ -11,9 +11,9 @@ import com.simibubi.create.foundation.blockEntity.behaviour.filtering.FilteringB
 import com.simibubi.create.foundation.item.ItemHelper;
 import com.simibubi.create.foundation.utility.VecHelper;
 import com.simibubi.create.infrastructure.config.AllConfigs;
-import com.supermartijn642.rechiseled.chiseling.ChiselingEntry;
-import com.supermartijn642.rechiseled.chiseling.ChiselingRecipe;
-import com.supermartijn642.rechiseled.chiseling.ChiselingRecipes;
+import com.supermartijn642.rechiseled.api.chiseling.*;
+import com.supermartijn642.rechiseled.api.chiseling.conversion.ChiselingConversionHelper;
+import com.supermartijn642.rechiseled.api.chiseling.conversion.ConversionResult;
 import com.supermartijn642.rechiseled.create.RechiseledCreate;
 import io.github.fabricators_of_create.porting_lib.transfer.TransferUtil;
 import io.github.fabricators_of_create.porting_lib.transfer.item.ItemHandlerHelper;
@@ -44,9 +44,7 @@ import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
 import org.jetbrains.annotations.Nullable;
 
-import java.util.Collections;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -279,31 +277,54 @@ public class MechanicalChiselBlockEntity extends KineticBlockEntity implements I
     private List<ItemStack> getRecipes(){
         ItemStack input = this.inventory.getStackInSlot(0);
         // Find the chiseling recipe for the input
-        ChiselingRecipe recipe = ChiselingRecipes.getRecipe(input);
+        ChiselingRecipe recipe = ChiselingRecipeManager.get(this.level.isClientSide).getRecipeForItem(input.getItem());
         if(recipe == null)
             return Collections.emptyList();
-        // If there's filter, return everything which matches the filter
+        ItemWithWorth inputWorth = recipe.getWorth(input.getItem());
+        // If there's a filter, return everything that matches the filter
         if(this.filtering.isActive() && !this.filtering.getFilter().isEmpty())
-            return recipe.getEntries().stream()
-                .flatMap(entry -> entry.hasConnectingItem() ? entry.hasRegularItem() ? Stream.of(entry.getConnectingItem(), entry.getRegularItem()) : Stream.of(entry.getConnectingItem()) : Stream.of(entry.getRegularItem()))
-                .map(Item::getDefaultInstance)
+            return recipe.entries().stream()
+                .flatMap(entry -> Arrays.stream(ChiselingBlockShape.values()).flatMap(shape -> Stream.of(entry.getRegularItem(shape), entry.getConnectingItem(shape))).filter(Objects::nonNull))
+                .map(item -> {
+                    ConversionResult conversion = ChiselingConversionHelper.convert(1, inputWorth, item);
+                    if(conversion.leftover() != 0 || conversion.result() == 0)
+                        return null;
+                    return new ItemStack(item.item(), conversion.result());
+                })
+                .filter(Objects::nonNull)
                 .filter(this.filtering::test)
-                .collect(Collectors.toList());
-        // Check whether the input is a connecting entry
+                .toList();
+        // Find the entry corresponding to the input
         boolean connecting = false;
-        for(ChiselingEntry entry : recipe.getEntries()){
-            if(entry.getConnectingItem() == input.getItem()){
-                connecting = true;
-                break;
+        ChiselingBlockShape shape = null;
+        loop:
+        for(ChiselingEntry entry : recipe.entries()){
+            for(ChiselingBlockShape s : ChiselingBlockShape.values()){
+                if(entry.hasRegularItem(s) && entry.getRegularItem(s).item() == input.getItem()){
+                    connecting = false;
+                    shape = s;
+                    break loop;
+                }else if(entry.hasConnectingItem(s) && entry.getConnectingItem(s).item() == input.getItem()){
+                    connecting = true;
+                    shape = s;
+                    break loop;
+                }
             }
-            if(entry.getRegularItem() == input.getItem())
-                break;
         }
+        assert shape != null;
         // Return the appropriate outputs
-        return recipe.getEntries().stream()
-            .filter(connecting ? ChiselingEntry::hasConnectingItem : ChiselingEntry::hasRegularItem)
-            .map(connecting ? ChiselingEntry::getConnectingItem : ChiselingEntry::getRegularItem)
-            .map(Item::getDefaultInstance)
+        boolean finalConnecting = connecting;
+        ChiselingBlockShape finalShape = shape;
+        return recipe.entries().stream()
+            .map(entry -> finalConnecting ? entry.getConnectingItem(finalShape) : entry.getRegularItem(finalShape))
+            .filter(Objects::nonNull)
+            .map(item -> {
+                ConversionResult conversion = ChiselingConversionHelper.convert(1, inputWorth, item);
+                if(conversion.leftover() != 0 || conversion.result() == 0)
+                    return null;
+                return new ItemStack(item.item(), conversion.result());
+            })
+            .filter(Objects::nonNull)
             .filter(this.filtering::test)
             .collect(Collectors.toList());
     }
