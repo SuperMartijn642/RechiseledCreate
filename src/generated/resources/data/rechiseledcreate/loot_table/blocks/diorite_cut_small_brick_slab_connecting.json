@@ -1,0 +1,34 @@
+{
+  "pools": [
+    {
+      "rolls": 1.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "functions": [
+        {
+          "conditions": [
+            {
+              "block": "rechiseledcreate:diorite_cut_small_brick_slab_connecting",
+              "properties": {
+                "type": "double"
+              },
+              "condition": "minecraft:block_state_property"
+            }
+          ],
+          "count": 2.0,
+          "add": false,
+          "function": "minecraft:set_count"
+        }
+      ],
+      "entries": [
+        {
+          "name": "rechiseledcreate:diorite_cut_small_brick_slab_connecting",
+          "type": "minecraft:item"
+        }
+      ]
+    }
+  ]
+}
