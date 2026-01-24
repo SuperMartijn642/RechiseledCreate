@@ -1,16 +1,101 @@
 {
   "type": "fusion:connecting",
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/cube",
   "connections": {
-    "type": "fusion:or",
-    "predicates": [
-      {
-        "type": "fusion:is_same_block"
-      }
-    ]
+    "down": {
+      "type": "fusion:or",
+      "predicates": [
+        {
+          "type": "fusion:match_block",
+          "block": "rechiseledcreate:rose_quartz_polished_block_connecting"
+        },
+        {
+          "type": "fusion:or",
+          "predicates": []
+        },
+        {
+          "type": "fusion:or",
+          "predicates": []
+        }
+      ]
+    },
+    "east": "#side",
+    "north": "#side",
+    "side": {
+      "type": "fusion:or",
+      "predicates": [
+        {
+          "type": "fusion:match_block",
+          "block": "rechiseledcreate:rose_quartz_polished_block_connecting"
+        },
+        {
+          "type": "fusion:or",
+          "predicates": []
+        },
+        {
+          "type": "fusion:and",
+          "predicates": [
+            {
+              "type": "fusion:is_direction",
+              "directions": [
+                "top",
+                "top_left",
+                "top_right"
+              ]
+            },
+            {
+              "type": "fusion:or",
+              "predicates": []
+            }
+          ]
+        },
+        {
+          "type": "fusion:and",
+          "predicates": [
+            {
+              "type": "fusion:is_direction",
+              "directions": [
+                "bottom",
+                "bottom_left",
+                "bottom_right"
+              ]
+            },
+            {
+              "type": "fusion:or",
+              "predicates": []
+            }
+          ]
+        }
+      ]
+    },
+    "south": "#side",
+    "up": {
+      "type": "fusion:or",
+      "predicates": [
+        {
+          "type": "fusion:match_block",
+          "block": "rechiseledcreate:rose_quartz_polished_block_connecting"
+        },
+        {
+          "type": "fusion:or",
+          "predicates": []
+        },
+        {
+          "type": "fusion:or",
+          "predicates": []
+        }
+      ]
+    },
+    "west": "#side"
   },
   "loader": "fusion:model",
   "textures": {
-    "all": "rechiseledcreate:block/rose_quartz_polished_block"
+    "down": "rechiseledcreate:block/rose_quartz_polished_block",
+    "east": "rechiseledcreate:block/rose_quartz_polished_block",
+    "north": "rechiseledcreate:block/rose_quartz_polished_block",
+    "particle": "rechiseledcreate:block/rose_quartz_polished_block",
+    "south": "rechiseledcreate:block/rose_quartz_polished_block",
+    "up": "rechiseledcreate:block/rose_quartz_polished_block",
+    "west": "rechiseledcreate:block/rose_quartz_polished_block"
   }
 }

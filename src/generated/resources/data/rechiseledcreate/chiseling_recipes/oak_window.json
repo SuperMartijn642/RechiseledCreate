@@ -2,39 +2,39 @@
   "type": "rechiseled:chiseling",
   "entries": [
     {
-      "connecting_item": "create:oak_window"
+      "connecting_block": "create:oak_window"
     },
     {
-      "connecting_item": "rechiseledcreate:oak_window_bars_connecting",
-      "item": "rechiseledcreate:oak_window_bars"
+      "block": "rechiseledcreate:oak_window_bars",
+      "connecting_block": "rechiseledcreate:oak_window_bars_connecting"
     },
     {
-      "connecting_item": "rechiseledcreate:oak_window_covered_connecting",
-      "item": "rechiseledcreate:oak_window_covered"
+      "block": "rechiseledcreate:oak_window_covered",
+      "connecting_block": "rechiseledcreate:oak_window_covered_connecting"
     },
     {
-      "connecting_item": "rechiseledcreate:oak_window_diagonal_connecting",
-      "item": "rechiseledcreate:oak_window_diagonal"
+      "block": "rechiseledcreate:oak_window_diagonal",
+      "connecting_block": "rechiseledcreate:oak_window_diagonal_connecting"
     },
     {
-      "connecting_item": "rechiseledcreate:oak_window_large_connecting",
-      "item": "rechiseledcreate:oak_window_large"
+      "block": "rechiseledcreate:oak_window_large",
+      "connecting_block": "rechiseledcreate:oak_window_large_connecting"
     },
     {
-      "connecting_item": "rechiseledcreate:oak_window_rounded_connecting",
-      "item": "rechiseledcreate:oak_window_rounded"
+      "block": "rechiseledcreate:oak_window_rounded",
+      "connecting_block": "rechiseledcreate:oak_window_rounded_connecting"
     },
     {
-      "connecting_item": "rechiseledcreate:oak_window_slim_connecting",
-      "item": "rechiseledcreate:oak_window_slim"
+      "block": "rechiseledcreate:oak_window_slim",
+      "connecting_block": "rechiseledcreate:oak_window_slim_connecting"
     },
     {
-      "connecting_item": "rechiseledcreate:oak_window_swirling_connecting",
-      "item": "rechiseledcreate:oak_window_swirling"
+      "block": "rechiseledcreate:oak_window_swirling",
+      "connecting_block": "rechiseledcreate:oak_window_swirling_connecting"
     },
     {
-      "connecting_item": "rechiseledcreate:oak_window_tiles_connecting",
-      "item": "rechiseledcreate:oak_window_tiles"
+      "block": "rechiseledcreate:oak_window_tiles",
+      "connecting_block": "rechiseledcreate:oak_window_tiles_connecting"
     }
   ],
   "overwrite": false

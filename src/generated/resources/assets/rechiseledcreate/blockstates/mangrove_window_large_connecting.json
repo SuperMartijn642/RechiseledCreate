@@ -1,7 +1,7 @@
 {
   "variants": {
     "axis=x": {
-      "model": "rechiseledcreate:block/mangrove_window_large_connecting",
+      "model": "rechiseledcreate:block/mangrove_window_large_connecting_horizontal",
       "x": 90,
       "y": 90
     },
@@ -9,7 +9,7 @@
       "model": "rechiseledcreate:block/mangrove_window_large_connecting"
     },
     "axis=z": {
-      "model": "rechiseledcreate:block/mangrove_window_large_connecting",
+      "model": "rechiseledcreate:block/mangrove_window_large_connecting_horizontal",
       "x": 90
     }
   }

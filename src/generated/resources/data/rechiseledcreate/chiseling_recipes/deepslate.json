@@ -1,28 +1,44 @@
 {
   "type": "rechiseled:chiseling",
   "entries": [
+    "minecraft:deepslate",
     {
-      "item": "minecraft:deepslate"
+      "block": "create:cut_deepslate",
+      "slab": "create:cut_deepslate_slab",
+      "slab_worth": 0.5,
+      "stairs": "create:cut_deepslate_stairs"
     },
     {
-      "item": "create:cut_deepslate"
+      "block": "create:cut_deepslate_bricks",
+      "slab": "create:cut_deepslate_brick_slab",
+      "slab_worth": 0.5,
+      "stairs": "create:cut_deepslate_brick_stairs"
     },
     {
-      "item": "create:cut_deepslate_bricks"
+      "connecting_block": "create:layered_deepslate"
     },
     {
-      "item": "create:layered_deepslate"
+      "connecting_block": "create:deepslate_pillar"
     },
     {
-      "item": "create:deepslate_pillar"
+      "block": "create:polished_cut_deepslate",
+      "connecting_block": "rechiseledcreate:deepslate_cut_polished_connecting",
+      "connecting_slab": "rechiseledcreate:deepslate_cut_polished_slab_connecting",
+      "connecting_slab_worth": 0.5,
+      "connecting_stairs": "rechiseledcreate:deepslate_cut_polished_stairs_connecting",
+      "slab": "create:polished_cut_deepslate_slab",
+      "slab_worth": 0.5,
+      "stairs": "create:polished_cut_deepslate_stairs"
     },
     {
-      "connecting_item": "rechiseledcreate:deepslate_cut_polished_connecting",
-      "item": "create:polished_cut_deepslate"
-    },
-    {
-      "connecting_item": "rechiseledcreate:deepslate_cut_small_brick_connecting",
-      "item": "create:small_deepslate_bricks"
+      "block": "create:small_deepslate_bricks",
+      "connecting_block": "rechiseledcreate:deepslate_cut_small_brick_connecting",
+      "connecting_slab": "rechiseledcreate:deepslate_cut_small_brick_slab_connecting",
+      "connecting_slab_worth": 0.5,
+      "connecting_stairs": "rechiseledcreate:deepslate_cut_small_brick_stairs_connecting",
+      "slab": "create:small_deepslate_brick_slab",
+      "slab_worth": 0.5,
+      "stairs": "create:small_deepslate_brick_stairs"
     }
   ],
   "overwrite": false
