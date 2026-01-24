@@ -1,28 +1,44 @@
 {
   "type": "rechiseled:chiseling",
   "entries": [
+    "minecraft:dripstone_block",
     {
-      "item": "minecraft:dripstone_block"
+      "block": "create:cut_dripstone",
+      "slab": "create:cut_dripstone_slab",
+      "slab_worth": 0.5,
+      "stairs": "create:cut_dripstone_stairs"
     },
     {
-      "item": "create:cut_dripstone"
+      "block": "create:cut_dripstone_bricks",
+      "slab": "create:cut_dripstone_brick_slab",
+      "slab_worth": 0.5,
+      "stairs": "create:cut_dripstone_brick_stairs"
     },
     {
-      "item": "create:cut_dripstone_bricks"
+      "connecting_block": "create:layered_dripstone"
     },
     {
-      "item": "create:layered_dripstone"
+      "connecting_block": "create:dripstone_pillar"
     },
     {
-      "item": "create:dripstone_pillar"
+      "block": "create:polished_cut_dripstone",
+      "connecting_block": "rechiseledcreate:dripstone_cut_polished_connecting",
+      "connecting_slab": "rechiseledcreate:dripstone_cut_polished_slab_connecting",
+      "connecting_slab_worth": 0.5,
+      "connecting_stairs": "rechiseledcreate:dripstone_cut_polished_stairs_connecting",
+      "slab": "create:polished_cut_dripstone_slab",
+      "slab_worth": 0.5,
+      "stairs": "create:polished_cut_dripstone_stairs"
     },
     {
-      "connecting_item": "rechiseledcreate:dripstone_cut_polished_connecting",
-      "item": "create:polished_cut_dripstone"
-    },
-    {
-      "connecting_item": "rechiseledcreate:dripstone_cut_small_brick_connecting",
-      "item": "create:small_dripstone_bricks"
+      "block": "create:small_dripstone_bricks",
+      "connecting_block": "rechiseledcreate:dripstone_cut_small_brick_connecting",
+      "connecting_slab": "rechiseledcreate:dripstone_cut_small_brick_slab_connecting",
+      "connecting_slab_worth": 0.5,
+      "connecting_stairs": "rechiseledcreate:dripstone_cut_small_brick_stairs_connecting",
+      "slab": "create:small_dripstone_brick_slab",
+      "slab_worth": 0.5,
+      "stairs": "create:small_dripstone_brick_stairs"
     }
   ],
   "overwrite": false

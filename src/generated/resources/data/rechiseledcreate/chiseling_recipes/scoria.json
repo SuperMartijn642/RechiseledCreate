@@ -1,28 +1,44 @@
 {
   "type": "rechiseled:chiseling",
   "entries": [
+    "create:scoria",
     {
-      "item": "create:scoria"
+      "block": "create:cut_scoria",
+      "slab": "create:cut_scoria_slab",
+      "slab_worth": 0.5,
+      "stairs": "create:cut_scoria_stairs"
     },
     {
-      "item": "create:cut_scoria"
+      "block": "create:cut_scoria_bricks",
+      "slab": "create:cut_scoria_brick_slab",
+      "slab_worth": 0.5,
+      "stairs": "create:cut_scoria_brick_stairs"
     },
     {
-      "item": "create:cut_scoria_bricks"
+      "connecting_block": "create:layered_scoria"
     },
     {
-      "item": "create:layered_scoria"
+      "connecting_block": "create:scoria_pillar"
     },
     {
-      "item": "create:scoria_pillar"
+      "block": "create:polished_cut_scoria",
+      "connecting_block": "rechiseledcreate:scoria_cut_polished_connecting",
+      "connecting_slab": "rechiseledcreate:scoria_cut_polished_slab_connecting",
+      "connecting_slab_worth": 0.5,
+      "connecting_stairs": "rechiseledcreate:scoria_cut_polished_stairs_connecting",
+      "slab": "create:polished_cut_scoria_slab",
+      "slab_worth": 0.5,
+      "stairs": "create:polished_cut_scoria_stairs"
     },
     {
-      "connecting_item": "rechiseledcreate:scoria_cut_polished_connecting",
-      "item": "create:polished_cut_scoria"
-    },
-    {
-      "connecting_item": "rechiseledcreate:scoria_cut_small_brick_connecting",
-      "item": "create:small_scoria_bricks"
+      "block": "create:small_scoria_bricks",
+      "connecting_block": "rechiseledcreate:scoria_cut_small_brick_connecting",
+      "connecting_slab": "rechiseledcreate:scoria_cut_small_brick_slab_connecting",
+      "connecting_slab_worth": 0.5,
+      "connecting_stairs": "rechiseledcreate:scoria_cut_small_brick_stairs_connecting",
+      "slab": "create:small_scoria_brick_slab",
+      "slab_worth": 0.5,
+      "stairs": "create:small_scoria_brick_stairs"
     }
   ],
   "overwrite": false

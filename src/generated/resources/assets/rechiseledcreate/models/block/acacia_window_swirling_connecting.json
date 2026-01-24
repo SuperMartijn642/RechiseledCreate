@@ -2,12 +2,106 @@
   "type": "fusion:connecting",
   "parent": "minecraft:block/cube",
   "connections": {
-    "type": "fusion:or",
-    "predicates": [
-      {
-        "type": "fusion:is_same_state"
-      }
-    ]
+    "down": {
+      "type": "fusion:or",
+      "predicates": [
+        {
+          "type": "fusion:match_state",
+          "block": "rechiseledcreate:acacia_window_swirling_connecting",
+          "properties": {
+            "axis": [
+              "y"
+            ]
+          }
+        },
+        {
+          "type": "fusion:or",
+          "predicates": []
+        },
+        {
+          "type": "fusion:or",
+          "predicates": []
+        }
+      ]
+    },
+    "east": "#side",
+    "north": "#side",
+    "side": {
+      "type": "fusion:or",
+      "predicates": [
+        {
+          "type": "fusion:match_state",
+          "block": "rechiseledcreate:acacia_window_swirling_connecting",
+          "properties": {
+            "axis": [
+              "y"
+            ]
+          }
+        },
+        {
+          "type": "fusion:or",
+          "predicates": []
+        },
+        {
+          "type": "fusion:and",
+          "predicates": [
+            {
+              "type": "fusion:is_direction",
+              "directions": [
+                "top",
+                "top_left",
+                "top_right"
+              ]
+            },
+            {
+              "type": "fusion:or",
+              "predicates": []
+            }
+          ]
+        },
+        {
+          "type": "fusion:and",
+          "predicates": [
+            {
+              "type": "fusion:is_direction",
+              "directions": [
+                "bottom",
+                "bottom_left",
+                "bottom_right"
+              ]
+            },
+            {
+              "type": "fusion:or",
+              "predicates": []
+            }
+          ]
+        }
+      ]
+    },
+    "south": "#side",
+    "up": {
+      "type": "fusion:or",
+      "predicates": [
+        {
+          "type": "fusion:match_state",
+          "block": "rechiseledcreate:acacia_window_swirling_connecting",
+          "properties": {
+            "axis": [
+              "y"
+            ]
+          }
+        },
+        {
+          "type": "fusion:or",
+          "predicates": []
+        },
+        {
+          "type": "fusion:or",
+          "predicates": []
+        }
+      ]
+    },
+    "west": "#side"
   },
   "loader": "fusion:model",
   "textures": {
