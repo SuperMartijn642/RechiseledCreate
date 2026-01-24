@@ -1,28 +1,44 @@
 {
   "type": "rechiseled:chiseling",
   "entries": [
+    "create:veridium",
     {
-      "item": "create:veridium"
+      "block": "create:cut_veridium",
+      "slab": "create:cut_veridium_slab",
+      "slab_worth": 0.5,
+      "stairs": "create:cut_veridium_stairs"
     },
     {
-      "item": "create:cut_veridium"
+      "block": "create:cut_veridium_bricks",
+      "slab": "create:cut_veridium_brick_slab",
+      "slab_worth": 0.5,
+      "stairs": "create:cut_veridium_brick_stairs"
     },
     {
-      "item": "create:cut_veridium_bricks"
+      "connecting_block": "create:layered_veridium"
     },
     {
-      "item": "create:layered_veridium"
+      "connecting_block": "create:veridium_pillar"
     },
     {
-      "item": "create:veridium_pillar"
+      "block": "create:polished_cut_veridium",
+      "connecting_block": "rechiseledcreate:veridium_cut_polished_connecting",
+      "connecting_slab": "rechiseledcreate:veridium_cut_polished_slab_connecting",
+      "connecting_slab_worth": 0.5,
+      "connecting_stairs": "rechiseledcreate:veridium_cut_polished_stairs_connecting",
+      "slab": "create:polished_cut_veridium_slab",
+      "slab_worth": 0.5,
+      "stairs": "create:polished_cut_veridium_stairs"
     },
     {
-      "connecting_item": "rechiseledcreate:veridium_cut_polished_connecting",
-      "item": "create:polished_cut_veridium"
-    },
-    {
-      "connecting_item": "rechiseledcreate:veridium_cut_small_brick_connecting",
-      "item": "create:small_veridium_bricks"
+      "block": "create:small_veridium_bricks",
+      "connecting_block": "rechiseledcreate:veridium_cut_small_brick_connecting",
+      "connecting_slab": "rechiseledcreate:veridium_cut_small_brick_slab_connecting",
+      "connecting_slab_worth": 0.5,
+      "connecting_stairs": "rechiseledcreate:veridium_cut_small_brick_stairs_connecting",
+      "slab": "create:small_veridium_brick_slab",
+      "slab_worth": 0.5,
+      "stairs": "create:small_veridium_brick_stairs"
     }
   ],
   "overwrite": false

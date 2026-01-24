@@ -2,24 +2,42 @@
   "type": "rechiseled:chiseling",
   "entries": [
     {
-      "item": "create:cut_diorite"
+      "block": "create:cut_diorite",
+      "slab": "create:cut_diorite_slab",
+      "slab_worth": 0.5,
+      "stairs": "create:cut_diorite_stairs"
     },
     {
-      "item": "create:cut_diorite_bricks"
+      "block": "create:cut_diorite_bricks",
+      "slab": "create:cut_diorite_brick_slab",
+      "slab_worth": 0.5,
+      "stairs": "create:cut_diorite_brick_stairs"
     },
     {
-      "item": "create:layered_diorite"
+      "connecting_block": "create:layered_diorite"
     },
     {
-      "item": "create:diorite_pillar"
+      "connecting_block": "create:diorite_pillar"
     },
     {
-      "connecting_item": "rechiseledcreate:diorite_cut_polished_connecting",
-      "item": "create:polished_cut_diorite"
+      "block": "create:polished_cut_diorite",
+      "connecting_block": "rechiseledcreate:diorite_cut_polished_connecting",
+      "connecting_slab": "rechiseledcreate:diorite_cut_polished_slab_connecting",
+      "connecting_slab_worth": 0.5,
+      "connecting_stairs": "rechiseledcreate:diorite_cut_polished_stairs_connecting",
+      "slab": "create:polished_cut_diorite_slab",
+      "slab_worth": 0.5,
+      "stairs": "create:polished_cut_diorite_stairs"
     },
     {
-      "connecting_item": "rechiseledcreate:diorite_cut_small_brick_connecting",
-      "item": "create:small_diorite_bricks"
+      "block": "create:small_diorite_bricks",
+      "connecting_block": "rechiseledcreate:diorite_cut_small_brick_connecting",
+      "connecting_slab": "rechiseledcreate:diorite_cut_small_brick_slab_connecting",
+      "connecting_slab_worth": 0.5,
+      "connecting_stairs": "rechiseledcreate:diorite_cut_small_brick_stairs_connecting",
+      "slab": "create:small_diorite_brick_slab",
+      "slab_worth": 0.5,
+      "stairs": "create:small_diorite_brick_stairs"
     }
   ],
   "overwrite": false
