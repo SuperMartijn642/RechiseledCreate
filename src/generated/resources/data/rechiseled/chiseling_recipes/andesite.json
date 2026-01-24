@@ -3,24 +3,42 @@
   "overwrite": false,
   "entries": [
     {
-      "item": "create:cut_andesite"
+      "block": "create:cut_andesite",
+      "stairs": "create:cut_andesite_stairs",
+      "slab": "create:cut_andesite_slab",
+      "slab_worth": 0.5
     },
     {
-      "item": "create:cut_andesite_bricks"
+      "block": "create:cut_andesite_bricks",
+      "stairs": "create:cut_andesite_brick_stairs",
+      "slab": "create:cut_andesite_brick_slab",
+      "slab_worth": 0.5
     },
     {
-      "item": "create:layered_andesite"
+      "connecting_block": "create:layered_andesite"
     },
     {
-      "item": "create:andesite_pillar"
+      "connecting_block": "create:andesite_pillar"
     },
     {
-      "item": "create:polished_cut_andesite",
-      "connecting_item": "rechiseledcreate:andesite_cut_polished_connecting"
+      "block": "create:polished_cut_andesite",
+      "stairs": "create:polished_cut_andesite_stairs",
+      "slab": "create:polished_cut_andesite_slab",
+      "slab_worth": 0.5,
+      "connecting_block": "rechiseledcreate:andesite_cut_polished_connecting",
+      "connecting_stairs": "rechiseledcreate:andesite_cut_polished_stairs_connecting",
+      "connecting_slab": "rechiseledcreate:andesite_cut_polished_slab_connecting",
+      "connecting_slab_worth": 0.5
     },
     {
-      "item": "create:small_andesite_bricks",
-      "connecting_item": "rechiseledcreate:andesite_cut_small_brick_connecting"
+      "block": "create:small_andesite_bricks",
+      "stairs": "create:small_andesite_brick_stairs",
+      "slab": "create:small_andesite_brick_slab",
+      "slab_worth": 0.5,
+      "connecting_block": "rechiseledcreate:andesite_cut_small_brick_connecting",
+      "connecting_stairs": "rechiseledcreate:andesite_cut_small_brick_stairs_connecting",
+      "connecting_slab": "rechiseledcreate:andesite_cut_small_brick_slab_connecting",
+      "connecting_slab_worth": 0.5
     }
   ]
 }

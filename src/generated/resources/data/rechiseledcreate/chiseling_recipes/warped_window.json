@@ -3,35 +3,35 @@
   "overwrite": false,
   "entries": [
     {
-      "connecting_item": "create:warped_window"
+      "connecting_block": "create:warped_window"
     },
     {
-      "item": "rechiseledcreate:warped_window_bars",
-      "connecting_item": "rechiseledcreate:warped_window_bars_connecting"
+      "block": "rechiseledcreate:warped_window_bars",
+      "connecting_block": "rechiseledcreate:warped_window_bars_connecting"
     },
     {
-      "item": "rechiseledcreate:warped_window_covered",
-      "connecting_item": "rechiseledcreate:warped_window_covered_connecting"
+      "block": "rechiseledcreate:warped_window_covered",
+      "connecting_block": "rechiseledcreate:warped_window_covered_connecting"
     },
     {
-      "item": "rechiseledcreate:warped_window_diagonal",
-      "connecting_item": "rechiseledcreate:warped_window_diagonal_connecting"
+      "block": "rechiseledcreate:warped_window_diagonal",
+      "connecting_block": "rechiseledcreate:warped_window_diagonal_connecting"
     },
     {
-      "item": "rechiseledcreate:warped_window_large",
-      "connecting_item": "rechiseledcreate:warped_window_large_connecting"
+      "block": "rechiseledcreate:warped_window_large",
+      "connecting_block": "rechiseledcreate:warped_window_large_connecting"
     },
     {
-      "item": "rechiseledcreate:warped_window_panes",
-      "connecting_item": "rechiseledcreate:warped_window_panes_connecting"
+      "block": "rechiseledcreate:warped_window_panes",
+      "connecting_block": "rechiseledcreate:warped_window_panes_connecting"
     },
     {
-      "item": "rechiseledcreate:warped_window_slim",
-      "connecting_item": "rechiseledcreate:warped_window_slim_connecting"
+      "block": "rechiseledcreate:warped_window_slim",
+      "connecting_block": "rechiseledcreate:warped_window_slim_connecting"
     },
     {
-      "item": "rechiseledcreate:warped_window_tiles",
-      "connecting_item": "rechiseledcreate:warped_window_tiles_connecting"
+      "block": "rechiseledcreate:warped_window_tiles",
+      "connecting_block": "rechiseledcreate:warped_window_tiles_connecting"
     }
   ]
 }

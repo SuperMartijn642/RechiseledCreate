@@ -3,24 +3,42 @@
   "overwrite": false,
   "entries": [
     {
-      "item": "create:cut_granite"
+      "block": "create:cut_granite",
+      "stairs": "create:cut_granite_stairs",
+      "slab": "create:cut_granite_slab",
+      "slab_worth": 0.5
     },
     {
-      "item": "create:cut_granite_bricks"
+      "block": "create:cut_granite_bricks",
+      "stairs": "create:cut_granite_brick_stairs",
+      "slab": "create:cut_granite_brick_slab",
+      "slab_worth": 0.5
     },
     {
-      "item": "create:layered_granite"
+      "connecting_block": "create:layered_granite"
     },
     {
-      "item": "create:granite_pillar"
+      "connecting_block": "create:granite_pillar"
     },
     {
-      "item": "create:polished_cut_granite",
-      "connecting_item": "rechiseledcreate:granite_cut_polished_connecting"
+      "block": "create:polished_cut_granite",
+      "stairs": "create:polished_cut_granite_stairs",
+      "slab": "create:polished_cut_granite_slab",
+      "slab_worth": 0.5,
+      "connecting_block": "rechiseledcreate:granite_cut_polished_connecting",
+      "connecting_stairs": "rechiseledcreate:granite_cut_polished_stairs_connecting",
+      "connecting_slab": "rechiseledcreate:granite_cut_polished_slab_connecting",
+      "connecting_slab_worth": 0.5
     },
     {
-      "item": "create:small_granite_bricks",
-      "connecting_item": "rechiseledcreate:granite_cut_small_brick_connecting"
+      "block": "create:small_granite_bricks",
+      "stairs": "create:small_granite_brick_stairs",
+      "slab": "create:small_granite_brick_slab",
+      "slab_worth": 0.5,
+      "connecting_block": "rechiseledcreate:granite_cut_small_brick_connecting",
+      "connecting_stairs": "rechiseledcreate:granite_cut_small_brick_stairs_connecting",
+      "connecting_slab": "rechiseledcreate:granite_cut_small_brick_slab_connecting",
+      "connecting_slab_worth": 0.5
     }
   ]
 }

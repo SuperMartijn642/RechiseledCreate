@@ -1,13 +1,101 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/cube",
   "textures": {
-    "all": "rechiseledcreate:block/rose_quartz_tiles"
+    "east": "rechiseledcreate:block/rose_quartz_tiles",
+    "south": "rechiseledcreate:block/rose_quartz_tiles",
+    "north": "rechiseledcreate:block/rose_quartz_tiles",
+    "west": "rechiseledcreate:block/rose_quartz_tiles",
+    "particle": "rechiseledcreate:block/rose_quartz_tiles",
+    "up": "rechiseledcreate:block/rose_quartz_tiles",
+    "down": "rechiseledcreate:block/rose_quartz_tiles"
   },
-  "connections": [
-    {
-      "type": "fusion:is_same_block"
+  "connections": {
+    "south": "#side",
+    "side": {
+      "predicates": [
+        {
+          "block": "rechiseledcreate:rose_quartz_tiles_connecting",
+          "type": "fusion:match_block"
+        },
+        {
+          "predicates": [],
+          "type": "fusion:or"
+        },
+        {
+          "predicates": [
+            {
+              "directions": [
+                "top",
+                "top_left",
+                "top_right"
+              ],
+              "type": "fusion:is_direction"
+            },
+            {
+              "predicates": [],
+              "type": "fusion:or"
+            }
+          ],
+          "type": "fusion:and"
+        },
+        {
+          "predicates": [
+            {
+              "directions": [
+                "bottom",
+                "bottom_left",
+                "bottom_right"
+              ],
+              "type": "fusion:is_direction"
+            },
+            {
+              "predicates": [],
+              "type": "fusion:or"
+            }
+          ],
+          "type": "fusion:and"
+        }
+      ],
+      "type": "fusion:or"
+    },
+    "north": "#side",
+    "east": "#side",
+    "up": {
+      "predicates": [
+        {
+          "block": "rechiseledcreate:rose_quartz_tiles_connecting",
+          "type": "fusion:match_block"
+        },
+        {
+          "predicates": [],
+          "type": "fusion:or"
+        },
+        {
+          "predicates": [],
+          "type": "fusion:or"
+        }
+      ],
+      "type": "fusion:or"
+    },
+    "west": "#side",
+    "down": {
+      "predicates": [
+        {
+          "block": "rechiseledcreate:rose_quartz_tiles_connecting",
+          "type": "fusion:match_block"
+        },
+        {
+          "predicates": [],
+          "type": "fusion:or"
+        },
+        {
+          "predicates": [],
+          "type": "fusion:or"
+        }
+      ],
+      "type": "fusion:or"
     }
-  ],
+  },
   "loader": "fusion:model",
   "type": "fusion:connecting"
 }

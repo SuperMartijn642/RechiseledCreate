@@ -2,28 +2,44 @@
   "type": "rechiseled:chiseling",
   "overwrite": false,
   "entries": [
+    "minecraft:deepslate",
     {
-      "item": "minecraft:deepslate"
+      "block": "create:cut_deepslate",
+      "stairs": "create:cut_deepslate_stairs",
+      "slab": "create:cut_deepslate_slab",
+      "slab_worth": 0.5
     },
     {
-      "item": "create:cut_deepslate"
+      "block": "create:cut_deepslate_bricks",
+      "stairs": "create:cut_deepslate_brick_stairs",
+      "slab": "create:cut_deepslate_brick_slab",
+      "slab_worth": 0.5
     },
     {
-      "item": "create:cut_deepslate_bricks"
+      "connecting_block": "create:layered_deepslate"
     },
     {
-      "item": "create:layered_deepslate"
+      "connecting_block": "create:deepslate_pillar"
     },
     {
-      "item": "create:deepslate_pillar"
+      "block": "create:polished_cut_deepslate",
+      "stairs": "create:polished_cut_deepslate_stairs",
+      "slab": "create:polished_cut_deepslate_slab",
+      "slab_worth": 0.5,
+      "connecting_block": "rechiseledcreate:deepslate_cut_polished_connecting",
+      "connecting_stairs": "rechiseledcreate:deepslate_cut_polished_stairs_connecting",
+      "connecting_slab": "rechiseledcreate:deepslate_cut_polished_slab_connecting",
+      "connecting_slab_worth": 0.5
     },
     {
-      "item": "create:polished_cut_deepslate",
-      "connecting_item": "rechiseledcreate:deepslate_cut_polished_connecting"
-    },
-    {
-      "item": "create:small_deepslate_bricks",
-      "connecting_item": "rechiseledcreate:deepslate_cut_small_brick_connecting"
+      "block": "create:small_deepslate_bricks",
+      "stairs": "create:small_deepslate_brick_stairs",
+      "slab": "create:small_deepslate_brick_slab",
+      "slab_worth": 0.5,
+      "connecting_block": "rechiseledcreate:deepslate_cut_small_brick_connecting",
+      "connecting_stairs": "rechiseledcreate:deepslate_cut_small_brick_stairs_connecting",
+      "connecting_slab": "rechiseledcreate:deepslate_cut_small_brick_slab_connecting",
+      "connecting_slab_worth": 0.5
     }
   ]
 }

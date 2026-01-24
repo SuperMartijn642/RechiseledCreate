@@ -3,35 +3,35 @@
   "overwrite": false,
   "entries": [
     {
-      "connecting_item": "create:acacia_window"
+      "connecting_block": "create:acacia_window"
     },
     {
-      "item": "rechiseledcreate:acacia_window_covered",
-      "connecting_item": "rechiseledcreate:acacia_window_covered_connecting"
+      "block": "rechiseledcreate:acacia_window_covered",
+      "connecting_block": "rechiseledcreate:acacia_window_covered_connecting"
     },
     {
-      "item": "rechiseledcreate:acacia_window_diagonal",
-      "connecting_item": "rechiseledcreate:acacia_window_diagonal_connecting"
+      "block": "rechiseledcreate:acacia_window_diagonal",
+      "connecting_block": "rechiseledcreate:acacia_window_diagonal_connecting"
     },
     {
-      "item": "rechiseledcreate:acacia_window_large",
-      "connecting_item": "rechiseledcreate:acacia_window_large_connecting"
+      "block": "rechiseledcreate:acacia_window_large",
+      "connecting_block": "rechiseledcreate:acacia_window_large_connecting"
     },
     {
-      "item": "rechiseledcreate:acacia_window_panes",
-      "connecting_item": "rechiseledcreate:acacia_window_panes_connecting"
+      "block": "rechiseledcreate:acacia_window_panes",
+      "connecting_block": "rechiseledcreate:acacia_window_panes_connecting"
     },
     {
-      "item": "rechiseledcreate:acacia_window_slim",
-      "connecting_item": "rechiseledcreate:acacia_window_slim_connecting"
+      "block": "rechiseledcreate:acacia_window_slim",
+      "connecting_block": "rechiseledcreate:acacia_window_slim_connecting"
     },
     {
-      "item": "rechiseledcreate:acacia_window_swirling",
-      "connecting_item": "rechiseledcreate:acacia_window_swirling_connecting"
+      "block": "rechiseledcreate:acacia_window_swirling",
+      "connecting_block": "rechiseledcreate:acacia_window_swirling_connecting"
     },
     {
-      "item": "rechiseledcreate:acacia_window_tiles",
-      "connecting_item": "rechiseledcreate:acacia_window_tiles_connecting"
+      "block": "rechiseledcreate:acacia_window_tiles",
+      "connecting_block": "rechiseledcreate:acacia_window_tiles_connecting"
     }
   ]
 }

@@ -2,28 +2,44 @@
   "type": "rechiseled:chiseling",
   "overwrite": false,
   "entries": [
+    "create:asurine",
     {
-      "item": "create:asurine"
+      "block": "create:cut_asurine",
+      "stairs": "create:cut_asurine_stairs",
+      "slab": "create:cut_asurine_slab",
+      "slab_worth": 0.5
     },
     {
-      "item": "create:cut_asurine"
+      "block": "create:cut_asurine_bricks",
+      "stairs": "create:cut_asurine_brick_stairs",
+      "slab": "create:cut_asurine_brick_slab",
+      "slab_worth": 0.5
     },
     {
-      "item": "create:cut_asurine_bricks"
+      "connecting_block": "create:layered_asurine"
     },
     {
-      "item": "create:layered_asurine"
+      "connecting_block": "create:asurine_pillar"
     },
     {
-      "item": "create:asurine_pillar"
+      "block": "create:polished_cut_asurine",
+      "stairs": "create:polished_cut_asurine_stairs",
+      "slab": "create:polished_cut_asurine_slab",
+      "slab_worth": 0.5,
+      "connecting_block": "rechiseledcreate:asurine_cut_polished_connecting",
+      "connecting_stairs": "rechiseledcreate:asurine_cut_polished_stairs_connecting",
+      "connecting_slab": "rechiseledcreate:asurine_cut_polished_slab_connecting",
+      "connecting_slab_worth": 0.5
     },
     {
-      "item": "create:polished_cut_asurine",
-      "connecting_item": "rechiseledcreate:asurine_cut_polished_connecting"
-    },
-    {
-      "item": "create:small_asurine_bricks",
-      "connecting_item": "rechiseledcreate:asurine_cut_small_brick_connecting"
+      "block": "create:small_asurine_bricks",
+      "stairs": "create:small_asurine_brick_stairs",
+      "slab": "create:small_asurine_brick_slab",
+      "slab_worth": 0.5,
+      "connecting_block": "rechiseledcreate:asurine_cut_small_brick_connecting",
+      "connecting_stairs": "rechiseledcreate:asurine_cut_small_brick_stairs_connecting",
+      "connecting_slab": "rechiseledcreate:asurine_cut_small_brick_slab_connecting",
+      "connecting_slab_worth": 0.5
     }
   ]
 }
