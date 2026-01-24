@@ -31,7 +31,7 @@ repositories {
     maven { url = "https://mvn.devos.one/snapshots/" } // Create, Porting Lib, Forge Tags, Milk Lib, Registrate
     maven { url = "https://maven.jamieswhiteshirt.com/libs-release" } // Reach Entity Attributes
     maven { url = "https://jitpack.io/" } // Mixin Extras, Fabric ASM
-    maven { url = "https://maven.tterrag.com/" } // Flywheel
+    maven { url = "https://modmaven.dev/" } // Flywheel
     maven { url = "https://raw.githubusercontent.com/Fuzss/modresources/main/maven/" } // Forge Config API Port
 }
 
