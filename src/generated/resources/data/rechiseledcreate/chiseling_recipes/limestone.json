@@ -2,28 +2,44 @@
   "type": "rechiseled:chiseling",
   "overwrite": false,
   "entries": [
+    "create:limestone",
     {
-      "item": "create:limestone"
+      "block": "create:cut_limestone",
+      "stairs": "create:cut_limestone_stairs",
+      "slab": "create:cut_limestone_slab",
+      "slab_worth": 0.5
     },
     {
-      "item": "create:cut_limestone"
+      "block": "create:cut_limestone_bricks",
+      "stairs": "create:cut_limestone_brick_stairs",
+      "slab": "create:cut_limestone_brick_slab",
+      "slab_worth": 0.5
     },
     {
-      "item": "create:cut_limestone_bricks"
+      "connecting_block": "create:layered_limestone"
     },
     {
-      "item": "create:layered_limestone"
+      "connecting_block": "create:limestone_pillar"
     },
     {
-      "item": "create:limestone_pillar"
+      "block": "create:polished_cut_limestone",
+      "stairs": "create:polished_cut_limestone_stairs",
+      "slab": "create:polished_cut_limestone_slab",
+      "slab_worth": 0.5,
+      "connecting_block": "rechiseledcreate:limestone_cut_polished_connecting",
+      "connecting_stairs": "rechiseledcreate:limestone_cut_polished_stairs_connecting",
+      "connecting_slab": "rechiseledcreate:limestone_cut_polished_slab_connecting",
+      "connecting_slab_worth": 0.5
     },
     {
-      "item": "create:polished_cut_limestone",
-      "connecting_item": "rechiseledcreate:limestone_cut_polished_connecting"
-    },
-    {
-      "item": "create:small_limestone_bricks",
-      "connecting_item": "rechiseledcreate:limestone_cut_small_brick_connecting"
+      "block": "create:small_limestone_bricks",
+      "stairs": "create:small_limestone_brick_stairs",
+      "slab": "create:small_limestone_brick_slab",
+      "slab_worth": 0.5,
+      "connecting_block": "rechiseledcreate:limestone_cut_small_brick_connecting",
+      "connecting_stairs": "rechiseledcreate:limestone_cut_small_brick_stairs_connecting",
+      "connecting_slab": "rechiseledcreate:limestone_cut_small_brick_slab_connecting",
+      "connecting_slab_worth": 0.5
     }
   ]
 }

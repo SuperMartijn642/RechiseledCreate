@@ -2,28 +2,44 @@
   "type": "rechiseled:chiseling",
   "overwrite": false,
   "entries": [
+    "minecraft:tuff",
     {
-      "item": "minecraft:tuff"
+      "block": "create:cut_tuff",
+      "stairs": "create:cut_tuff_stairs",
+      "slab": "create:cut_tuff_slab",
+      "slab_worth": 0.5
     },
     {
-      "item": "create:cut_tuff"
+      "block": "create:cut_tuff_bricks",
+      "stairs": "create:cut_tuff_brick_stairs",
+      "slab": "create:cut_tuff_brick_slab",
+      "slab_worth": 0.5
     },
     {
-      "item": "create:cut_tuff_bricks"
+      "connecting_block": "create:layered_tuff"
     },
     {
-      "item": "create:layered_tuff"
+      "connecting_block": "create:tuff_pillar"
     },
     {
-      "item": "create:tuff_pillar"
+      "block": "create:polished_cut_tuff",
+      "stairs": "create:polished_cut_tuff_stairs",
+      "slab": "create:polished_cut_tuff_slab",
+      "slab_worth": 0.5,
+      "connecting_block": "rechiseledcreate:tuff_cut_polished_connecting",
+      "connecting_stairs": "rechiseledcreate:tuff_cut_polished_stairs_connecting",
+      "connecting_slab": "rechiseledcreate:tuff_cut_polished_slab_connecting",
+      "connecting_slab_worth": 0.5
     },
     {
-      "item": "create:polished_cut_tuff",
-      "connecting_item": "rechiseledcreate:tuff_cut_polished_connecting"
-    },
-    {
-      "item": "create:small_tuff_bricks",
-      "connecting_item": "rechiseledcreate:tuff_cut_small_brick_connecting"
+      "block": "create:small_tuff_bricks",
+      "stairs": "create:small_tuff_brick_stairs",
+      "slab": "create:small_tuff_brick_slab",
+      "slab_worth": 0.5,
+      "connecting_block": "rechiseledcreate:tuff_cut_small_brick_connecting",
+      "connecting_stairs": "rechiseledcreate:tuff_cut_small_brick_stairs_connecting",
+      "connecting_slab": "rechiseledcreate:tuff_cut_small_brick_slab_connecting",
+      "connecting_slab_worth": 0.5
     }
   ]
 }

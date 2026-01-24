@@ -2,28 +2,44 @@
   "type": "rechiseled:chiseling",
   "overwrite": false,
   "entries": [
+    "create:crimsite",
     {
-      "item": "create:crimsite"
+      "block": "create:cut_crimsite",
+      "stairs": "create:cut_crimsite_stairs",
+      "slab": "create:cut_crimsite_slab",
+      "slab_worth": 0.5
     },
     {
-      "item": "create:cut_crimsite"
+      "block": "create:cut_crimsite_bricks",
+      "stairs": "create:cut_crimsite_brick_stairs",
+      "slab": "create:cut_crimsite_brick_slab",
+      "slab_worth": 0.5
     },
     {
-      "item": "create:cut_crimsite_bricks"
+      "connecting_block": "create:layered_crimsite"
     },
     {
-      "item": "create:layered_crimsite"
+      "connecting_block": "create:crimsite_pillar"
     },
     {
-      "item": "create:crimsite_pillar"
+      "block": "create:polished_cut_crimsite",
+      "stairs": "create:polished_cut_crimsite_stairs",
+      "slab": "create:polished_cut_crimsite_slab",
+      "slab_worth": 0.5,
+      "connecting_block": "rechiseledcreate:crimsite_cut_polished_connecting",
+      "connecting_stairs": "rechiseledcreate:crimsite_cut_polished_stairs_connecting",
+      "connecting_slab": "rechiseledcreate:crimsite_cut_polished_slab_connecting",
+      "connecting_slab_worth": 0.5
     },
     {
-      "item": "create:polished_cut_crimsite",
-      "connecting_item": "rechiseledcreate:crimsite_cut_polished_connecting"
-    },
-    {
-      "item": "create:small_crimsite_bricks",
-      "connecting_item": "rechiseledcreate:crimsite_cut_small_brick_connecting"
+      "block": "create:small_crimsite_bricks",
+      "stairs": "create:small_crimsite_brick_stairs",
+      "slab": "create:small_crimsite_brick_slab",
+      "slab_worth": 0.5,
+      "connecting_block": "rechiseledcreate:crimsite_cut_small_brick_connecting",
+      "connecting_stairs": "rechiseledcreate:crimsite_cut_small_brick_stairs_connecting",
+      "connecting_slab": "rechiseledcreate:crimsite_cut_small_brick_slab_connecting",
+      "connecting_slab_worth": 0.5
     }
   ]
 }

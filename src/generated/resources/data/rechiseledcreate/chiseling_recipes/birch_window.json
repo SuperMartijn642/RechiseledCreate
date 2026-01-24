@@ -3,35 +3,35 @@
   "overwrite": false,
   "entries": [
     {
-      "connecting_item": "create:birch_window"
+      "connecting_block": "create:birch_window"
     },
     {
-      "item": "rechiseledcreate:birch_window_bars",
-      "connecting_item": "rechiseledcreate:birch_window_bars_connecting"
+      "block": "rechiseledcreate:birch_window_bars",
+      "connecting_block": "rechiseledcreate:birch_window_bars_connecting"
     },
     {
-      "item": "rechiseledcreate:birch_window_diagonal",
-      "connecting_item": "rechiseledcreate:birch_window_diagonal_connecting"
+      "block": "rechiseledcreate:birch_window_diagonal",
+      "connecting_block": "rechiseledcreate:birch_window_diagonal_connecting"
     },
     {
-      "item": "rechiseledcreate:birch_window_large",
-      "connecting_item": "rechiseledcreate:birch_window_large_connecting"
+      "block": "rechiseledcreate:birch_window_large",
+      "connecting_block": "rechiseledcreate:birch_window_large_connecting"
     },
     {
-      "item": "rechiseledcreate:birch_window_panes",
-      "connecting_item": "rechiseledcreate:birch_window_panes_connecting"
+      "block": "rechiseledcreate:birch_window_panes",
+      "connecting_block": "rechiseledcreate:birch_window_panes_connecting"
     },
     {
-      "item": "rechiseledcreate:birch_window_slim",
-      "connecting_item": "rechiseledcreate:birch_window_slim_connecting"
+      "block": "rechiseledcreate:birch_window_slim",
+      "connecting_block": "rechiseledcreate:birch_window_slim_connecting"
     },
     {
-      "item": "rechiseledcreate:birch_window_swirling",
-      "connecting_item": "rechiseledcreate:birch_window_swirling_connecting"
+      "block": "rechiseledcreate:birch_window_swirling",
+      "connecting_block": "rechiseledcreate:birch_window_swirling_connecting"
     },
     {
-      "item": "rechiseledcreate:birch_window_tiles",
-      "connecting_item": "rechiseledcreate:birch_window_tiles_connecting"
+      "block": "rechiseledcreate:birch_window_tiles",
+      "connecting_block": "rechiseledcreate:birch_window_tiles_connecting"
     }
   ]
 }

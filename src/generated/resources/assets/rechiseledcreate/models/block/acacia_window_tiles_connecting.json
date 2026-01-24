@@ -10,12 +10,106 @@
     "down": "rechiseledcreate:block/acacia_window_tiles_end"
   },
   "connections": {
-    "predicates": [
-      {
-        "type": "fusion:is_same_state"
-      }
-    ],
-    "type": "fusion:or"
+    "south": "#side",
+    "side": {
+      "predicates": [
+        {
+          "block": "rechiseledcreate:acacia_window_tiles_connecting",
+          "properties": {
+            "axis": [
+              "y"
+            ]
+          },
+          "type": "fusion:match_state"
+        },
+        {
+          "predicates": [],
+          "type": "fusion:or"
+        },
+        {
+          "predicates": [
+            {
+              "directions": [
+                "top",
+                "top_left",
+                "top_right"
+              ],
+              "type": "fusion:is_direction"
+            },
+            {
+              "predicates": [],
+              "type": "fusion:or"
+            }
+          ],
+          "type": "fusion:and"
+        },
+        {
+          "predicates": [
+            {
+              "directions": [
+                "bottom",
+                "bottom_left",
+                "bottom_right"
+              ],
+              "type": "fusion:is_direction"
+            },
+            {
+              "predicates": [],
+              "type": "fusion:or"
+            }
+          ],
+          "type": "fusion:and"
+        }
+      ],
+      "type": "fusion:or"
+    },
+    "north": "#side",
+    "east": "#side",
+    "up": {
+      "predicates": [
+        {
+          "block": "rechiseledcreate:acacia_window_tiles_connecting",
+          "properties": {
+            "axis": [
+              "y"
+            ]
+          },
+          "type": "fusion:match_state"
+        },
+        {
+          "predicates": [],
+          "type": "fusion:or"
+        },
+        {
+          "predicates": [],
+          "type": "fusion:or"
+        }
+      ],
+      "type": "fusion:or"
+    },
+    "west": "#side",
+    "down": {
+      "predicates": [
+        {
+          "block": "rechiseledcreate:acacia_window_tiles_connecting",
+          "properties": {
+            "axis": [
+              "y"
+            ]
+          },
+          "type": "fusion:match_state"
+        },
+        {
+          "predicates": [],
+          "type": "fusion:or"
+        },
+        {
+          "predicates": [],
+          "type": "fusion:or"
+        }
+      ],
+      "type": "fusion:or"
+    }
   },
   "loader": "fusion:model",
   "type": "fusion:connecting"
