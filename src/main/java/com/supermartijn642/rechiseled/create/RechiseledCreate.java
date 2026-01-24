@@ -31,7 +31,7 @@ public class RechiseledCreate implements ModInitializer {
     public static final String MODID = "rechiseledcreate";
     public static final RechiseledRegistration REGISTRATION = RechiseledRegistration.get(MODID);
     @SuppressWarnings("Convert2MethodRef")
-    public static final CreativeItemGroup GROUP = (CreativeItemGroup)REGISTRATION.itemGroup(() -> Blocks.ROSE_QUARTZ_POLISHED_BLOCK.getRegularBlock(), "Rechiseled: Create Integration");
+    public static final CreativeItemGroup GROUP = (CreativeItemGroup)REGISTRATION.itemGroup(() -> RechiseledCreateBlocks.ROSE_QUARTZ_POLISHED_BLOCK.getRegularBlock(), "Rechiseled: Create Integration");
 
     @RegistryEntryAcceptor(namespace = MODID, identifier = "mechanical_chisel", registry = RegistryEntryAcceptor.Registry.BLOCKS)
     public static MechanicalChiselBlock mechanical_chisel;
@@ -41,8 +41,8 @@ public class RechiseledCreate implements ModInitializer {
     @Override
     public void onInitialize(){
         // Make sure the blocks get loaded
-        Blocks.init();
-        Recipes.init();
+        RechiseledCreateBlocks.init();
+        RechiseledCreateRecipes.init();
 
         // Register mechanical chisel
         RegistrationHandler handler = RegistrationHandler.get(MODID);
