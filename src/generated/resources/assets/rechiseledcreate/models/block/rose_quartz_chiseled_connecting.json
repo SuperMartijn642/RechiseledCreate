@@ -1,15 +1,34 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
+    "up": "rechiseledcreate:block/rose_quartz_chiseled",
+    "north": "rechiseledcreate:block/rose_quartz_chiseled",
     "east": "rechiseledcreate:block/rose_quartz_chiseled",
     "south": "rechiseledcreate:block/rose_quartz_chiseled",
-    "north": "rechiseledcreate:block/rose_quartz_chiseled",
-    "west": "rechiseledcreate:block/rose_quartz_chiseled",
+    "down": "rechiseledcreate:block/rose_quartz_chiseled",
     "particle": "rechiseledcreate:block/rose_quartz_chiseled",
-    "up": "rechiseledcreate:block/rose_quartz_chiseled",
-    "down": "rechiseledcreate:block/rose_quartz_chiseled"
+    "west": "rechiseledcreate:block/rose_quartz_chiseled"
   },
   "connections": {
+    "up": {
+      "predicates": [
+        {
+          "block": "rechiseledcreate:rose_quartz_chiseled_connecting",
+          "type": "fusion:match_block"
+        },
+        {
+          "predicates": [],
+          "type": "fusion:or"
+        },
+        {
+          "predicates": [],
+          "type": "fusion:or"
+        }
+      ],
+      "type": "fusion:or"
+    },
+    "north": "#side",
+    "east": "#side",
     "south": "#side",
     "side": {
       "predicates": [
@@ -58,26 +77,6 @@
       ],
       "type": "fusion:or"
     },
-    "north": "#side",
-    "east": "#side",
-    "up": {
-      "predicates": [
-        {
-          "block": "rechiseledcreate:rose_quartz_chiseled_connecting",
-          "type": "fusion:match_block"
-        },
-        {
-          "predicates": [],
-          "type": "fusion:or"
-        },
-        {
-          "predicates": [],
-          "type": "fusion:or"
-        }
-      ],
-      "type": "fusion:or"
-    },
-    "west": "#side",
     "down": {
       "predicates": [
         {
@@ -94,7 +93,8 @@
         }
       ],
       "type": "fusion:or"
-    }
+    },
+    "west": "#side"
   },
   "loader": "fusion:model",
   "type": "fusion:connecting"

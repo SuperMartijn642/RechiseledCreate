@@ -1,16 +1,54 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "east": "#side",
-    "side": "rechiseledcreate:block/scoria_cut_small_brick",
-    "south": "#side",
-    "north": "#side",
+    "down": "rechiseledcreate:block/scoria_cut_small_brick",
     "west": "#side",
-    "particle": "#side",
+    "south": "#side",
+    "east": "#side",
     "up": "rechiseledcreate:block/scoria_cut_small_brick",
-    "down": "rechiseledcreate:block/scoria_cut_small_brick"
+    "side": "rechiseledcreate:block/scoria_cut_small_brick",
+    "particle": "#side",
+    "north": "#side"
   },
   "connections": {
+    "up": {
+      "predicates": [
+        {
+          "predicates": [
+            {
+              "block": "rechiseledcreate:scoria_cut_small_brick_connecting",
+              "type": "fusion:match_block"
+            },
+            {
+              "block": "rechiseledcreate:scoria_cut_small_brick_slab_connecting",
+              "properties": {
+                "type": [
+                  "double"
+                ]
+              },
+              "type": "fusion:match_state"
+            }
+          ],
+          "type": "fusion:or"
+        },
+        {
+          "block": "rechiseledcreate:scoria_cut_small_brick_stairs_connecting",
+          "type": "fusion:match_block"
+        },
+        {
+          "block": "rechiseledcreate:scoria_cut_small_brick_slab_connecting",
+          "properties": {
+            "type": [
+              "top"
+            ]
+          },
+          "type": "fusion:match_state"
+        }
+      ],
+      "type": "fusion:or"
+    },
+    "north": "#side",
+    "east": "#side",
     "south": "#side",
     "side": {
       "predicates": [
@@ -83,45 +121,6 @@
       ],
       "type": "fusion:or"
     },
-    "north": "#side",
-    "east": "#side",
-    "up": {
-      "predicates": [
-        {
-          "predicates": [
-            {
-              "block": "rechiseledcreate:scoria_cut_small_brick_connecting",
-              "type": "fusion:match_block"
-            },
-            {
-              "block": "rechiseledcreate:scoria_cut_small_brick_slab_connecting",
-              "properties": {
-                "type": [
-                  "double"
-                ]
-              },
-              "type": "fusion:match_state"
-            }
-          ],
-          "type": "fusion:or"
-        },
-        {
-          "block": "rechiseledcreate:scoria_cut_small_brick_stairs_connecting",
-          "type": "fusion:match_block"
-        },
-        {
-          "block": "rechiseledcreate:scoria_cut_small_brick_slab_connecting",
-          "properties": {
-            "type": [
-              "top"
-            ]
-          },
-          "type": "fusion:match_state"
-        }
-      ],
-      "type": "fusion:or"
-    },
-    "west": "#side",
     "down": {
       "predicates": [
         {
@@ -157,7 +156,8 @@
         }
       ],
       "type": "fusion:or"
-    }
+    },
+    "west": "#side"
   },
   "loader": "fusion:model",
   "type": "fusion:connecting"

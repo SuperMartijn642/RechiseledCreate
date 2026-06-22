@@ -1,11 +1,47 @@
 {
   "parent": "minecraft:block/outer_stairs",
   "textures": {
-    "side": "rechiseledcreate:block/crimsite_cut_polished",
+    "bottom": "rechiseledcreate:block/crimsite_cut_polished",
     "top": "rechiseledcreate:block/crimsite_cut_polished",
-    "bottom": "rechiseledcreate:block/crimsite_cut_polished"
+    "side": "rechiseledcreate:block/crimsite_cut_polished"
   },
   "connections": {
+    "bottom": {
+      "predicates": [
+        {
+          "predicates": [
+            {
+              "block": "rechiseledcreate:crimsite_cut_polished_connecting",
+              "type": "fusion:match_block"
+            },
+            {
+              "block": "rechiseledcreate:crimsite_cut_polished_slab_connecting",
+              "properties": {
+                "type": [
+                  "double"
+                ]
+              },
+              "type": "fusion:match_state"
+            }
+          ],
+          "type": "fusion:or"
+        },
+        {
+          "block": "rechiseledcreate:crimsite_cut_polished_stairs_connecting",
+          "type": "fusion:match_block"
+        },
+        {
+          "block": "rechiseledcreate:crimsite_cut_polished_slab_connecting",
+          "properties": {
+            "type": [
+              "bottom"
+            ]
+          },
+          "type": "fusion:match_state"
+        }
+      ],
+      "type": "fusion:or"
+    },
     "top": {
       "predicates": [
         {
@@ -92,42 +128,6 @@
             }
           ],
           "type": "fusion:and"
-        }
-      ],
-      "type": "fusion:or"
-    },
-    "bottom": {
-      "predicates": [
-        {
-          "predicates": [
-            {
-              "block": "rechiseledcreate:crimsite_cut_polished_connecting",
-              "type": "fusion:match_block"
-            },
-            {
-              "block": "rechiseledcreate:crimsite_cut_polished_slab_connecting",
-              "properties": {
-                "type": [
-                  "double"
-                ]
-              },
-              "type": "fusion:match_state"
-            }
-          ],
-          "type": "fusion:or"
-        },
-        {
-          "block": "rechiseledcreate:crimsite_cut_polished_stairs_connecting",
-          "type": "fusion:match_block"
-        },
-        {
-          "block": "rechiseledcreate:crimsite_cut_polished_slab_connecting",
-          "properties": {
-            "type": [
-              "bottom"
-            ]
-          },
-          "type": "fusion:match_state"
         }
       ],
       "type": "fusion:or"

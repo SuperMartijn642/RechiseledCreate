@@ -1,11 +1,47 @@
 {
   "parent": "minecraft:block/outer_stairs",
   "textures": {
-    "side": "rechiseledcreate:block/granite_cut_small_brick",
+    "bottom": "rechiseledcreate:block/granite_cut_small_brick",
     "top": "rechiseledcreate:block/granite_cut_small_brick",
-    "bottom": "rechiseledcreate:block/granite_cut_small_brick"
+    "side": "rechiseledcreate:block/granite_cut_small_brick"
   },
   "connections": {
+    "bottom": {
+      "predicates": [
+        {
+          "predicates": [
+            {
+              "block": "rechiseledcreate:granite_cut_small_brick_connecting",
+              "type": "fusion:match_block"
+            },
+            {
+              "block": "rechiseledcreate:granite_cut_small_brick_slab_connecting",
+              "properties": {
+                "type": [
+                  "double"
+                ]
+              },
+              "type": "fusion:match_state"
+            }
+          ],
+          "type": "fusion:or"
+        },
+        {
+          "block": "rechiseledcreate:granite_cut_small_brick_stairs_connecting",
+          "type": "fusion:match_block"
+        },
+        {
+          "block": "rechiseledcreate:granite_cut_small_brick_slab_connecting",
+          "properties": {
+            "type": [
+              "bottom"
+            ]
+          },
+          "type": "fusion:match_state"
+        }
+      ],
+      "type": "fusion:or"
+    },
     "top": {
       "predicates": [
         {
@@ -92,42 +128,6 @@
             }
           ],
           "type": "fusion:and"
-        }
-      ],
-      "type": "fusion:or"
-    },
-    "bottom": {
-      "predicates": [
-        {
-          "predicates": [
-            {
-              "block": "rechiseledcreate:granite_cut_small_brick_connecting",
-              "type": "fusion:match_block"
-            },
-            {
-              "block": "rechiseledcreate:granite_cut_small_brick_slab_connecting",
-              "properties": {
-                "type": [
-                  "double"
-                ]
-              },
-              "type": "fusion:match_state"
-            }
-          ],
-          "type": "fusion:or"
-        },
-        {
-          "block": "rechiseledcreate:granite_cut_small_brick_stairs_connecting",
-          "type": "fusion:match_block"
-        },
-        {
-          "block": "rechiseledcreate:granite_cut_small_brick_slab_connecting",
-          "properties": {
-            "type": [
-              "bottom"
-            ]
-          },
-          "type": "fusion:match_state"
         }
       ],
       "type": "fusion:or"

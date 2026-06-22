@@ -1,11 +1,34 @@
 {
   "parent": "minecraft:block/slab_top",
   "textures": {
-    "side": "rechiseledcreate:block/limestone_cut_polished",
+    "bottom": "rechiseledcreate:block/limestone_cut_polished",
     "top": "rechiseledcreate:block/limestone_cut_polished",
-    "bottom": "rechiseledcreate:block/limestone_cut_polished"
+    "side": "rechiseledcreate:block/limestone_cut_polished"
   },
   "connections": {
+    "bottom": {
+      "predicates": [
+        {
+          "block": "rechiseledcreate:limestone_cut_polished_slab_connecting",
+          "properties": {
+            "type": [
+              "top"
+            ]
+          },
+          "type": "fusion:match_state"
+        },
+        {
+          "block": "rechiseledcreate:limestone_cut_polished_stairs_connecting",
+          "properties": {
+            "half": [
+              "top"
+            ]
+          },
+          "type": "fusion:match_state"
+        }
+      ],
+      "type": "fusion:or"
+    },
     "top": {
       "predicates": [
         {
@@ -127,29 +150,6 @@
             }
           ],
           "type": "fusion:and"
-        }
-      ],
-      "type": "fusion:or"
-    },
-    "bottom": {
-      "predicates": [
-        {
-          "block": "rechiseledcreate:limestone_cut_polished_slab_connecting",
-          "properties": {
-            "type": [
-              "top"
-            ]
-          },
-          "type": "fusion:match_state"
-        },
-        {
-          "block": "rechiseledcreate:limestone_cut_polished_stairs_connecting",
-          "properties": {
-            "half": [
-              "top"
-            ]
-          },
-          "type": "fusion:match_state"
         }
       ],
       "type": "fusion:or"

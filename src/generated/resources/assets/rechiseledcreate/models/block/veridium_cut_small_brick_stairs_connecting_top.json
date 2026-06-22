@@ -1,11 +1,28 @@
 {
   "parent": "rechiseled:block/stairs_top",
   "textures": {
-    "side": "rechiseledcreate:block/veridium_cut_small_brick",
+    "bottom": "rechiseledcreate:block/veridium_cut_small_brick",
     "top": "rechiseledcreate:block/veridium_cut_small_brick",
-    "bottom": "rechiseledcreate:block/veridium_cut_small_brick"
+    "side": "rechiseledcreate:block/veridium_cut_small_brick"
   },
   "connections": {
+    "bottom": {
+      "predicates": [
+        {
+          "block": "rechiseledcreate:veridium_cut_small_brick_connecting",
+          "type": "fusion:match_block"
+        },
+        {
+          "block": "rechiseledcreate:veridium_cut_small_brick_stairs_connecting",
+          "type": "fusion:match_block"
+        },
+        {
+          "block": "rechiseledcreate:veridium_cut_small_brick_slab_connecting",
+          "type": "fusion:match_block"
+        }
+      ],
+      "type": "fusion:or"
+    },
     "top": {
       "predicates": [
         {
@@ -111,23 +128,6 @@
             }
           ],
           "type": "fusion:and"
-        }
-      ],
-      "type": "fusion:or"
-    },
-    "bottom": {
-      "predicates": [
-        {
-          "block": "rechiseledcreate:veridium_cut_small_brick_connecting",
-          "type": "fusion:match_block"
-        },
-        {
-          "block": "rechiseledcreate:veridium_cut_small_brick_stairs_connecting",
-          "type": "fusion:match_block"
-        },
-        {
-          "block": "rechiseledcreate:veridium_cut_small_brick_slab_connecting",
-          "type": "fusion:match_block"
         }
       ],
       "type": "fusion:or"

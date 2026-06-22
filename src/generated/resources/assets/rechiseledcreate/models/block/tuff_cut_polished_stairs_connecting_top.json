@@ -1,11 +1,28 @@
 {
   "parent": "rechiseled:block/stairs_top",
   "textures": {
-    "side": "rechiseledcreate:block/tuff_cut_polished",
+    "bottom": "rechiseledcreate:block/tuff_cut_polished",
     "top": "rechiseledcreate:block/tuff_cut_polished",
-    "bottom": "rechiseledcreate:block/tuff_cut_polished"
+    "side": "rechiseledcreate:block/tuff_cut_polished"
   },
   "connections": {
+    "bottom": {
+      "predicates": [
+        {
+          "block": "rechiseledcreate:tuff_cut_polished_connecting",
+          "type": "fusion:match_block"
+        },
+        {
+          "block": "rechiseledcreate:tuff_cut_polished_stairs_connecting",
+          "type": "fusion:match_block"
+        },
+        {
+          "block": "rechiseledcreate:tuff_cut_polished_slab_connecting",
+          "type": "fusion:match_block"
+        }
+      ],
+      "type": "fusion:or"
+    },
     "top": {
       "predicates": [
         {
@@ -111,23 +128,6 @@
             }
           ],
           "type": "fusion:and"
-        }
-      ],
-      "type": "fusion:or"
-    },
-    "bottom": {
-      "predicates": [
-        {
-          "block": "rechiseledcreate:tuff_cut_polished_connecting",
-          "type": "fusion:match_block"
-        },
-        {
-          "block": "rechiseledcreate:tuff_cut_polished_stairs_connecting",
-          "type": "fusion:match_block"
-        },
-        {
-          "block": "rechiseledcreate:tuff_cut_polished_slab_connecting",
-          "type": "fusion:match_block"
         }
       ],
       "type": "fusion:or"

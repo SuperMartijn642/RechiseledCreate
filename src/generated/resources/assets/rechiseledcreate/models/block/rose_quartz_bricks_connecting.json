@@ -1,15 +1,34 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
+    "up": "rechiseledcreate:block/rose_quartz_bricks",
+    "north": "rechiseledcreate:block/rose_quartz_bricks",
     "east": "rechiseledcreate:block/rose_quartz_bricks",
     "south": "rechiseledcreate:block/rose_quartz_bricks",
-    "north": "rechiseledcreate:block/rose_quartz_bricks",
-    "west": "rechiseledcreate:block/rose_quartz_bricks",
+    "down": "rechiseledcreate:block/rose_quartz_bricks",
     "particle": "rechiseledcreate:block/rose_quartz_bricks",
-    "up": "rechiseledcreate:block/rose_quartz_bricks",
-    "down": "rechiseledcreate:block/rose_quartz_bricks"
+    "west": "rechiseledcreate:block/rose_quartz_bricks"
   },
   "connections": {
+    "up": {
+      "predicates": [
+        {
+          "block": "rechiseledcreate:rose_quartz_bricks_connecting",
+          "type": "fusion:match_block"
+        },
+        {
+          "predicates": [],
+          "type": "fusion:or"
+        },
+        {
+          "predicates": [],
+          "type": "fusion:or"
+        }
+      ],
+      "type": "fusion:or"
+    },
+    "north": "#side",
+    "east": "#side",
     "south": "#side",
     "side": {
       "predicates": [
@@ -58,26 +77,6 @@
       ],
       "type": "fusion:or"
     },
-    "north": "#side",
-    "east": "#side",
-    "up": {
-      "predicates": [
-        {
-          "block": "rechiseledcreate:rose_quartz_bricks_connecting",
-          "type": "fusion:match_block"
-        },
-        {
-          "predicates": [],
-          "type": "fusion:or"
-        },
-        {
-          "predicates": [],
-          "type": "fusion:or"
-        }
-      ],
-      "type": "fusion:or"
-    },
-    "west": "#side",
     "down": {
       "predicates": [
         {
@@ -94,7 +93,8 @@
         }
       ],
       "type": "fusion:or"
-    }
+    },
+    "west": "#side"
   },
   "loader": "fusion:model",
   "type": "fusion:connecting"

@@ -1,11 +1,34 @@
 {
   "parent": "minecraft:block/slab_top",
   "textures": {
-    "side": "rechiseledcreate:block/diorite_cut_small_brick",
+    "bottom": "rechiseledcreate:block/diorite_cut_small_brick",
     "top": "rechiseledcreate:block/diorite_cut_small_brick",
-    "bottom": "rechiseledcreate:block/diorite_cut_small_brick"
+    "side": "rechiseledcreate:block/diorite_cut_small_brick"
   },
   "connections": {
+    "bottom": {
+      "predicates": [
+        {
+          "block": "rechiseledcreate:diorite_cut_small_brick_slab_connecting",
+          "properties": {
+            "type": [
+              "top"
+            ]
+          },
+          "type": "fusion:match_state"
+        },
+        {
+          "block": "rechiseledcreate:diorite_cut_small_brick_stairs_connecting",
+          "properties": {
+            "half": [
+              "top"
+            ]
+          },
+          "type": "fusion:match_state"
+        }
+      ],
+      "type": "fusion:or"
+    },
     "top": {
       "predicates": [
         {
@@ -127,29 +150,6 @@
             }
           ],
           "type": "fusion:and"
-        }
-      ],
-      "type": "fusion:or"
-    },
-    "bottom": {
-      "predicates": [
-        {
-          "block": "rechiseledcreate:diorite_cut_small_brick_slab_connecting",
-          "properties": {
-            "type": [
-              "top"
-            ]
-          },
-          "type": "fusion:match_state"
-        },
-        {
-          "block": "rechiseledcreate:diorite_cut_small_brick_stairs_connecting",
-          "properties": {
-            "half": [
-              "top"
-            ]
-          },
-          "type": "fusion:match_state"
         }
       ],
       "type": "fusion:or"
