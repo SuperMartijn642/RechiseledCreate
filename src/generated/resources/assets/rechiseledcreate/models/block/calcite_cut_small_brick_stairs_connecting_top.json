@@ -2,46 +2,10 @@
   "parent": "rechiseled:block/stairs_top",
   "textures": {
     "side": "rechiseledcreate:block/calcite_cut_small_brick",
-    "top": "rechiseledcreate:block/calcite_cut_small_brick",
-    "bottom": "rechiseledcreate:block/calcite_cut_small_brick"
+    "bottom": "rechiseledcreate:block/calcite_cut_small_brick",
+    "top": "rechiseledcreate:block/calcite_cut_small_brick"
   },
   "connections": {
-    "top": {
-      "predicates": [
-        {
-          "predicates": [
-            {
-              "block": "rechiseledcreate:calcite_cut_small_brick_connecting",
-              "type": "fusion:match_block"
-            },
-            {
-              "block": "rechiseledcreate:calcite_cut_small_brick_slab_connecting",
-              "properties": {
-                "type": [
-                  "double"
-                ]
-              },
-              "type": "fusion:match_state"
-            }
-          ],
-          "type": "fusion:or"
-        },
-        {
-          "block": "rechiseledcreate:calcite_cut_small_brick_stairs_connecting",
-          "type": "fusion:match_block"
-        },
-        {
-          "block": "rechiseledcreate:calcite_cut_small_brick_slab_connecting",
-          "properties": {
-            "type": [
-              "top"
-            ]
-          },
-          "type": "fusion:match_state"
-        }
-      ],
-      "type": "fusion:or"
-    },
     "side": {
       "predicates": [
         {
@@ -128,6 +92,42 @@
         {
           "block": "rechiseledcreate:calcite_cut_small_brick_slab_connecting",
           "type": "fusion:match_block"
+        }
+      ],
+      "type": "fusion:or"
+    },
+    "top": {
+      "predicates": [
+        {
+          "predicates": [
+            {
+              "block": "rechiseledcreate:calcite_cut_small_brick_connecting",
+              "type": "fusion:match_block"
+            },
+            {
+              "block": "rechiseledcreate:calcite_cut_small_brick_slab_connecting",
+              "properties": {
+                "type": [
+                  "double"
+                ]
+              },
+              "type": "fusion:match_state"
+            }
+          ],
+          "type": "fusion:or"
+        },
+        {
+          "block": "rechiseledcreate:calcite_cut_small_brick_stairs_connecting",
+          "type": "fusion:match_block"
+        },
+        {
+          "block": "rechiseledcreate:calcite_cut_small_brick_slab_connecting",
+          "properties": {
+            "type": [
+              "top"
+            ]
+          },
+          "type": "fusion:match_state"
         }
       ],
       "type": "fusion:or"

@@ -1,15 +1,39 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
+    "up": "rechiseledcreate:block/warped_window_tiles_end",
+    "north": "rechiseledcreate:block/warped_window_tiles_side",
     "east": "rechiseledcreate:block/warped_window_tiles_side",
     "south": "rechiseledcreate:block/warped_window_tiles_side",
-    "north": "rechiseledcreate:block/warped_window_tiles_side",
-    "west": "rechiseledcreate:block/warped_window_tiles_side",
+    "down": "rechiseledcreate:block/warped_window_tiles_end",
     "particle": "rechiseledcreate:block/warped_window_tiles_side",
-    "up": "rechiseledcreate:block/warped_window_tiles_end",
-    "down": "rechiseledcreate:block/warped_window_tiles_end"
+    "west": "rechiseledcreate:block/warped_window_tiles_side"
   },
   "connections": {
+    "up": {
+      "predicates": [
+        {
+          "block": "rechiseledcreate:warped_window_tiles_connecting",
+          "properties": {
+            "axis": [
+              "y"
+            ]
+          },
+          "type": "fusion:match_state"
+        },
+        {
+          "predicates": [],
+          "type": "fusion:or"
+        },
+        {
+          "predicates": [],
+          "type": "fusion:or"
+        }
+      ],
+      "type": "fusion:or"
+    },
+    "north": "#side",
+    "east": "#side",
     "south": "#side",
     "side": {
       "predicates": [
@@ -63,31 +87,6 @@
       ],
       "type": "fusion:or"
     },
-    "north": "#side",
-    "east": "#side",
-    "up": {
-      "predicates": [
-        {
-          "block": "rechiseledcreate:warped_window_tiles_connecting",
-          "properties": {
-            "axis": [
-              "y"
-            ]
-          },
-          "type": "fusion:match_state"
-        },
-        {
-          "predicates": [],
-          "type": "fusion:or"
-        },
-        {
-          "predicates": [],
-          "type": "fusion:or"
-        }
-      ],
-      "type": "fusion:or"
-    },
-    "west": "#side",
     "down": {
       "predicates": [
         {
@@ -109,7 +108,8 @@
         }
       ],
       "type": "fusion:or"
-    }
+    },
+    "west": "#side"
   },
   "loader": "fusion:model",
   "type": "fusion:connecting"

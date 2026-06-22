@@ -2,33 +2,10 @@
   "parent": "minecraft:block/slab",
   "textures": {
     "side": "rechiseledcreate:block/andesite_cut_polished",
-    "top": "rechiseledcreate:block/andesite_cut_polished",
-    "bottom": "rechiseledcreate:block/andesite_cut_polished"
+    "bottom": "rechiseledcreate:block/andesite_cut_polished",
+    "top": "rechiseledcreate:block/andesite_cut_polished"
   },
   "connections": {
-    "top": {
-      "predicates": [
-        {
-          "block": "rechiseledcreate:andesite_cut_polished_slab_connecting",
-          "properties": {
-            "type": [
-              "bottom"
-            ]
-          },
-          "type": "fusion:match_state"
-        },
-        {
-          "block": "rechiseledcreate:andesite_cut_polished_stairs_connecting",
-          "properties": {
-            "half": [
-              "bottom"
-            ]
-          },
-          "type": "fusion:match_state"
-        }
-      ],
-      "type": "fusion:or"
-    },
     "side": {
       "predicates": [
         {
@@ -146,6 +123,29 @@
           "block": "rechiseledcreate:andesite_cut_polished_slab_connecting",
           "properties": {
             "type": [
+              "bottom"
+            ]
+          },
+          "type": "fusion:match_state"
+        }
+      ],
+      "type": "fusion:or"
+    },
+    "top": {
+      "predicates": [
+        {
+          "block": "rechiseledcreate:andesite_cut_polished_slab_connecting",
+          "properties": {
+            "type": [
+              "bottom"
+            ]
+          },
+          "type": "fusion:match_state"
+        },
+        {
+          "block": "rechiseledcreate:andesite_cut_polished_stairs_connecting",
+          "properties": {
+            "half": [
               "bottom"
             ]
           },

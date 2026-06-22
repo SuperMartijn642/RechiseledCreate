@@ -2,46 +2,10 @@
   "parent": "minecraft:block/slab_top",
   "textures": {
     "side": "rechiseledcreate:block/tuff_cut_small_brick",
-    "top": "rechiseledcreate:block/tuff_cut_small_brick",
-    "bottom": "rechiseledcreate:block/tuff_cut_small_brick"
+    "bottom": "rechiseledcreate:block/tuff_cut_small_brick",
+    "top": "rechiseledcreate:block/tuff_cut_small_brick"
   },
   "connections": {
-    "top": {
-      "predicates": [
-        {
-          "predicates": [
-            {
-              "block": "rechiseledcreate:tuff_cut_small_brick_connecting",
-              "type": "fusion:match_block"
-            },
-            {
-              "block": "rechiseledcreate:tuff_cut_small_brick_slab_connecting",
-              "properties": {
-                "type": [
-                  "double"
-                ]
-              },
-              "type": "fusion:match_state"
-            }
-          ],
-          "type": "fusion:or"
-        },
-        {
-          "block": "rechiseledcreate:tuff_cut_small_brick_stairs_connecting",
-          "type": "fusion:match_block"
-        },
-        {
-          "block": "rechiseledcreate:tuff_cut_small_brick_slab_connecting",
-          "properties": {
-            "type": [
-              "top"
-            ]
-          },
-          "type": "fusion:match_state"
-        }
-      ],
-      "type": "fusion:or"
-    },
     "side": {
       "predicates": [
         {
@@ -146,6 +110,42 @@
           "block": "rechiseledcreate:tuff_cut_small_brick_stairs_connecting",
           "properties": {
             "half": [
+              "top"
+            ]
+          },
+          "type": "fusion:match_state"
+        }
+      ],
+      "type": "fusion:or"
+    },
+    "top": {
+      "predicates": [
+        {
+          "predicates": [
+            {
+              "block": "rechiseledcreate:tuff_cut_small_brick_connecting",
+              "type": "fusion:match_block"
+            },
+            {
+              "block": "rechiseledcreate:tuff_cut_small_brick_slab_connecting",
+              "properties": {
+                "type": [
+                  "double"
+                ]
+              },
+              "type": "fusion:match_state"
+            }
+          ],
+          "type": "fusion:or"
+        },
+        {
+          "block": "rechiseledcreate:tuff_cut_small_brick_stairs_connecting",
+          "type": "fusion:match_block"
+        },
+        {
+          "block": "rechiseledcreate:tuff_cut_small_brick_slab_connecting",
+          "properties": {
+            "type": [
               "top"
             ]
           },

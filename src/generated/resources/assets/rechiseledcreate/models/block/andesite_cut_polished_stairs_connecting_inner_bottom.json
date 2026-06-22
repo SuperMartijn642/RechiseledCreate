@@ -2,27 +2,10 @@
   "parent": "minecraft:block/inner_stairs",
   "textures": {
     "side": "rechiseledcreate:block/andesite_cut_polished",
-    "top": "rechiseledcreate:block/andesite_cut_polished",
-    "bottom": "rechiseledcreate:block/andesite_cut_polished"
+    "bottom": "rechiseledcreate:block/andesite_cut_polished",
+    "top": "rechiseledcreate:block/andesite_cut_polished"
   },
   "connections": {
-    "top": {
-      "predicates": [
-        {
-          "block": "rechiseledcreate:andesite_cut_polished_connecting",
-          "type": "fusion:match_block"
-        },
-        {
-          "block": "rechiseledcreate:andesite_cut_polished_stairs_connecting",
-          "type": "fusion:match_block"
-        },
-        {
-          "block": "rechiseledcreate:andesite_cut_polished_slab_connecting",
-          "type": "fusion:match_block"
-        }
-      ],
-      "type": "fusion:or"
-    },
     "side": {
       "predicates": [
         {
@@ -128,6 +111,23 @@
             ]
           },
           "type": "fusion:match_state"
+        }
+      ],
+      "type": "fusion:or"
+    },
+    "top": {
+      "predicates": [
+        {
+          "block": "rechiseledcreate:andesite_cut_polished_connecting",
+          "type": "fusion:match_block"
+        },
+        {
+          "block": "rechiseledcreate:andesite_cut_polished_stairs_connecting",
+          "type": "fusion:match_block"
+        },
+        {
+          "block": "rechiseledcreate:andesite_cut_polished_slab_connecting",
+          "type": "fusion:match_block"
         }
       ],
       "type": "fusion:or"
