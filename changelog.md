@@ -1,3 +1,6 @@
+### Rechiseled: Create 1.1.1
+- Fixed non-connecting blocks also connecting with Fusion 1.3.0
+
 ### Rechiseled: Create 1.1.0
 - Added stairs and slabs for 
 - Marked Mechanical Chisel as catalyst for JEI and REI chiseling category
